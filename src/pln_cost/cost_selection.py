@@ -34,7 +34,7 @@ def selection_fixture(case, config, budget, model, mode):
     return "!" + config_expression(model, mode) + "\n" + fixture(case, config, budget) + "!(println! (COST_STATS (cost_stats)))\n"
 
 
-def audit_trace(log, case, config, model, mode, source_hash, fixture_hash):
+def audit_trace(log, case, config, model, mode, source_hash, fixture_hash, *, selection_reference=None):
     states, selected = [], []
     for line_number, line in enumerate(log.splitlines(), 1):
         if line.startswith("(QUAL_STATE "):
@@ -48,7 +48,7 @@ def audit_trace(log, case, config, model, mode, source_hash, fixture_hash):
             record = read_one(line)[1]
             if not states or len(selected) != len(states)-1:
                 raise ValueError("Unexpected selection count")
-            expected, _ = choose(states[-1]["state"], model, mode)
+            expected, _ = (selection_reference or choose)(states[-1]["state"], model, mode)
             if record != expected:
                 raise ValueError("Native hook differs from Python selection reference")
             selected.append(record)

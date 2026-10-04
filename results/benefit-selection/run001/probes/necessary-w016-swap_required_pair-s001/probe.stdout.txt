@@ -1,0 +1,31 @@
+(RANKS (covered (1 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)))
+(PICK_N (Sentence ((Ready unit0 required) (stv 1.0 0.9)) (1)))
+(STATS_N (1 0 0 0 0 270099 0 0 0))
+(PICK_B (Sentence ((Implication (Certificate unit0 required) (CanOperate unit0)) (stv 1.0 0.9)) (3)))
+(STATS_B (1 55 4520618 0 0 5108570 0 0 1))
+(PICK_BO (Sentence ((Implication (Certificate unit0 required) (CanOperate unit0)) (stv 1.0 0.9)) (3)))
+(STATS_BO (1 55 3152807 0 0 3771416 0 0 1))
+(PICK_BC (Sentence ((Implication (Certificate unit0 required) (CanOperate unit0)) (stv 1.0 0.9)) (3)))
+(STATS_BC (1 55 3638576 0 0 4112993 0 0 1))
+754114888
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true

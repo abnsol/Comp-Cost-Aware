@@ -1,0 +1,171 @@
+{
+  "ranks": [
+    "covered",
+    [
+      0,
+      1,
+      1,
+      2,
+      1,
+      2
+    ]
+  ],
+  "choices": [
+    {
+      "mode": "N",
+      "selected": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Certificate",
+              "unit0",
+              "path_b_001"
+            ],
+            [
+              "CanOperate",
+              "unit0"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          6
+        ]
+      ],
+      "stats": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        97416,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": "B",
+      "selected": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Certificate",
+              "unit0",
+              "path_a"
+            ],
+            [
+              "CanOperate",
+              "unit0"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          4
+        ]
+      ],
+      "stats": [
+        1,
+        6,
+        419497,
+        0,
+        0,
+        544643,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mode": "BO",
+      "selected": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Certificate",
+              "unit0",
+              "path_a"
+            ],
+            [
+              "CanOperate",
+              "unit0"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          4
+        ]
+      ],
+      "stats": [
+        1,
+        6,
+        401470,
+        0,
+        0,
+        493856,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mode": "BC",
+      "selected": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Certificate",
+              "unit0",
+              "path_a"
+            ],
+            [
+              "CanOperate",
+              "unit0"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          4
+        ]
+      ],
+      "stats": [
+        1,
+        6,
+        551479,
+        0,
+        0,
+        650389,
+        0,
+        0,
+        1
+      ]
+    }
+  ]
+}

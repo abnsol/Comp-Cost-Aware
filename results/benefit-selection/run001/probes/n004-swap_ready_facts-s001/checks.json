@@ -1,0 +1,173 @@
+{
+  "ranks": [
+    "covered",
+    [
+      1,
+      1,
+      0,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  ],
+  "choices": [
+    {
+      "mode": "N",
+      "selected": [
+        "Sentence",
+        [
+          [
+            "Ready",
+            "unit0",
+            "route_a"
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          1
+        ]
+      ],
+      "stats": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        110353,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": "B",
+      "selected": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Certificate",
+              "unit0",
+              "path_b_001"
+            ],
+            [
+              "CanOperate",
+              "unit0"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          6
+        ]
+      ],
+      "stats": [
+        1,
+        15,
+        995517,
+        0,
+        0,
+        1173843,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": "BO",
+      "selected": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Certificate",
+              "unit0",
+              "path_b_001"
+            ],
+            [
+              "CanOperate",
+              "unit0"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          6
+        ]
+      ],
+      "stats": [
+        1,
+        15,
+        875420,
+        4,
+        137740,
+        1248559,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": "BC",
+      "selected": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Certificate",
+              "unit0",
+              "path_b_001"
+            ],
+            [
+              "CanOperate",
+              "unit0"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          6
+        ]
+      ],
+      "stats": [
+        1,
+        15,
+        892604,
+        4,
+        182837,
+        1344564,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "ranks": [
+    "covered",
+    [
+      1,
+      1,
+      2,
+      1,
+      2
+    ]
+  ],
+  "choices": [
+    {
+      "mode": "N",
+      "selected": [
+        "Sentence",
+        [
+          [
+            "Ready",
+            "unit0",
+            "route_b"
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          2
+        ]
+      ],
+      "stats": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        56822,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "mode": "B",
+      "selected": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Certificate",
+              "unit0",
+              "path_a"
+            ],
+            [
+              "CanOperate",
+              "unit0"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          4
+        ]
+      ],
+      "stats": [
+        1,
+        5,
+        328392,
+        0,
+        0,
+        411400,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mode": "BO",
+      "selected": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Certificate",
+              "unit0",
+              "path_a"
+            ],
+            [
+              "CanOperate",
+              "unit0"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          4
+        ]
+      ],
+      "stats": [
+        1,
+        5,
+        309728,
+        0,
+        0,
+        392063,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mode": "BC",
+      "selected": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Certificate",
+              "unit0",
+              "path_a"
+            ],
+            [
+              "CanOperate",
+              "unit0"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          4
+        ]
+      ],
+      "stats": [
+        1,
+        5,
+        387113,
+        0,
+        0,
+        529466,
+        0,
+        0,
+        1
+      ]
+    }
+  ]
+}

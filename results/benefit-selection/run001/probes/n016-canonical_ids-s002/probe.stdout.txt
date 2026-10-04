@@ -1,0 +1,31 @@
+(RANKS (covered (1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)))
+(PICK_N (Sentence ((Implication (Ready unit0 route_a) (Certificate unit0 path_a)) (stv 1.0 0.9)) (3)))
+(STATS_N (1 0 0 0 0 294400 0 0 0))
+(PICK_B (Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)))
+(STATS_B (1 51 4799589 0 0 5806501 0 0 0))
+(PICK_BO (Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)))
+(STATS_BO (1 51 2627387 17 1180241 4427077 0 0 0))
+(PICK_BC (Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)))
+(STATS_BC (1 51 4675841 17 1227450 6800100 0 0 0))
+872712636
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true

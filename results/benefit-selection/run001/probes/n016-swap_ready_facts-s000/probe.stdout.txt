@@ -1,0 +1,31 @@
+(RANKS (covered (1 1 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0)))
+(PICK_N (Sentence ((Ready unit0 route_b) (stv 1.0 0.9)) (2)))
+(STATS_N (1 0 0 0 0 457526 0 0 0))
+(PICK_B (Sentence ((Ready unit0 route_b) (stv 1.0 0.9)) (2)))
+(STATS_B (1 36 2176181 0 0 2630334 0 0 0))
+(PICK_BO (Sentence ((Ready unit0 route_b) (stv 1.0 0.9)) (2)))
+(STATS_BO (1 36 1912910 19 873389 3288519 0 0 0))
+(PICK_BC (Sentence ((Ready unit0 route_a) (stv 1.0 0.9)) (1)))
+(STATS_BC (1 36 2563096 19 1470895 4671225 0 0 0))
+913331441
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true

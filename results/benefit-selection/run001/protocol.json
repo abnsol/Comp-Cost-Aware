@@ -1,0 +1,15 @@
+{
+  "data_batch": "results/selection/step-03/run002",
+  "descriptor_batch": "results/benefit-signals/run001",
+  "model_path": "results/selection/step-04/run001/model.json",
+  "scope": "qualified-closed-ground-mp-v1",
+  "modes": [
+    "N",
+    "B",
+    "BO",
+    "BC"
+  ],
+  "validation_budget_ns": 10000000000,
+  "purpose": "Development-only correctness and integrated accounting; no performance comparison or retraining",
+  "timings": "Diagnostic single executions only; not speedup estimates"
+}

@@ -1,0 +1,31 @@
+(RANKS (covered (2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)))
+(PICK_N (Sentence ((Implication (Certificate unit0 required) (CanOperate unit0)) (stv 1.0 0.9)) (3)))
+(STATS_N (1 0 0 0 0 438965 0 0 0))
+(PICK_B (Sentence ((Implication (Certificate unit0 required) (CanOperate unit0)) (stv 1.0 0.9)) (3)))
+(STATS_B (1 70 3757488 0 0 4785222 0 0 1))
+(PICK_BO (Sentence ((Implication (Certificate unit0 required) (CanOperate unit0)) (stv 1.0 0.9)) (3)))
+(STATS_BO (1 70 5490016 0 0 6118031 0 0 1))
+(PICK_BC (Sentence ((Implication (Certificate unit0 required) (CanOperate unit0)) (stv 1.0 0.9)) (3)))
+(STATS_BC (1 70 3492726 0 0 3988044 0 0 1))
+777643927
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
