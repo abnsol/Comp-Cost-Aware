@@ -56,3 +56,37 @@ def initial_state(records, limits):
             "task_limit": limits["task_queue_limit_argument"],
             "belief_limit": limits["belief_queue_limit_argument"],
             "tasks": deepcopy(records), "beliefs": deepcopy(records)}
+
+
+def evaluation_records(width, modules=1, shared_sinks=False,
+                       ordering="canonical_ids", seed=29):
+    """Reserved structural variants, never training instances.
+
+    Shared sinks permit additional revision of side conclusions. Disconnected
+    modules add other complete proofs with different queries; only unit0 is
+    queried. The target module's witness retains input IDs 1, 2, 3.
+    """
+    if type(modules) is not int or modules < 1 or type(shared_sinks) is not bool:
+        raise ValueError("Invalid evaluation variant")
+    if ordering not in ORDERINGS:
+        raise ValueError("Unsupported ordering")
+    records = []
+    for module in range(modules):
+        unit = f"unit{module}"
+
+        def transform(term):
+            if not isinstance(term, list):
+                return unit if term == "unit0" else term
+            if term and term[0] == "Side":
+                return ["Side", unit, "shared" if shared_sinks else term[1], term[2]]
+            return [transform(part) for part in term]
+
+        for record in necessary_records(width):
+            record[1][0] = transform(record[1][0])
+            record[2] = [len(records) + 1]
+            records.append(record)
+    if ordering == "swap_required_pair":
+        records[0], records[1] = records[1], records[0]
+    elif ordering == "seeded_shuffle":
+        random.Random(seed).shuffle(records)
+    return records

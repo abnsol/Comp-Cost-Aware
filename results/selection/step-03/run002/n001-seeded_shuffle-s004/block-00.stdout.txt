@@ -1,0 +1,91 @@
+(PAIRED_SAMPLE Warmup 0 1 1 0 53354 true)
+(PAIRED_SAMPLE Warmup 0 0 1 0 98276 true)
+(PAIRED_SAMPLE Warmup 1 1 1 0 50645 true)
+(PAIRED_SAMPLE Warmup 1 0 1 0 54990 true)
+(PAIRED_SAMPLE Measured 0 1 1 0 49205 true)
+(PAIRED_SAMPLE Measured 0 0 1 0 54771 true)
+(PAIRED_SAMPLE Measured 1 0 1 0 52321 true)
+(PAIRED_SAMPLE Measured 1 1 1 0 47406 true)
+(PAIRED_SAMPLE Measured 2 1 1 0 46497 true)
+(PAIRED_SAMPLE Measured 2 0 1 0 82519 true)
+(PAIRED_SAMPLE Measured 3 1 1 0 46648 true)
+(PAIRED_SAMPLE Measured 3 0 1 0 52270 true)
+(PAIRED_SAMPLE Measured 4 1 1 0 46460 true)
+(PAIRED_SAMPLE Measured 4 0 1 0 52138 true)
+(PAIRED_SAMPLE Empty 0 0 1 0 6595 true)
+(PAIRED_SAMPLE Empty 1 1 1 0 2248 true)
+(PAIRED_SAMPLE Empty 2 0 1 0 2063 true)
+(PAIRED_SAMPLE Empty 3 1 1 0 2197 true)
+(PAIRED_SAMPLE Empty 4 0 1 0 2118 true)
+(PAIRED_SAMPLE Empty 5 1 1 0 2086 true)
+(PAIRED_SAMPLE Empty 6 0 1 0 2278 true)
+(PAIRED_SAMPLE Empty 7 1 1 0 2199 true)
+(PAIRED_SAMPLE Empty 8 0 1 0 15402 true)
+(PAIRED_SAMPLE Empty 9 1 1 0 2239 true)
+(PAIRED_SAMPLE Empty 10 0 1 0 2080 true)
+(PAIRED_SAMPLE Empty 11 1 1 0 2300 true)
+(PAIRED_SAMPLE Empty 12 0 1 0 2115 true)
+(PAIRED_SAMPLE Empty 13 1 1 0 2170 true)
+(PAIRED_SAMPLE Empty 14 0 1 0 2173 true)
+(PAIRED_SAMPLE Empty 15 1 1 0 2175 true)
+(PAIRED_SAMPLE Empty 16 0 1 0 2199 true)
+(PAIRED_SAMPLE Empty 17 1 1 0 2201 true)
+(PAIRED_SAMPLE Empty 18 0 1 0 2157 true)
+(PAIRED_SAMPLE Empty 19 1 1 0 2281 true)
+(PAIRED_SAMPLE Empty 20 0 1 0 2222 true)
+(PAIRED_SAMPLE Empty 21 1 1 0 2069 true)
+(PAIRED_SAMPLE Empty 22 0 1 0 2155 true)
+(PAIRED_SAMPLE Empty 23 1 1 0 2106 true)
+(PAIRED_SAMPLE Empty 24 0 1 0 2265 true)
+(PAIRED_SAMPLE Empty 25 1 1 0 2161 true)
+(PAIRED_SAMPLE Empty 26 0 1 0 2511 true)
+(PAIRED_SAMPLE Empty 27 1 1 0 2201 true)
+(PAIRED_SAMPLE Empty 28 0 1 0 2159 true)
+(PAIRED_SAMPLE Empty 29 1 1 0 2136 true)
+473680796
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true

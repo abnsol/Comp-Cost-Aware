@@ -1,0 +1,146 @@
+{
+  "name": "n001-swap_ready_facts-s003",
+  "case": "n001-swap_ready_facts",
+  "family": "alternative",
+  "split": "development",
+  "checkpoint": 3,
+  "state_sha256": "ac7160f78059ccdfae3171994efd53cce93fbb6248b53a42b95382c24c9bfa00",
+  "candidates": [
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Certificate",
+            "unit0",
+            "path_a"
+          ],
+          [
+            "CanOperate",
+            "unit0"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        4
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Ready",
+            "unit0",
+            "route_b"
+          ],
+          [
+            "Certificate",
+            "unit0",
+            "path_b_001"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        5
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Certificate",
+            "unit0",
+            "path_b_001"
+          ],
+          [
+            "CanOperate",
+            "unit0"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        6
+      ]
+    ]
+  ],
+  "features": [
+    {
+      "belief_count": 8,
+      "task_count": 5,
+      "term_nodes": 9,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 7,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 8,
+      "mp_matches_x_tasks": 5
+    },
+    {
+      "belief_count": 8,
+      "task_count": 5,
+      "term_nodes": 10,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 6,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 8,
+      "mp_matches_x_tasks": 5
+    },
+    {
+      "belief_count": 8,
+      "task_count": 5,
+      "term_nodes": 9,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 7,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 8,
+      "mp_matches_x_tasks": 5
+    }
+  ],
+  "all_eligible_features_python_cpu_ns": [
+    155926,
+    155281,
+    374680,
+    153949,
+    152902,
+    152945,
+    157821,
+    153992,
+    200168,
+    153643,
+    154892,
+    246494,
+    158524,
+    158213,
+    155098,
+    153169,
+    154605,
+    153760,
+    196322,
+    264077
+  ]
+}

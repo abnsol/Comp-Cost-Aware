@@ -1,0 +1,184 @@
+{
+  "name": "n001-canonical_ids-s002",
+  "case": "n001-canonical_ids",
+  "family": "alternative",
+  "split": "development",
+  "checkpoint": 2,
+  "state_sha256": "1e30457864934a1a728df98212063a76542193ed6c23ff6f8d56bb599e074c9d",
+  "candidates": [
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Ready",
+            "unit0",
+            "route_a"
+          ],
+          [
+            "Certificate",
+            "unit0",
+            "path_a"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        3
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Certificate",
+            "unit0",
+            "path_a"
+          ],
+          [
+            "CanOperate",
+            "unit0"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        4
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Ready",
+            "unit0",
+            "route_b"
+          ],
+          [
+            "Certificate",
+            "unit0",
+            "path_b_001"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        5
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Certificate",
+            "unit0",
+            "path_b_001"
+          ],
+          [
+            "CanOperate",
+            "unit0"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        6
+      ]
+    ]
+  ],
+  "features": [
+    {
+      "belief_count": 8,
+      "task_count": 6,
+      "term_nodes": 10,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 6,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 8,
+      "mp_matches_x_tasks": 6
+    },
+    {
+      "belief_count": 8,
+      "task_count": 6,
+      "term_nodes": 9,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 7,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 8,
+      "mp_matches_x_tasks": 6
+    },
+    {
+      "belief_count": 8,
+      "task_count": 6,
+      "term_nodes": 10,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 6,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 8,
+      "mp_matches_x_tasks": 6
+    },
+    {
+      "belief_count": 8,
+      "task_count": 6,
+      "term_nodes": 9,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 7,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 8,
+      "mp_matches_x_tasks": 6
+    }
+  ],
+  "all_eligible_features_python_cpu_ns": [
+    204443,
+    200069,
+    200257,
+    200779,
+    207433,
+    293640,
+    199789,
+    200726,
+    212260,
+    247073,
+    195618,
+    195035,
+    526319,
+    226126,
+    262893,
+    377122,
+    413987,
+    367135,
+    425614,
+    372085
+  ]
+}

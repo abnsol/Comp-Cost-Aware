@@ -1,0 +1,527 @@
+{
+  "name": "necessary-w004-canonical_ids-s002",
+  "case": "necessary-w004-canonical_ids",
+  "family": "necessary",
+  "split": "development",
+  "checkpoint": 2,
+  "state_sha256": "adb45167c074392f56fa970c2eec5fc5c5f7f5c68c91323de58ffe59c82ea7a2",
+  "candidates": [
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Certificate",
+            "unit0",
+            "required"
+          ],
+          [
+            "CanOperate",
+            "unit0"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        3
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Idle",
+          "unit0",
+          "d0"
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        4
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Idle",
+          "unit0",
+          "d1"
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        5
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Idle",
+          "unit0",
+          "d2"
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        6
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Idle",
+          "unit0",
+          "d3"
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        7
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Ready",
+            "unit0",
+            "required"
+          ],
+          [
+            "Side",
+            "fact",
+            "s0"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        8
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Implication",
+            [
+              "Ready",
+              "unit0",
+              "required"
+            ],
+            [
+              "Certificate",
+              "unit0",
+              "required"
+            ]
+          ],
+          [
+            "Side",
+            "rule",
+            "s0"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        9
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Ready",
+            "unit0",
+            "required"
+          ],
+          [
+            "Side",
+            "fact",
+            "s1"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        10
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Implication",
+            [
+              "Ready",
+              "unit0",
+              "required"
+            ],
+            [
+              "Certificate",
+              "unit0",
+              "required"
+            ]
+          ],
+          [
+            "Side",
+            "rule",
+            "s1"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        11
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Ready",
+            "unit0",
+            "required"
+          ],
+          [
+            "Side",
+            "fact",
+            "s2"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        12
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Implication",
+            [
+              "Ready",
+              "unit0",
+              "required"
+            ],
+            [
+              "Certificate",
+              "unit0",
+              "required"
+            ]
+          ],
+          [
+            "Side",
+            "rule",
+            "s2"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        13
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Ready",
+            "unit0",
+            "required"
+          ],
+          [
+            "Side",
+            "fact",
+            "s3"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        14
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Implication",
+            [
+              "Ready",
+              "unit0",
+              "required"
+            ],
+            [
+              "Certificate",
+              "unit0",
+              "required"
+            ]
+          ],
+          [
+            "Side",
+            "rule",
+            "s3"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        15
+      ]
+    ]
+  ],
+  "features": [
+    {
+      "belief_count": 24,
+      "task_count": 22,
+      "term_nodes": 9,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 23,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 24,
+      "mp_matches_x_tasks": 22
+    },
+    {
+      "belief_count": 24,
+      "task_count": 22,
+      "term_nodes": 4,
+      "evidence_count": 1,
+      "is_implication": 0,
+      "disjoint_beliefs": 23,
+      "same_term_disjoint": 0,
+      "mp_matches": 0,
+      "mp_matches_x_beliefs": 0,
+      "mp_matches_x_tasks": 0
+    },
+    {
+      "belief_count": 24,
+      "task_count": 22,
+      "term_nodes": 4,
+      "evidence_count": 1,
+      "is_implication": 0,
+      "disjoint_beliefs": 23,
+      "same_term_disjoint": 0,
+      "mp_matches": 0,
+      "mp_matches_x_beliefs": 0,
+      "mp_matches_x_tasks": 0
+    },
+    {
+      "belief_count": 24,
+      "task_count": 22,
+      "term_nodes": 4,
+      "evidence_count": 1,
+      "is_implication": 0,
+      "disjoint_beliefs": 23,
+      "same_term_disjoint": 0,
+      "mp_matches": 0,
+      "mp_matches_x_beliefs": 0,
+      "mp_matches_x_tasks": 0
+    },
+    {
+      "belief_count": 24,
+      "task_count": 22,
+      "term_nodes": 4,
+      "evidence_count": 1,
+      "is_implication": 0,
+      "disjoint_beliefs": 23,
+      "same_term_disjoint": 0,
+      "mp_matches": 0,
+      "mp_matches_x_beliefs": 0,
+      "mp_matches_x_tasks": 0
+    },
+    {
+      "belief_count": 24,
+      "task_count": 22,
+      "term_nodes": 10,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 22,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 24,
+      "mp_matches_x_tasks": 22
+    },
+    {
+      "belief_count": 24,
+      "task_count": 22,
+      "term_nodes": 16,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 22,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 24,
+      "mp_matches_x_tasks": 22
+    },
+    {
+      "belief_count": 24,
+      "task_count": 22,
+      "term_nodes": 10,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 22,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 24,
+      "mp_matches_x_tasks": 22
+    },
+    {
+      "belief_count": 24,
+      "task_count": 22,
+      "term_nodes": 16,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 22,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 24,
+      "mp_matches_x_tasks": 22
+    },
+    {
+      "belief_count": 24,
+      "task_count": 22,
+      "term_nodes": 10,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 22,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 24,
+      "mp_matches_x_tasks": 22
+    },
+    {
+      "belief_count": 24,
+      "task_count": 22,
+      "term_nodes": 16,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 22,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 24,
+      "mp_matches_x_tasks": 22
+    },
+    {
+      "belief_count": 24,
+      "task_count": 22,
+      "term_nodes": 10,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 22,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 24,
+      "mp_matches_x_tasks": 22
+    },
+    {
+      "belief_count": 24,
+      "task_count": 22,
+      "term_nodes": 16,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 22,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 24,
+      "mp_matches_x_tasks": 22
+    }
+  ],
+  "all_eligible_features_python_cpu_ns": [
+    3990555,
+    3807761,
+    3852602,
+    4629313,
+    3930226,
+    4023881,
+    3808884,
+    4656681,
+    3902639,
+    3807246,
+    3795531,
+    4593112,
+    4029479,
+    3844175,
+    3813012,
+    4508913,
+    3990079,
+    3815209,
+    3776716,
+    4296830
+  ]
+}

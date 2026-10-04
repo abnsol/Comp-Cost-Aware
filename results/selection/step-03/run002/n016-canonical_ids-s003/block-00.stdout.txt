@@ -1,0 +1,556 @@
+(PAIRED_SAMPLE Warmup 0 17 1 0 1121206 true)
+(PAIRED_SAMPLE Warmup 0 26 1 0 1002755 true)
+(PAIRED_SAMPLE Warmup 0 6 1 0 621887 true)
+(PAIRED_SAMPLE Warmup 0 27 1 0 575464 true)
+(PAIRED_SAMPLE Warmup 0 5 1 0 574365 true)
+(PAIRED_SAMPLE Warmup 0 18 1 0 594092 true)
+(PAIRED_SAMPLE Warmup 0 31 1 0 656847 true)
+(PAIRED_SAMPLE Warmup 0 32 1 0 598164 true)
+(PAIRED_SAMPLE Warmup 0 12 1 0 591341 true)
+(PAIRED_SAMPLE Warmup 0 3 1 0 555035 true)
+(PAIRED_SAMPLE Warmup 0 22 1 0 590386 true)
+(PAIRED_SAMPLE Warmup 0 13 1 0 536420 true)
+(PAIRED_SAMPLE Warmup 0 11 1 0 543884 true)
+(PAIRED_SAMPLE Warmup 0 14 1 0 690616 true)
+(PAIRED_SAMPLE Warmup 0 19 1 0 601733 true)
+(PAIRED_SAMPLE Warmup 0 10 1 0 762388 true)
+(PAIRED_SAMPLE Warmup 0 20 1 0 685741 true)
+(PAIRED_SAMPLE Warmup 0 4 1 0 612071 true)
+(PAIRED_SAMPLE Warmup 0 8 1 0 588461 true)
+(PAIRED_SAMPLE Warmup 0 16 1 0 603687 true)
+(PAIRED_SAMPLE Warmup 0 21 1 0 547380 true)
+(PAIRED_SAMPLE Warmup 0 2 1 0 576063 true)
+(PAIRED_SAMPLE Warmup 0 0 1 0 576418 true)
+(PAIRED_SAMPLE Warmup 0 24 1 0 584874 true)
+(PAIRED_SAMPLE Warmup 0 9 1 0 547981 true)
+(PAIRED_SAMPLE Warmup 0 1 1 0 547848 true)
+(PAIRED_SAMPLE Warmup 0 29 1 0 557690 true)
+(PAIRED_SAMPLE Warmup 0 23 1 0 720088 true)
+(PAIRED_SAMPLE Warmup 0 7 1 0 556255 true)
+(PAIRED_SAMPLE Warmup 0 25 1 0 676725 true)
+(PAIRED_SAMPLE Warmup 0 28 1 0 622502 true)
+(PAIRED_SAMPLE Warmup 0 30 1 0 620609 true)
+(PAIRED_SAMPLE Warmup 0 15 1 0 672474 true)
+(PAIRED_SAMPLE Warmup 1 28 1 0 664383 true)
+(PAIRED_SAMPLE Warmup 1 3 1 0 545721 true)
+(PAIRED_SAMPLE Warmup 1 2 1 0 577582 true)
+(PAIRED_SAMPLE Warmup 1 12 1 0 623559 true)
+(PAIRED_SAMPLE Warmup 1 6 1 0 739542 true)
+(PAIRED_SAMPLE Warmup 1 16 1 0 578758 true)
+(PAIRED_SAMPLE Warmup 1 25 1 0 551367 true)
+(PAIRED_SAMPLE Warmup 1 17 1 0 541338 true)
+(PAIRED_SAMPLE Warmup 1 14 1 0 579141 true)
+(PAIRED_SAMPLE Warmup 1 31 1 0 556422 true)
+(PAIRED_SAMPLE Warmup 1 1 1 0 545101 true)
+(PAIRED_SAMPLE Warmup 1 27 1 0 558148 true)
+(PAIRED_SAMPLE Warmup 1 7 1 0 547937 true)
+(PAIRED_SAMPLE Warmup 1 5 1 0 635249 true)
+(PAIRED_SAMPLE Warmup 1 11 1 0 581876 true)
+(PAIRED_SAMPLE Warmup 1 0 1 0 661112 true)
+(PAIRED_SAMPLE Warmup 1 23 1 0 644867 true)
+(PAIRED_SAMPLE Warmup 1 21 1 0 597754 true)
+(PAIRED_SAMPLE Warmup 1 8 1 0 594121 true)
+(PAIRED_SAMPLE Warmup 1 20 1 0 582849 true)
+(PAIRED_SAMPLE Warmup 1 29 1 0 574736 true)
+(PAIRED_SAMPLE Warmup 1 22 1 0 580616 true)
+(PAIRED_SAMPLE Warmup 1 24 1 0 610168 true)
+(PAIRED_SAMPLE Warmup 1 13 1 0 551071 true)
+(PAIRED_SAMPLE Warmup 1 10 1 0 580159 true)
+(PAIRED_SAMPLE Warmup 1 18 1 0 582311 true)
+(PAIRED_SAMPLE Warmup 1 32 1 0 599255 true)
+(PAIRED_SAMPLE Warmup 1 19 1 0 551787 true)
+(PAIRED_SAMPLE Warmup 1 9 1 0 559303 true)
+(PAIRED_SAMPLE Warmup 1 26 1 0 703197 true)
+(PAIRED_SAMPLE Warmup 1 4 1 0 606552 true)
+(PAIRED_SAMPLE Warmup 1 30 1 0 595889 true)
+(PAIRED_SAMPLE Warmup 1 15 1 0 637691 true)
+(PAIRED_SAMPLE Measured 0 21 1 0 586437 true)
+(PAIRED_SAMPLE Measured 0 23 1 0 553369 true)
+(PAIRED_SAMPLE Measured 0 24 1 0 576677 true)
+(PAIRED_SAMPLE Measured 0 15 1 0 581348 true)
+(PAIRED_SAMPLE Measured 0 9 1 0 543328 true)
+(PAIRED_SAMPLE Measured 0 4 1 0 576529 true)
+(PAIRED_SAMPLE Measured 0 26 1 0 573489 true)
+(PAIRED_SAMPLE Measured 0 11 1 0 541313 true)
+(PAIRED_SAMPLE Measured 0 10 1 0 578683 true)
+(PAIRED_SAMPLE Measured 0 6 1 0 575746 true)
+(PAIRED_SAMPLE Measured 0 8 1 0 606164 true)
+(PAIRED_SAMPLE Measured 0 19 1 0 552482 true)
+(PAIRED_SAMPLE Measured 0 29 1 0 555372 true)
+(PAIRED_SAMPLE Measured 0 31 1 0 705677 true)
+(PAIRED_SAMPLE Measured 0 22 1 0 626969 true)
+(PAIRED_SAMPLE Measured 0 25 1 0 675955 true)
+(PAIRED_SAMPLE Measured 0 30 1 0 647383 true)
+(PAIRED_SAMPLE Measured 0 13 1 0 586082 true)
+(PAIRED_SAMPLE Measured 0 2 1 0 580519 true)
+(PAIRED_SAMPLE Measured 0 1 1 0 537520 true)
+(PAIRED_SAMPLE Measured 0 32 1 0 599188 true)
+(PAIRED_SAMPLE Measured 0 14 1 0 578829 true)
+(PAIRED_SAMPLE Measured 0 7 1 0 544523 true)
+(PAIRED_SAMPLE Measured 0 5 1 0 539570 true)
+(PAIRED_SAMPLE Measured 0 17 1 0 559300 true)
+(PAIRED_SAMPLE Measured 0 12 1 0 612997 true)
+(PAIRED_SAMPLE Measured 0 27 1 0 558998 true)
+(PAIRED_SAMPLE Measured 0 20 1 0 597431 true)
+(PAIRED_SAMPLE Measured 0 28 1 0 588519 true)
+(PAIRED_SAMPLE Measured 0 3 1 0 566628 true)
+(PAIRED_SAMPLE Measured 0 0 1 0 677126 true)
+(PAIRED_SAMPLE Measured 0 18 1 0 623454 true)
+(PAIRED_SAMPLE Measured 0 16 1 0 703718 true)
+(PAIRED_SAMPLE Measured 1 15 1 0 583928 true)
+(PAIRED_SAMPLE Measured 1 6 1 0 635011 true)
+(PAIRED_SAMPLE Measured 1 13 1 0 548104 true)
+(PAIRED_SAMPLE Measured 1 19 1 0 543644 true)
+(PAIRED_SAMPLE Measured 1 29 1 0 546549 true)
+(PAIRED_SAMPLE Measured 1 20 1 0 622138 true)
+(PAIRED_SAMPLE Measured 1 9 1 0 544586 true)
+(PAIRED_SAMPLE Measured 1 1 1 0 548831 true)
+(PAIRED_SAMPLE Measured 1 2 1 0 589569 true)
+(PAIRED_SAMPLE Measured 1 31 1 0 556837 true)
+(PAIRED_SAMPLE Measured 1 14 1 0 587177 true)
+(PAIRED_SAMPLE Measured 1 28 1 0 585887 true)
+(PAIRED_SAMPLE Measured 1 16 1 0 584979 true)
+(PAIRED_SAMPLE Measured 1 7 1 0 553913 true)
+(PAIRED_SAMPLE Measured 1 22 1 0 675865 true)
+(PAIRED_SAMPLE Measured 1 10 1 0 621658 true)
+(PAIRED_SAMPLE Measured 1 17 1 0 758561 true)
+(PAIRED_SAMPLE Measured 1 8 1 0 679965 true)
+(PAIRED_SAMPLE Measured 1 32 1 0 644248 true)
+(PAIRED_SAMPLE Measured 1 3 1 0 545517 true)
+(PAIRED_SAMPLE Measured 1 21 1 0 549581 true)
+(PAIRED_SAMPLE Measured 1 5 1 0 564712 true)
+(PAIRED_SAMPLE Measured 1 4 1 0 579422 true)
+(PAIRED_SAMPLE Measured 1 24 1 0 581156 true)
+(PAIRED_SAMPLE Measured 1 30 1 0 624840 true)
+(PAIRED_SAMPLE Measured 1 25 1 0 568405 true)
+(PAIRED_SAMPLE Measured 1 18 1 0 587426 true)
+(PAIRED_SAMPLE Measured 1 27 1 0 569978 true)
+(PAIRED_SAMPLE Measured 1 23 1 0 558925 true)
+(PAIRED_SAMPLE Measured 1 12 1 0 587083 true)
+(PAIRED_SAMPLE Measured 1 11 1 0 694229 true)
+(PAIRED_SAMPLE Measured 1 26 1 0 725027 true)
+(PAIRED_SAMPLE Measured 1 0 1 0 884604 true)
+(PAIRED_SAMPLE Measured 2 7 1 0 634866 true)
+(PAIRED_SAMPLE Measured 2 30 1 0 617778 true)
+(PAIRED_SAMPLE Measured 2 26 1 0 593990 true)
+(PAIRED_SAMPLE Measured 2 31 1 0 660401 true)
+(PAIRED_SAMPLE Measured 2 6 1 0 600980 true)
+(PAIRED_SAMPLE Measured 2 23 1 0 561937 true)
+(PAIRED_SAMPLE Measured 2 14 1 0 592409 true)
+(PAIRED_SAMPLE Measured 2 27 1 0 580484 true)
+(PAIRED_SAMPLE Measured 2 18 1 0 685152 true)
+(PAIRED_SAMPLE Measured 2 11 1 0 602840 true)
+(PAIRED_SAMPLE Measured 2 9 1 0 563725 true)
+(PAIRED_SAMPLE Measured 2 5 1 0 573386 true)
+(PAIRED_SAMPLE Measured 2 20 1 0 609902 true)
+(PAIRED_SAMPLE Measured 2 1 1 0 723878 true)
+(PAIRED_SAMPLE Measured 2 29 1 0 564815 true)
+(PAIRED_SAMPLE Measured 2 22 1 0 712146 true)
+(PAIRED_SAMPLE Measured 2 21 1 0 605248 true)
+(PAIRED_SAMPLE Measured 2 17 1 0 580805 true)
+(PAIRED_SAMPLE Measured 2 32 1 0 593849 true)
+(PAIRED_SAMPLE Measured 2 12 1 0 596413 true)
+(PAIRED_SAMPLE Measured 2 10 1 0 603297 true)
+(PAIRED_SAMPLE Measured 2 28 1 0 580189 true)
+(PAIRED_SAMPLE Measured 2 25 1 0 548688 true)
+(PAIRED_SAMPLE Measured 2 3 1 0 542128 true)
+(PAIRED_SAMPLE Measured 2 24 1 0 578385 true)
+(PAIRED_SAMPLE Measured 2 8 1 0 576831 true)
+(PAIRED_SAMPLE Measured 2 0 1 0 576211 true)
+(PAIRED_SAMPLE Measured 2 15 1 0 548480 true)
+(PAIRED_SAMPLE Measured 2 4 1 0 594058 true)
+(PAIRED_SAMPLE Measured 2 2 1 0 586753 true)
+(PAIRED_SAMPLE Measured 2 16 1 0 598994 true)
+(PAIRED_SAMPLE Measured 2 13 1 0 553252 true)
+(PAIRED_SAMPLE Measured 2 19 1 0 568845 true)
+(PAIRED_SAMPLE Measured 3 0 1 0 597915 true)
+(PAIRED_SAMPLE Measured 3 13 1 0 561701 true)
+(PAIRED_SAMPLE Measured 3 15 1 0 568316 true)
+(PAIRED_SAMPLE Measured 3 14 1 0 572293 true)
+(PAIRED_SAMPLE Measured 3 12 1 0 632632 true)
+(PAIRED_SAMPLE Measured 3 30 1 0 581841 true)
+(PAIRED_SAMPLE Measured 3 9 1 0 545963 true)
+(PAIRED_SAMPLE Measured 3 31 1 0 627042 true)
+(PAIRED_SAMPLE Measured 3 22 1 0 623186 true)
+(PAIRED_SAMPLE Measured 3 5 1 0 680914 true)
+(PAIRED_SAMPLE Measured 3 8 1 0 692086 true)
+(PAIRED_SAMPLE Measured 3 32 1 0 679348 true)
+(PAIRED_SAMPLE Measured 3 11 1 0 557338 true)
+(PAIRED_SAMPLE Measured 3 16 1 0 752659 true)
+(PAIRED_SAMPLE Measured 3 3 1 0 598443 true)
+(PAIRED_SAMPLE Measured 3 18 1 0 741265 true)
+(PAIRED_SAMPLE Measured 3 2 1 0 667445 true)
+(PAIRED_SAMPLE Measured 3 1 1 0 553691 true)
+(PAIRED_SAMPLE Measured 3 10 1 0 594654 true)
+(PAIRED_SAMPLE Measured 3 26 1 0 587223 true)
+(PAIRED_SAMPLE Measured 3 27 1 0 592243 true)
+(PAIRED_SAMPLE Measured 3 20 1 0 584351 true)
+(PAIRED_SAMPLE Measured 3 23 1 0 562504 true)
+(PAIRED_SAMPLE Measured 3 17 1 0 552471 true)
+(PAIRED_SAMPLE Measured 3 7 1 0 549453 true)
+(PAIRED_SAMPLE Measured 3 28 1 0 585822 true)
+(PAIRED_SAMPLE Measured 3 29 1 0 553989 true)
+(PAIRED_SAMPLE Measured 3 21 1 0 542665 true)
+(PAIRED_SAMPLE Measured 3 24 1 0 571344 true)
+(PAIRED_SAMPLE Measured 3 6 1 0 568548 true)
+(PAIRED_SAMPLE Measured 3 19 1 0 544588 true)
+(PAIRED_SAMPLE Measured 3 4 1 0 572702 true)
+(PAIRED_SAMPLE Measured 3 25 1 0 613443 true)
+(PAIRED_SAMPLE Measured 4 17 1 0 555801 true)
+(PAIRED_SAMPLE Measured 4 15 1 0 547661 true)
+(PAIRED_SAMPLE Measured 4 4 1 0 586402 true)
+(PAIRED_SAMPLE Measured 4 21 1 0 554058 true)
+(PAIRED_SAMPLE Measured 4 31 1 0 558126 true)
+(PAIRED_SAMPLE Measured 4 23 1 0 543004 true)
+(PAIRED_SAMPLE Measured 4 1 1 0 534026 true)
+(PAIRED_SAMPLE Measured 4 0 1 0 579125 true)
+(PAIRED_SAMPLE Measured 4 13 1 0 542335 true)
+(PAIRED_SAMPLE Measured 4 12 1 0 571300 true)
+(PAIRED_SAMPLE Measured 4 9 1 0 540701 true)
+(PAIRED_SAMPLE Measured 4 2 1 0 584624 true)
+(PAIRED_SAMPLE Measured 4 26 1 0 583397 true)
+(PAIRED_SAMPLE Measured 4 18 1 0 591629 true)
+(PAIRED_SAMPLE Measured 4 11 1 0 558994 true)
+(PAIRED_SAMPLE Measured 4 32 1 0 779414 true)
+(PAIRED_SAMPLE Measured 4 27 1 0 611412 true)
+(PAIRED_SAMPLE Measured 4 10 1 0 1110865 true)
+(PAIRED_SAMPLE Measured 4 24 1 0 1076453 true)
+(PAIRED_SAMPLE Measured 4 25 1 0 709774 true)
+(PAIRED_SAMPLE Measured 4 20 1 0 913314 true)
+(PAIRED_SAMPLE Measured 4 22 1 0 666322 true)
+(PAIRED_SAMPLE Measured 4 30 1 0 685013 true)
+(PAIRED_SAMPLE Measured 4 14 1 0 674660 true)
+(PAIRED_SAMPLE Measured 4 8 1 0 860095 true)
+(PAIRED_SAMPLE Measured 4 5 1 0 651352 true)
+(PAIRED_SAMPLE Measured 4 28 1 0 771749 true)
+(PAIRED_SAMPLE Measured 4 29 1 0 953257 true)
+(PAIRED_SAMPLE Measured 4 19 1 0 795265 true)
+(PAIRED_SAMPLE Measured 4 16 1 0 920236 true)
+(PAIRED_SAMPLE Measured 4 6 1 0 600943 true)
+(PAIRED_SAMPLE Measured 4 3 1 0 547478 true)
+(PAIRED_SAMPLE Measured 4 7 1 0 615593 true)
+(PAIRED_SAMPLE Empty 0 0 1 0 16548 true)
+(PAIRED_SAMPLE Empty 1 1 1 0 11431 true)
+(PAIRED_SAMPLE Empty 2 2 1 0 11462 true)
+(PAIRED_SAMPLE Empty 3 3 1 0 13264 true)
+(PAIRED_SAMPLE Empty 4 4 1 0 12266 true)
+(PAIRED_SAMPLE Empty 5 5 1 0 8269 true)
+(PAIRED_SAMPLE Empty 6 6 1 0 10814 true)
+(PAIRED_SAMPLE Empty 7 7 1 0 10108 true)
+(PAIRED_SAMPLE Empty 8 8 1 0 10678 true)
+(PAIRED_SAMPLE Empty 9 9 1 0 8107 true)
+(PAIRED_SAMPLE Empty 10 10 1 0 6714 true)
+(PAIRED_SAMPLE Empty 11 11 1 0 10547 true)
+(PAIRED_SAMPLE Empty 12 12 1 0 8419 true)
+(PAIRED_SAMPLE Empty 13 13 1 0 7336 true)
+(PAIRED_SAMPLE Empty 14 14 1 0 8013 true)
+(PAIRED_SAMPLE Empty 15 15 1 0 5599 true)
+(PAIRED_SAMPLE Empty 16 16 1 0 7537 true)
+(PAIRED_SAMPLE Empty 17 17 1 0 10908 true)
+(PAIRED_SAMPLE Empty 18 18 1 0 10738 true)
+(PAIRED_SAMPLE Empty 19 19 1 0 7724 true)
+(PAIRED_SAMPLE Empty 20 20 1 0 6770 true)
+(PAIRED_SAMPLE Empty 21 21 1 0 8725 true)
+(PAIRED_SAMPLE Empty 22 22 1 0 7283 true)
+(PAIRED_SAMPLE Empty 23 23 1 0 7835 true)
+(PAIRED_SAMPLE Empty 24 24 1 0 7798 true)
+(PAIRED_SAMPLE Empty 25 25 1 0 8451 true)
+(PAIRED_SAMPLE Empty 26 26 1 0 7483 true)
+(PAIRED_SAMPLE Empty 27 27 1 0 11741 true)
+(PAIRED_SAMPLE Empty 28 28 1 0 12150 true)
+(PAIRED_SAMPLE Empty 29 29 1 0 13457 true)
+1353505530
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true

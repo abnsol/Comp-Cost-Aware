@@ -1,0 +1,422 @@
+{
+  "name": "necessary-w016-seeded_shuffle-s029",
+  "case": "necessary-w016-seeded_shuffle",
+  "family": "necessary",
+  "split": "development",
+  "checkpoint": 29,
+  "state_sha256": "41068a952fc72af6ed014b41cb20e55d03b3223641cfd96bfd46b6eb32048c84",
+  "candidates": [
+    [
+      "Sentence",
+      [
+        [
+          "Ready",
+          "unit0",
+          "required"
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        1
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Ready",
+            "unit0",
+            "required"
+          ],
+          [
+            "Side",
+            "fact",
+            "s11"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        30
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Ready",
+            "unit0",
+            "required"
+          ],
+          [
+            "Side",
+            "fact",
+            "s0"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        8
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Ready",
+            "unit0",
+            "required"
+          ],
+          [
+            "Side",
+            "fact",
+            "s5"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        18
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Ready",
+            "unit0",
+            "required"
+          ],
+          [
+            "Side",
+            "fact",
+            "s2"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        12
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Implication",
+            [
+              "Ready",
+              "unit0",
+              "required"
+            ],
+            [
+              "Certificate",
+              "unit0",
+              "required"
+            ]
+          ],
+          [
+            "Side",
+            "rule",
+            "s5"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        19
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Ready",
+            "unit0",
+            "required"
+          ],
+          [
+            "Side",
+            "fact",
+            "s8"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        24
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Ready",
+            "unit0",
+            "required"
+          ],
+          [
+            "Side",
+            "fact",
+            "s6"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        20
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Implication",
+            [
+              "Ready",
+              "unit0",
+              "required"
+            ],
+            [
+              "Certificate",
+              "unit0",
+              "required"
+            ]
+          ],
+          [
+            "Side",
+            "rule",
+            "s9"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        27
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Ready",
+            "unit0",
+            "required"
+          ],
+          [
+            "Side",
+            "fact",
+            "s13"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        34
+      ]
+    ]
+  ],
+  "features": [
+    {
+      "belief_count": 65,
+      "task_count": 36,
+      "term_nodes": 4,
+      "evidence_count": 1,
+      "is_implication": 0,
+      "disjoint_beliefs": 54,
+      "same_term_disjoint": 0,
+      "mp_matches": 17,
+      "mp_matches_x_beliefs": 1105,
+      "mp_matches_x_tasks": 612
+    },
+    {
+      "belief_count": 65,
+      "task_count": 36,
+      "term_nodes": 10,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 64,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 65,
+      "mp_matches_x_tasks": 36
+    },
+    {
+      "belief_count": 65,
+      "task_count": 36,
+      "term_nodes": 10,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 64,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 65,
+      "mp_matches_x_tasks": 36
+    },
+    {
+      "belief_count": 65,
+      "task_count": 36,
+      "term_nodes": 10,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 64,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 65,
+      "mp_matches_x_tasks": 36
+    },
+    {
+      "belief_count": 65,
+      "task_count": 36,
+      "term_nodes": 10,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 64,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 65,
+      "mp_matches_x_tasks": 36
+    },
+    {
+      "belief_count": 65,
+      "task_count": 36,
+      "term_nodes": 16,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 63,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 65,
+      "mp_matches_x_tasks": 36
+    },
+    {
+      "belief_count": 65,
+      "task_count": 36,
+      "term_nodes": 10,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 64,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 65,
+      "mp_matches_x_tasks": 36
+    },
+    {
+      "belief_count": 65,
+      "task_count": 36,
+      "term_nodes": 10,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 64,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 65,
+      "mp_matches_x_tasks": 36
+    },
+    {
+      "belief_count": 65,
+      "task_count": 36,
+      "term_nodes": 16,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 63,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 65,
+      "mp_matches_x_tasks": 36
+    },
+    {
+      "belief_count": 65,
+      "task_count": 36,
+      "term_nodes": 10,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 64,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 65,
+      "mp_matches_x_tasks": 36
+    }
+  ],
+  "all_eligible_features_python_cpu_ns": [
+    3825908,
+    4538273,
+    4119253,
+    3571252,
+    3476949,
+    4123332,
+    4442979,
+    4080242,
+    3561440,
+    4147668,
+    4382138,
+    3745435,
+    3470898,
+    3896323,
+    4750357,
+    3938522,
+    3729308,
+    4514775,
+    4584274,
+    3777301
+  ]
+}

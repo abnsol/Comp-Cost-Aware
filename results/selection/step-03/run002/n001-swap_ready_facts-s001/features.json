@@ -1,0 +1,214 @@
+{
+  "name": "n001-swap_ready_facts-s001",
+  "case": "n001-swap_ready_facts",
+  "family": "alternative",
+  "split": "development",
+  "checkpoint": 1,
+  "state_sha256": "cd7ef859a347266d954bc608358b8da4bcc3b29f959a291c56aea0960a987932",
+  "candidates": [
+    [
+      "Sentence",
+      [
+        [
+          "Ready",
+          "unit0",
+          "route_a"
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        1
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Ready",
+            "unit0",
+            "route_a"
+          ],
+          [
+            "Certificate",
+            "unit0",
+            "path_a"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        3
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Certificate",
+            "unit0",
+            "path_a"
+          ],
+          [
+            "CanOperate",
+            "unit0"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        4
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Ready",
+            "unit0",
+            "route_b"
+          ],
+          [
+            "Certificate",
+            "unit0",
+            "path_b_001"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        5
+      ]
+    ],
+    [
+      "Sentence",
+      [
+        [
+          "Implication",
+          [
+            "Certificate",
+            "unit0",
+            "path_b_001"
+          ],
+          [
+            "CanOperate",
+            "unit0"
+          ]
+        ],
+        [
+          "stv",
+          1.0,
+          0.9
+        ]
+      ],
+      [
+        6
+      ]
+    ]
+  ],
+  "features": [
+    {
+      "belief_count": 7,
+      "task_count": 6,
+      "term_nodes": 4,
+      "evidence_count": 1,
+      "is_implication": 0,
+      "disjoint_beliefs": 6,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 7,
+      "mp_matches_x_tasks": 6
+    },
+    {
+      "belief_count": 7,
+      "task_count": 6,
+      "term_nodes": 10,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 6,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 7,
+      "mp_matches_x_tasks": 6
+    },
+    {
+      "belief_count": 7,
+      "task_count": 6,
+      "term_nodes": 9,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 6,
+      "same_term_disjoint": 0,
+      "mp_matches": 0,
+      "mp_matches_x_beliefs": 0,
+      "mp_matches_x_tasks": 0
+    },
+    {
+      "belief_count": 7,
+      "task_count": 6,
+      "term_nodes": 10,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 5,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 7,
+      "mp_matches_x_tasks": 6
+    },
+    {
+      "belief_count": 7,
+      "task_count": 6,
+      "term_nodes": 9,
+      "evidence_count": 1,
+      "is_implication": 1,
+      "disjoint_beliefs": 6,
+      "same_term_disjoint": 0,
+      "mp_matches": 1,
+      "mp_matches_x_beliefs": 7,
+      "mp_matches_x_tasks": 6
+    }
+  ],
+  "all_eligible_features_python_cpu_ns": [
+    358525,
+    357222,
+    540876,
+    341954,
+    348432,
+    296152,
+    318901,
+    300541,
+    286772,
+    422569,
+    282972,
+    280814,
+    297620,
+    273347,
+    279198,
+    273996,
+    388814,
+    275206,
+    239887,
+    238580
+  ]
+}
