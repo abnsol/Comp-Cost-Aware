@@ -8,8 +8,13 @@ Improvement, no benefit and harm are all legitimate experimental outcomes.
 The current qualification phase addresses time/success to a valid PLN derivation.
 It does not establish improved probability accuracy against external outcomes.
 
-Status: step-six paired cost comparison completed; stopped for review.
-Start at docs/qualification/06-paired-results.txt. Across 156 fresh processes and
+Status: step-seven first-answer CPU pilot completed; stopped for review.
+Start at docs/qualification/07-first-answer-results.txt. All nine KBs reached a
+verified goal after 4-6 expansions, with pilot median reasoning CPU about0.38-3.02
+milliseconds. Nine prefix audits and 54 fresh-process timings passed. Timing uses
+an offline-known stopping checkpoint; an online answer detector and CPU-budget
+policy are not implemented. The native selector/rules/queues remain unchanged.
+Previous step: docs/qualification/06-paired-results.txt. Across 156 fresh processes and
 1560 measured pairs, B was reproducibly costlier in 8/13 saved states. One control
 fell within the relative equivalence band; four states remain unresolved because
 of block-level overhead failures. The clearest result is width16: all five states
@@ -40,6 +45,7 @@ Folder structure and review order
   src/pln_cost/expansion.py  Native expansion extraction, CPU clocks and separate counters
   src/pln_cost/paired.py  Repeated-state harness, calibration summaries and block analysis
   src/pln_cost/thin.py / thin_clock.pl  Thin compiled-call measurement adapter
+  src/pln_cost/first_answer.py / first_clock.pl  First-goal proofs and native-loop CPU
   scripts/                Human-readable entry points; start at validate_step1.py
   tests/                  Offline input/oracle and false-success checks
   results/step-01/run001/ Original output, parity fixture and result manifest
@@ -59,6 +65,7 @@ Run from this project directory (Python standard library only)
   python3 scripts/repair_calibration.py validate --run-id review001
   python3 scripts/repair_calibration.py calibrate --run-id review001 --validation val001
   python3 scripts/run_paired.py measure --harness thin --run-id review001 --calibration cal002
+  python3 scripts/measure_first_answer.py --run-id review001
   python3 scripts/validate_step1.py --run-id review001
   python3 scripts/validate_step2.py --run-id review001
 The qualification generator runs no inference: it checks source revisions and
@@ -84,6 +91,14 @@ main run is results/qualification/step-06/measure/run001. Default --harness lega
 remains separate and cannot consume a thin calibration. Both calibration passing
 and main execution passing are distinct from all state-level analysis gates
 passing. Four main states remain unresolved; no samples were discarded or retried.
+First-answer measurement uses previously captured proof/state traces to identify
+the earliest qualifying committed goal, validates the entire native prefix in a
+separate audit, then times a direct call to the same native derivation loop.
+Only SELECTED console printing is silenced in the timing copy; inference and
+selection remain native. Startup/input preparation, parent orchestration and
+offline verification are excluded. This is reasoning CPU to answer availability,
+not online answer-return latency. Full-derivation timing excludes final Query
+answer ranking. Future online observation and budget-check overhead must count.
 Use a fresh run ID: existing results are never overwritten. Runtime paths in
 configs/runtime.json are relative to this project. The external runtime/source
 directories must already exist at the recorded revisions; the runner installs
@@ -105,12 +120,13 @@ Working agreement
 - Keep development/tuning separate from held-out evaluation.
 
 Review checkpoint
-Review docs/qualification/06-paired-results.txt and the main runner changes.
+Review docs/qualification/07-first-answer-results.txt and the native-loop timer.
 Keep cal001's failure, the repair and all main-run unresolved outcomes as evidence.
-The proposed next step is native first-answer CPU measurement, after discussion.
+The proposed next step is CPU-budget observation design and repeated budget tests,
+after discussion. Do not silently grant the online policy an offline-known stop.
 This new series is separate from the old diagnostic interface/proof-audit steps.
 Local expansion cost gaps are established for eight fixed development states;
-time to first available answer remains unmeasured. Do not implement an estimator
+first-answer availability CPU now has a three-repetition pilot. Do not implement an estimator
 or begin a cost-aware policy comparison before reviewing the baseline criteria
 and studying the papers. Local expansion costs do not establish full proof costs.
 

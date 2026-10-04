@@ -1,0 +1,50 @@
+STEP 7: FIRST-ANSWER BASELINE CPU MEASUREMENT
+Recorded before implementation/execution, 2026-10-04.
+
+Scope: first remaining preliminary step only. No cost selector, estimator or
+varied CPU budgets. Stop afterward for review.
+
+Use all nine original KBs, source pins, native confidence selector, full rule
+library and original queue caps. Read the validated step-four state/proof traces.
+For each case, identify the earliest completed expansion whose committed beliefs
+contain a goal meeting the declared strength/confidence threshold. Extract its
+proof using ONLY events at or before that checkpoint; replay pinned formulas and
+evidence guards independently. Unsupported proof means failure, not skipping to
+a convenient later checkpoint. Preserve a certificate and selected-record prefix.
+
+Replay that prefix with original PLN.Derive capped at the identified expansion
+count. In a separate audit process, require every queue checkpoint and proof/
+selection event to agree with the saved native prefix, except the cap field.
+The cap is known offline and affects only termination, never priority or rules.
+
+For CPU measurement generate a copy of the native library changing ONLY its
+SELECTED console print to an empty expression. No inference or selection rewrite.
+The timer brackets a direct compiled call to the whole native PLN.Derive loop,
+including selection, rule search, result collection, queue operations, loop
+dispatch and termination. There is no per-expansion observer. Initial ground
+inputs, source loading and Python orchestration are outside that interval.
+Check complete output queues against validated checkpoints after timing; also
+check the complete solution set separately after timing to justify once/1.
+
+Three fresh-process repetitions for each case and each of two endpoints:
+first-valid-answer prefix and original full derivation cap (100). Randomize all
+54 timing jobs with seed 1950 before the first timing run. No inference warmup;
+initialize clock bridge and take 30 matched empty-call probes before the call.
+Require empty p95 <=10% of measured CPU for descriptive timing readiness.
+Keep failures and all timings; no retries or exclusions to obtain desired data.
+These three repetitions are a pilot, not a statistically powered performance
+comparison. Do not use their ranges as confidence intervals or speedup claims.
+
+Report engine CPU separately from parent Python's invocation CPU and wall time.
+Parent invocation includes process management and output transport and is NOT an
+online time-to-answer. Engine initialization, proof replay and fixture creation
+are excluded from the reasoning interval and must not be presented as free.
+Full endpoint means PLN.Derive termination, not PLN.Query's subsequent answer
+ranking. Prefix timing means time to answer AVAILABILITY with offline checkpoint
+knowledge, not an implemented online answer detector or early-stopping policy.
+CPU intervals retain clock/wrapper overhead; subtract nothing.
+
+Report when Ready A/B were naturally selected relative to first success, and
+whether the goal came from expanding a fact, certificate or rule record. Local
+cost differences do not imply that avoiding B is possible or beneficial under
+the native confidence order. Review this distinction before the budget step.

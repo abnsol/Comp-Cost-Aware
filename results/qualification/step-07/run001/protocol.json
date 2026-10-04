@@ -1,0 +1,12 @@
+{
+  "seed": 1950,
+  "repetitions": 3,
+  "endpoints": [
+    "first",
+    "full"
+  ],
+  "empty_probes": 30,
+  "maximum_empty_p95_fraction": 0.1,
+  "inference_warmup": false,
+  "audit_before_timings": true
+}

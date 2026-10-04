@@ -1,0 +1,124 @@
+STEP 7: FIRST VERIFIED ANSWER AVAILABILITY AND BASELINE CPU
+Completed 2026-10-04. Stop for review before varying CPU budgets.
+
+Outcome
+All nine original KBs produced an independently verified qualifying goal after
+4-6 native expansions. All nine fresh audit runs matched every saved prefix
+checkpoint, ordered selection and proof event. All 54 timing runs matched the
+expected complete ordered queues and passed a separate post-timing singleton
+solution-set check. Native source/runtime provenance remained unchanged.
+All 54 empty-call overhead proxy checks passed the preset 10% threshold;
+maximum first-prefix proxy was below 1.7%. No CPU was subtracted.
+
+First answers all have strength 1.0 and confidence approximately 0.729.
+The actual captured proofs use two modus-ponens operations and their three
+input evidence IDs. Certificates include only proof events at/before the first
+qualifying committed state. No later proof licenses an earlier checkpoint.
+
+Results
+Three fresh-process repetitions per endpoint per case, with seed1950 randomized
+job order. These are pilot medians and observed ranges, NOT confidence intervals.
+Full is native PLN.Derive termination at original cap100 or empty Tasks; it
+excludes the later PLN.Query answer-ranking operation.
+Case | first/full expansions | first CPU median ms [observed range] | full derive CPU median ms
+n001-canonical_ids | 4/12 | 0.403 [0.297, 0.691] | 0.904
+n001-swap_ready_facts | 4/12 | 0.379 [0.289, 0.782] | 0.925
+n001-seeded_shuffle | 5/12 | 0.466 [0.419, 0.467] | 0.791
+n004-canonical_ids | 4/30 | 1.017 [0.701, 1.478] | 4.119
+n004-swap_ready_facts | 4/30 | 0.817 [0.758, 1.256] | 5.734
+n004-seeded_shuffle | 6/30 | 0.875 [0.872, 1.581] | 4.118
+n016-canonical_ids | 4/100 | 2.385 [2.093, 2.570] | 55.893
+n016-swap_ready_facts | 4/100 | 3.020 [2.495, 4.568] | 50.331
+n016-seeded_shuffle | 5/100 | 2.756 [2.703, 4.043] | 50.634
+
+What the clock includes
+One direct compiled call to the complete native derivation loop: native
+confidence selection, rule matching/formulas, result collection, evidence guards,
+deduplication, queue updates, recursion/dispatch and termination. Two Janus calls
+read embedded Python process_time_ns, including engine user and system CPU.
+Initial ground argument preparation precedes the clock. Source loading, engine
+startup, output checks/printing, Python orchestration and offline proof replay
+are outside this reasoning interval. No artificial costs/delays were added.
+The generated native-library copy changes ONLY the SELECTED console print to
+an empty expression. The saved quiet.diff makes that change reviewable; rules,
+selector and queue operations are unchanged. Measurements describe this quiet
+native baseline, not the original diagnostic printing cost.
+No per-expansion observer, clock or proof recorder runs in the timed loop.
+No inference warmup: each timed call is the first inference in its fresh process.
+Thirty empty-call probes initialize/measure the clock bridge before inference.
+The full solution-set check runs after the clock, so it cannot warm the measured
+call. Parent invocation CPU and total invocation wall time are stored separately
+in every run manifest. They include untimed setup/validation and cannot simply
+be added to prefix CPU to claim online answer latency.
+
+Offline checkpoint selection is not an online stopping algorithm
+The saved trace identifies the exact first qualifying committed belief state.
+We cap a native replay at that expansion count and verify exact prefix parity.
+This is a measurement device using offline knowledge; no policy receives that
+knowledge. Implementing a detector/CPU stopping check requires charging its cost.
+An actual application return also requires answer extraction and any requested
+online proof verification. That end-to-end behavior has not been benchmarked.
+
+Native control and where the measured alternatives occur
+Case | Ready A selected at expansion | Ready B selected at expansion | first answer evidence
+n001-canonical_ids | [1] | [2] | [1, 3, 4]
+n001-swap_ready_facts | [2] | [1] | [1, 3, 4]
+n001-seeded_shuffle | [1] | [3] | [1, 3, 4]
+n004-canonical_ids | [1] | [2] | [1, 3, 4]
+n004-swap_ready_facts | [2] | [1] | [1, 3, 4]
+n004-seeded_shuffle | [3] | [7] | [2, 11, 12]
+n016-canonical_ids | [1] | [2] | [1, 3, 4]
+n016-swap_ready_facts | [2] | [1] | [1, 3, 4]
+n016-seeded_shuffle | [23] | [3] | [2, 15, 16]
+
+Every first goal here is generated while expanding a Certificate -> CanOperate
+implication rule record. Rule records are legitimate native pending candidates;
+they were never excluded to make the A/B choices look more influential.
+Canonical and swapped cases expand BOTH Ready facts before the first goal.
+Swapping their order leaves the first goal at expansion4; this does not prove
+equal CPU or that a different cost-aware order could never help.
+In N4 shuffled, the B proof succeeds at expansion6 before ReadyB is selected
+at7: an implication expanded earlier already generated the B certificate.
+In N16 shuffled, a B proof succeeds at5 before ReadyA is selected at23.
+Thus the task is not accurately modeled as choosing exclusively between two
+Ready expansions and then automatically completing that chosen route.
+
+Interpretation and remaining limits
+The local expansion-cost difference now connects to actual native work before
+a valid answer on some cases. It still does not show that cost prediction
+improves answer CPU or that simply swapping Ready A/B is a useful intervention.
+The native search continues after this first acceptable goal. Earlier feasibility
+runs returned confidence approximately0.843262 after later disjoint-proof
+revision, so continued search is not automatically wasted. First-valid-proof
+completion and confidence improvement are different objectives. No improved
+probability accuracy against an external probabilistic reference is established.
+The workload is small: first-prefix medians are roughly0.38-3.02 ms, and some
+observed repeat ranges are broad. CPU-budget experiments need repeated runs;
+no budget grid or significance claim is selected from these three repetitions.
+An estimator/detector could consume the entire possible saving at this scale.
+
+Next step for discussion
+Design and validate an online CPU-budget boundary and first-answer observation
+policy, accounting for its overhead while preserving native candidate selection.
+Then test native success across a fixed range of budgets, retaining failures
+and repeated-run variability. No estimator or cost-aware selector yet. After
+budget testing, audit all baseline criteria and review the papers before design
+or implementation of the proposed adaptation.
+
+Files
+docs/qualification/07-first-answer-protocol.txt: protocol recorded beforehand.
+src/pln_cost/first_answer.py: earliest-prefix certificate and queue validation.
+src/pln_cost/first_clock.pl: whole-native-loop timer and post-timing checks.
+scripts/measure_first_answer.py: nine audits and randomized54-run pilot.
+results/qualification/step-07/run001/: protocol, full schedule, quiet-source diff,
+raw outputs, certificates/replays, CPU/probe samples and provenance hashes.
+Execution-time code hashes precede saved-artifact regression tests/docs updates.
+
+Validation
+python3 scripts/measure_first_answer.py --run-id run001
+67 tests passed before execution; 69 passed after adding saved-artifact checks
+that reparse all raw CPU/queue results and replay every first-proof certificate.
+No staging or commit performed.
+
+Suggested commit message
+Validate first PLN answer checkpoints and measure native baseline CPU

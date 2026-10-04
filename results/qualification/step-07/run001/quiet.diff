@@ -1,0 +1,11 @@
+--- pinned-PLN/lib_pln.metta
++++ generated/lib_pln.quiet.metta
+@@ -388,7 +388,7 @@
+                                                                     ((($Tyx $TVyx) (Sentence ($Tyx $TVyx) $stamp)))))))
+                                                  (empty)))
+                                        (case (|- $x) ((($T3 $TV3) (Sentence ($T3 $TV3) $Ev1)))))))
+-                 (progn (println! (SELECTED (Sentence $x $Ev1)))
++                 (progn ()
+                         (PLN.Derive (LimitSize (exclude-item (Sentence $x $Ev1) (ConcatUnique $Tasks $derivations)) $taskqueuesize)
+                                     (LimitSize (ConcatUnique $Beliefs $derivations) $beliefqueuesize)
+                                     (+ $steps 1)
