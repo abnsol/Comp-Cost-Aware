@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "status": "preliminary_qualification_review_complete_paper_review_pending",
+  "specification": "docs/qualification/01-kb-specification.txt",
+  "family": "equal_depth_alternative_authorization_proofs",
+  "development_widths": [
+    1,
+    4,
+    16
+  ],
+  "query": [
+    "CanOperate",
+    "unit0"
+  ],
+  "initial_strength": 1.0,
+  "initial_confidence": 0.9,
+  "initial_records_formula": "2*N+4",
+  "input_orderings": [
+    "canonical_ids",
+    "swap_ready_facts",
+    "seeded_shuffle"
+  ],
+  "shuffle_seed": 17,
+  "selector": "native_confidence",
+  "rule_profile": "full_pinned_library_loaded",
+  "success": {
+    "type": "one_independently_verified_derivation",
+    "strength": 1.0,
+    "minimum_confidence": 0.729,
+    "absolute_numeric_tolerance": 1e-12,
+    "availability_boundary": "belief_state_after_completed_expansion_and_queue_update",
+    "offline_verification_time_is_online_latency": false
+  },
+  "initial_correctness_limits": {
+    "maxsteps_argument": 100,
+    "task_queue_limit_argument": 4097,
+    "belief_queue_limit_argument": 4097,
+    "native_retained_queue_upper_bound": 4096,
+    "stack_limit": "1g",
+    "wall_safety_timeout_seconds": 60,
+    "query_cpu_budget_seconds": null
+  },
+  "measurement_status": {
+    "cost_gap_measured": true,
+    "first_answer_availability_measured": true,
+    "cpu_budgets_calibrated": true,
+    "cost_estimator_implemented": false
+  }
+}

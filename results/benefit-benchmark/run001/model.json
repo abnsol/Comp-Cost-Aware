@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "type": "weighted_standardized_ridge_log_cpu",
+  "feature_names": [
+    "belief_count",
+    "task_count",
+    "term_nodes",
+    "evidence_count",
+    "is_implication",
+    "disjoint_beliefs",
+    "same_term_disjoint",
+    "mp_matches",
+    "mp_matches_x_beliefs",
+    "mp_matches_x_tasks"
+  ],
+  "alpha": 0.01,
+  "means": [
+    27.9999999999999,
+    24.82333333333327,
+    9.557632496725125,
+    1.0199999999999982,
+    0.8410396940186852,
+    26.3498630516893,
+    0.0,
+    1.2105620733010618,
+    33.44945995919165,
+    30.33743241999326
+  ],
+  "scales": [
+    19.93924104205909,
+    18.22357782897993,
+    3.23144379216803,
+    0.14,
+    0.3656390667087428,
+    19.14617676721442,
+    1.0,
+    1.8805406084493876,
+    81.2188474101865,
+    69.60555619087438
+  ],
+  "weights": [
+    0.13309416592337794,
+    0.2766375756475232,
+    0.08813035199366673,
+    0.02779321100474676,
+    -0.02965747521205531,
+    0.19390486424766584,
+    0.0,
+    0.3490382775072169,
+    -0.13148168440528832,
+    -0.04371571536136566
+  ],
+  "intercept": 12.02175736736159,
+  "target_units": "native expansion CPU nanoseconds, excluding selection",
+  "training_rows": 941,
+  "excluded_unresolved_rows": 109,
+  "development_structures": [
+    "n001",
+    "n004",
+    "n016",
+    "necessary-w004",
+    "necessary-w016"
+  ],
+  "data_sha256": "1c298d1812762e64654c21497612757aaeb2729f9df0effa70124cd0a8e77f17",
+  "split_manifest_sha256": "672a4fc01cb27724061943876bdd654f456d4f234647ba26ca98e6f34be65772"
+}

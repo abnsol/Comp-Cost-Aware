@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "status": "specified_for_review_not_executed",
+  "validation_batch": "results/benefit-selection/run001",
+  "validation_report_sha256": "0091d1976990689ce369003fe7aec6a4033c22b6da3a84dcf48e0cd752db1dbd",
+  "model_path": "results/selection/step-04/run001/model.json",
+  "model_sha256": "dbf8233e873410bb169e0d2b8c12c0bad2b97841daf9e1ab1623c9ec1a37856e",
+  "prior_manifest_path": "results/selection/step-03/run002/split-manifest.json",
+  "prior_manifest_sha256": "672a4fc01cb27724061943876bdd654f456d4f234647ba26ca98e6f34be65772",
+  "qualification_config_path": "configs/qualification-kb.json",
+  "qualification_config_sha256": "66eeae8362c9ccd7ab177472cae7267c68eeb9329fbcf5ec13e0202f5ddf89e7",
+  "scope": "qualified-closed-ground-mp-v1",
+  "policies": [
+    "N",
+    "B",
+    "BO",
+    "BC"
+  ],
+  "primary_comparison": [
+    "BC",
+    "B"
+  ],
+  "secondary_comparisons": [
+    [
+      "B",
+      "N"
+    ],
+    [
+      "BO",
+      "B"
+    ],
+    [
+      "BC",
+      "BO"
+    ],
+    [
+      "BC",
+      "N"
+    ]
+  ],
+  "development": {
+    "source": "prior_manifest.development",
+    "expected_cases": 15
+  },
+  "reserved_evaluation": {
+    "shuffle_seed": 53,
+    "profiles": [
+      {
+        "family": "alternative",
+        "width": 8,
+        "orderings": [
+          "canonical_ids",
+          "swap_ready_facts",
+          "seeded_shuffle"
+        ]
+      },
+      {
+        "family": "alternative",
+        "width": 32,
+        "orderings": [
+          "canonical_ids",
+          "swap_ready_facts",
+          "seeded_shuffle"
+        ]
+      },
+      {
+        "family": "necessary",
+        "width": 8,
+        "distractors": 4,
+        "orderings": [
+          "canonical_ids",
+          "swap_required_pair",
+          "seeded_shuffle"
+        ]
+      },
+      {
+        "family": "necessary",
+        "width": 32,
+        "distractors": 4,
+        "orderings": [
+          "canonical_ids",
+          "swap_required_pair",
+          "seeded_shuffle"
+        ]
+      }
+    ],
+    "expected_cases": 12,
+    "scope_of_transfer": "new sizes and queue orders within two known synthetic families; not new task families",
+    "prior_evaluation_cases_included": false
+  },
+  "budgets_ns": [
+    500000,
+    1000000,
+    2000000,
+    4000000,
+    8000000,
+    16000000,
+    32000000
+  ],
+  "generous_budget_ns": 1000000000,
+  "audit_budget_ns": 10000000000,
+  "repetitions": 12,
+  "seed": 2311,
+  "balanced_arm_orders": [
+    [
+      "N",
+      "B",
+      "BC",
+      "BO"
+    ],
+    [
+      "B",
+      "BO",
+      "N",
+      "BC"
+    ],
+    [
+      "BO",
+      "BC",
+      "B",
+      "N"
+    ],
+    [
+      "BC",
+      "N",
+      "BO",
+      "B"
+    ]
+  ],
+  "schedule": "For case index i and budget index j, shuffle three copies of balanced_arm_orders with seed + 1000*i + j. For repetition r, shuffle all case/budget blocks with seed + r; execute each block's four arms consecutively using its r-th order. Case order is prior development manifest followed by reserved profiles and orderings as listed.",
+  "planned_measurements": 10368,
+  "execution": "serial fresh processes; one query per process; no inference warmup; no concurrent tests or other experiment workers",
+  "primary_endpoint": "on-time independently verified answers at every prespecified tight budget, reported separately by split and case",
+  "secondary_endpoint": "paired first-answer CPU at the separate generous endpoint, with all failures retained",
+  "query_clock": "engine process CPU through complete return, including embedded Python classification and all online selection overhead",
+  "deadline_policy": "cooperative checks between expansions; retain actual CPU and overshoot; late answers are misses",
+  "failure_policy": "retain invalid executions separately from valid deadline, late-return and exhausted outcomes; stop at three invalid executions; never replace measurements or claim completion for a partial batch",
+  "freeze_policy": "Verify prior validation source/model hashes; record runner, fixtures, schedule, protocol and adapters before any reserved native audit; never tune using reserved results. Any implementation change after reserved outcomes requires a separately identified follow-up and renewed holdout claims.",
+  "review_boundary": "Protocol only. Runner implementation, fixture qualification and benchmark execution have not occurred for this batch."
+}
