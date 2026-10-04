@@ -1,0 +1,27 @@
+STEP 6 MAIN EXECUTION CONTRACT
+Recorded before the first main paired run, 2026-10-04.
+
+User reviewed the thin-adapter repair and authorized continuing this step.
+Run: python3 scripts/run_paired.py measure --harness thin --run-id run001 --calibration cal002
+
+Use repair/calibrate/cal002 exclusively. Match its helper, Prolog adapter,
+condition and revised-protocol hashes, runtime provenance, and the exact Python
+fixture generator and runtime invocation source. The frozen generator is reused
+unchanged; the main runner checks its generated pair order against the prewritten
+whole-run schedule. Each fresh process also repeats the native singleton-result
+check and verifies every timed output against the validated tuple.
+
+12 blocks x 13 states x 10 balanced pairs = 156 fresh processes, 1560 measured
+pairs (3120 expansions). Each process also has 20 warm-up pairs, 30 clock probes
+and 10 empty samples. Processes run sequentially, not concurrently.
+No calibration or validation samples enter the main statistics.
+
+All original paired analysis thresholds remain fixed, including the 10% overhead
+gate in every block and calibrated 11915 ns absolute practical-gap floor.
+Do not retry or discard an inconvenient block, or relax a criterion. A completed
+run can have unresolved state verdicts: report.passed denotes execution/output
+and provenance checks, not that every state demonstrates a cost gap.
+
+Preserve all controls, raw outputs, schedules, process metadata and analysis.
+Stop afterward for review. No estimator, full-query budget experiment, probability
+accuracy claim or shorter-path claim belongs to this step.

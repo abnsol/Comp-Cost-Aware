@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+    "--stack_limit=1g",
+    "-q",
+    "-s",
+    "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+    "-g",
+    "consult('/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-06/measure/run001/thin_clock.pl')",
+    "-g",
+    "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PLN/lib_pln.metta',_)",
+    "--",
+    "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-06/measure/run001/block-10/n004-seeded_shuffle-s000/trial.metta",
+    "--silent"
+  ],
+  "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+  "returncode": 0,
+  "timed_out": false,
+  "name": "n004-seeded_shuffle-s000",
+  "label": "block-10/n004-seeded_shuffle-s000",
+  "batch_size": 1,
+  "stdout_sha256": "5bbcac1a12752e438677d45b20dc85067ea98ba58b2c771ca6fb052b25288270",
+  "fixture_sha256": "9a94a207e5c55e58e65b6a274a6bdf4daabedd41951af037911fb6c60f25ef33"
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "thin_adapter_recalibration_passed_main_cost_comparison_pending",
+  "status": "paired_cost_measurement_complete_eight_states_qualified_four_unresolved",
   "specification": "docs/qualification/01-kb-specification.txt",
   "family": "equal_depth_alternative_authorization_proofs",
   "development_widths": [1, 4, 16],
@@ -30,7 +30,7 @@
     "query_cpu_budget_seconds": null
   },
   "measurement_status": {
-    "cost_gap_measured": false,
+    "cost_gap_measured": true,
     "cpu_budgets_calibrated": false,
     "cost_estimator_implemented": false
   }

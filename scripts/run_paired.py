@@ -13,6 +13,7 @@ from pln_cost.expansion import build_expansion, parse_trial
 from pln_cost.paired import analyze, balanced_orders, fixture, parse, summarize_process
 from pln_cost.proof import key
 from pln_cost.runtime import Runtime
+from pln_cost.thin import thin_fixture
 from pln_cost.validation import clean_completion
 
 
@@ -22,6 +23,20 @@ def sha(data):
 
 def save(path, value):
     path.write_text(json.dumps(value, indent=2) + "\n")
+
+
+def check_calibration(calibration, report, thin):
+    fields = ["protocol_sha256", "conditions_sha256", "helper_sha256"]
+    if thin:
+        fields += ["adapter_sha256", "provenance_after"]
+        if calibration.get("accepted_batch_size") != 1 or not calibration.get("overhead_gate_passed"):
+            raise ValueError("Thin calibration must pass singleton overhead gate")
+        # The fixture generator and invocation layer must match recalibration.
+        for path in ("src/pln_cost/thin.py", "src/pln_cost/runtime.py"):
+            if calibration["project_source_sha256"][path] != report["project_source_sha256"][path]:
+                raise ValueError(f"Calibrated execution code changed: {path}")
+    if not calibration["passed"] or any(calibration[field] != report[field] for field in fields):
+        raise ValueError("Calibration did not pass or its contract differs")
 
 
 def load_conditions(protocol):
@@ -75,18 +90,28 @@ def main():
     parser.add_argument("stage", choices=("calibrate", "measure"))
     parser.add_argument("--run-id", required=True)
     parser.add_argument("--calibration")
+    parser.add_argument("--harness", choices=("legacy", "thin"), default="legacy")
     args = parser.parse_args()
     for ident in (args.run_id, args.calibration):
         if ident is not None and not ident.replace("-", "").replace("_", "").isalnum():
             parser.error("Simple alphanumeric IDs with optional '-'/'_' required")
     if args.stage == "measure" and not args.calibration:
         parser.error("Measurement requires a completed calibration ID")
+    if args.harness == "thin" and args.stage != "measure":
+        parser.error("Use repair_calibration.py for thin-adapter calibration")
     root = PROJECT / "results/qualification/step-06"
     output = root / args.stage / args.run_id
     output.mkdir(parents=True, exist_ok=False)
     report = {"stage": args.stage, "passed": False, "runs": [], "scope": "local expansion CPU on fixed development states"}
     try:
         protocol = json.loads((PROJECT / "configs/paired-protocol.json").read_text())
+        thin = args.harness == "thin"
+        if thin:
+            protocol = {**protocol, "harness_revision": "thin_compiled_singleton_v1", "batch_sizes_to_try": [1]}
+            bootstrap = output / "thin_clock.pl"
+            bootstrap.write_bytes((PROJECT / "src/pln_cost/thin_clock.pl").read_bytes())
+            report["adapter_sha256"] = sha(bootstrap.read_bytes())
+        report["harness"] = args.harness
         save(output / "protocol.json", protocol)
         conditions, validation = load_conditions(protocol)
         save(output / "conditions.json", conditions)
@@ -113,12 +138,18 @@ def main():
             folder = output / label
             folder.mkdir(parents=True)
             local_protocol = dict(protocol, empty_count=empty_count)
-            text, expected_schedule = fixture(helper, condition["state"], condition["candidates"], condition["expected"],
-                                               k, orders, local_protocol, seed)
+            if thin:
+                text, expected_schedule = thin_fixture(helper, condition, protocol, seed, len(orders), empty_count)
+                actual_orders = [r[2] for r in expected_schedule if r[0] == "Measured"]
+                if k != 1 or actual_orders != [r for pair in orders for r in pair]:
+                    raise ValueError("Thin fixture differs from frozen main schedule")
+            else:
+                text, expected_schedule = fixture(helper, condition["state"], condition["candidates"], condition["expected"],
+                                                   k, orders, local_protocol, seed)
             path = folder / "trial.metta"
             path.write_text(text)
             save(folder / "schedule.json", expected_schedule)
-            run = runtime.run(path, preload_pln=True)
+            run = runtime.run(path, preload_pln=True, bootstrap_path=bootstrap if thin else None)
             for stream in ("stdout", "stderr"):
                 (folder / f"{stream}.txt").write_text(run[stream])
             metadata = {k: v for k, v in run.items() if k not in ("stdout", "stderr")}
@@ -156,12 +187,10 @@ def main():
             if "accepted_batch_size" not in report:
                 raise RuntimeError("No predeclared batch size passed the instrumentation calibration gate")
         else:
-            calibration_path = root / "calibrate" / args.calibration / "report.json"
+            calibration_root = root / "repair" if thin else root
+            calibration_path = calibration_root / "calibrate" / args.calibration / "report.json"
             calibration = json.loads(calibration_path.read_text())
-            if (not calibration["passed"] or calibration["protocol_sha256"] != report["protocol_sha256"]
-                    or calibration["conditions_sha256"] != report["conditions_sha256"]
-                    or calibration["helper_sha256"] != report["helper_sha256"]):
-                raise ValueError("Calibration did not pass or its contract differs")
+            check_calibration(calibration, dict(report, provenance_after=report["provenance_before"]), thin)
             report["calibration_sha256"] = sha(calibration_path.read_bytes())
             k = calibration["accepted_batch_size"]
             report["batch_size"] = k

@@ -8,11 +8,12 @@ Improvement, no benefit and harm are all legitimate experimental outcomes.
 The current qualification phase addresses time/success to a valid PLN derivation.
 It does not establish improved probability accuracy against external outcomes.
 
-Status: step-six harness repaired and recalibrated; stopped for review.
-Start at docs/qualification/06-thin-repair-results.txt. A thinner adapter calls
-the same compiled PLN expansion without accumulating output lists. Validation
-passed on all 13 states; recalibration passed the unchanged 10% overhead gate.
-The main paired comparison has NOT run; a reproducible cost gap is not established.
+Status: step-six paired cost comparison completed; stopped for review.
+Start at docs/qualification/06-paired-results.txt. Across 156 fresh processes and
+1560 measured pairs, B was reproducibly costlier in 8/13 saved states. One control
+fell within the relative equivalence band; four states remain unresolved because
+of block-level overhead failures. The clearest result is width16: all five states
+passed, with paired B/A medians 3.535-3.799. No answer-speed benefit is established.
 The design is docs/qualification/01-kb-specification.txt and configs/qualification-kb.json.
 The earlier machine-example work is preserved:
 The returned machine-example answer now has a captured seven-node proof replayed
@@ -57,6 +58,7 @@ Run from this project directory (Python standard library only)
   python3 scripts/repair_calibration.py diagnose --run-id review001
   python3 scripts/repair_calibration.py validate --run-id review001
   python3 scripts/repair_calibration.py calibrate --run-id review001 --validation val001
+  python3 scripts/run_paired.py measure --harness thin --run-id review001 --calibration cal002
   python3 scripts/validate_step1.py --run-id review001
   python3 scripts/validate_step2.py --run-id review001
 The qualification generator runs no inference: it checks source revisions and
@@ -76,9 +78,12 @@ remain included, and probes are saved without automatically subtracting them.
 The legacy paired harness has separate calibrate/measure stages. Its saved cal001
 failed and remains preserved. repair_calibration.py records the thin-adapter
 revision: val001 passed and repair/calibrate/cal002 passed with singleton timing.
-The legacy run_paired.py measure command still uses the old wrapper; it must not
-be used with the thin calibration. Main-run integration of the validated thin
-adapter is the next reviewed work, preserving the paired protocol's criteria.
+run_paired.py measure --harness thin uses that exact validated adapter and binds
+to its calibration/helper/conditions/protocol and execution-code hashes. The
+main run is results/qualification/step-06/measure/run001. Default --harness legacy
+remains separate and cannot consume a thin calibration. Both calibration passing
+and main execution passing are distinct from all state-level analysis gates
+passing. Four main states remain unresolved; no samples were discarded or retried.
 Use a fresh run ID: existing results are never overwritten. Runtime paths in
 configs/runtime.json are relative to this project. The external runtime/source
 directories must already exist at the recorded revisions; the runner installs
@@ -100,14 +105,14 @@ Working agreement
 - Keep development/tuning separate from held-out evaluation.
 
 Review checkpoint
-Review docs/qualification/06-thin-repair-results.txt and the adapter code before
-the main paired comparison. Keep cal001's failure and the protocol revision as
-evidence. Do not advance to the budgeted query benchmark yet.
+Review docs/qualification/06-paired-results.txt and the main runner changes.
+Keep cal001's failure, the repair and all main-run unresolved outcomes as evidence.
+The proposed next step is native first-answer CPU measurement, after discussion.
 This new series is separate from the old diagnostic interface/proof-audit steps.
-The new task's reproducible CPU cost gap and time to first available answer remain
-unestablished. Single validation timings must not be presented as benchmark results.
-Do not implement an estimator or begin the main comparison before validating the
-task, reviewing the baseline criteria and studying the papers.
+Local expansion cost gaps are established for eight fixed development states;
+time to first available answer remains unmeasured. Do not implement an estimator
+or begin a cost-aware policy comparison before reviewing the baseline criteria
+and studying the papers. Local expansion costs do not establish full proof costs.
 
 Research context (relative to this project)
 ../hyperon-research-discovery-new-session-prompt.txt
