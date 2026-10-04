@@ -6,10 +6,11 @@ Does adding predicted computational cost to an existing PLN selection method
 improve answer speed and probabilistic accuracy after including its overhead?
 Improvement, no benefit and harm are all legitimate experimental outcomes.
 
-Status: step one implemented and checked on 2026-10-04; stopped for code review.
-Python successfully called the pinned SWI/PeTTa runtime, reproduced the native
-example's expected answer, and ran the authored machine-failure example.
-See docs/step-01.txt for results and limits. No cost estimator or CPU benchmark.
+Status: step two implemented and checked on 2026-10-04; stopped for code review.
+The returned machine-example answer now has a captured seven-node proof replayed
+independently in Python. Instrumented and original runs have identical original
+output, including every selected record. See docs/step-02.txt for scope and limits.
+No cost estimator, relevance extension or CPU benchmark has been implemented.
 
 The experiment is Python-led, using the actual pinned PLN MeTTa rules. Step one
 uses a subprocess interface; embedded PeTTa()/hyperon.MeTTa() compatibility is
@@ -21,24 +22,31 @@ Folder structure and review order
   src/pln_cost/world.py   Independent exact synthetic-world evaluator
   src/pln_cost/runtime.py Bounded Python interface to the existing engine
   src/pln_cost/validation.py  Output checks (not independent proof replay)
+  src/pln_cost/tracing.py Print-only instrumentation of a generated PLN copy
+  src/pln_cost/sexpr.py   Restricted ground fixture/trace parser
+  src/pln_cost/proof.py   Returned-answer certificate extraction and replay
   scripts/                Human-readable entry points; start at validate_step1.py
   tests/                  Offline input/oracle and false-success checks
   results/step-01/run001/ Original output, parity fixture and result manifest
+  results/step-02/        Raw traces, instrumentation diff and replay certificates
   docs/                   Step records, limitations and review notes
 
 Run from this project directory (Python standard library only)
   python3 -m unittest discover -s tests -v
   python3 scripts/validate_step1.py --run-id review001
+  python3 scripts/validate_step2.py --run-id review001
 Use a fresh run ID: existing results are never overwritten. Runtime paths in
 configs/runtime.json are relative to this project. The external runtime/source
 directories must already exist at the recorded revisions; the runner installs
 nothing. Each engine invocation has a 60-second wall safety limit, not a CPU
-benchmark budget. This step creates three fresh engine processes sequentially.
+benchmark budget. Step one creates three fresh engine processes sequentially;
+step two creates two (original and instrumented).
 
 Working agreement
 - Discuss each step before execution, then stop and review its results.
-- Make a focused commit for each completed meaningful step, documenting checks
-  and unresolved issues. Commit partial work only when clearly labeled.
+- The user reviews and commits changes. Leave changes uncommitted and unstaged
+  after each step, and provide a suggested commit message. Do not commit unless
+  the user explicitly asks. Document checks and unresolved issues for review.
 - Implement and validate the baseline first; audit it against CRITERIA.txt.
 - Before implementing cost estimation, review the papers' problems, selection
   methods, cost/benefit models, assumptions, experiments, results and limitations.
@@ -48,8 +56,9 @@ Working agreement
 - Keep development/tuning separate from held-out evaluation.
 
 Review checkpoint
-Review step-one code and results before proceeding. Remaining baseline work
-includes independent deduction-proof checking, fair relevance support and CPU
+Review step-two code and results before proceeding. The returned answer's two
+deductions and revision are checked; the entire search and other rule families
+are not certified. Remaining work includes fair relevance support and CPU
 instrumentation. Do not begin the cost estimator, training or a benchmark yet.
 
 Research context (relative to this project)

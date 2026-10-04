@@ -37,10 +37,13 @@ evidence and scope. Design agreement alone does not establish empirical validity
 Known open items from prior source inspection
 - Step one ran the proposed small inheritance example in native PLN. The observed
   answer strength was 0.6879979916209911 against world probability 0.74. Its four
-  properties alone are not a validated performance workload, and the new run has
-  not undergone independent deduction-proof replay.
+  properties alone are not a validated performance workload. Step two independently
+  replayed its returned-answer proof: four inputs, two deductions and one revision.
 - The existing relevance adapter handles implication chains, not general
   inheritance deduction; any extension must be shared by both comparison arms.
-- The existing independent verifier covers MP/revision, not all native PLN rules.
+- This project's new checker covers ground Inheritance deduction and revision for
+  the captured answer proof. Other native search rules remain outside its verified
+  scope; they are traced, not silently accepted. The older research-discovery
+  MP/revision checker remains separate.
 - Python subprocess-to-PeTTa execution passed the step-one checks. Embedded
   Python-PeTTa compatibility and useful CPU cost variation remain untested.

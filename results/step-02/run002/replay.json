@@ -1,0 +1,199 @@
+{
+  "valid": true,
+  "nodes": 7,
+  "answer": {
+    "strength": 0.6879979916209911,
+    "confidence": 0.679015635981946,
+    "evidence": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "steps": [
+    {
+      "id": "b8363ee7f819470ca19ce792fc99c30e7f0e9299d0d46b6b9666af840baaa046",
+      "rule": "input",
+      "record": [
+        "Sentence",
+        [
+          [
+            "Inheritance",
+            "HighLoad",
+            "Hot"
+          ],
+          [
+            "stv",
+            0.8,
+            0.9
+          ]
+        ],
+        [
+          1
+        ]
+      ],
+      "parents": [],
+      "trace_line": null
+    },
+    {
+      "id": "717a605aec551041e9c9496602e82e8e90ee67be631e3b5c849d2805f344e7be",
+      "rule": "input",
+      "record": [
+        "Sentence",
+        [
+          [
+            "Inheritance",
+            "Hot",
+            "Fails"
+          ],
+          [
+            "stv",
+            0.9,
+            0.9
+          ]
+        ],
+        [
+          2
+        ]
+      ],
+      "parents": [],
+      "trace_line": null
+    },
+    {
+      "id": "b36fcec2e1649a79e51b9c006a0c67e4f446adfb783ebeee59023affaa53a274",
+      "rule": "Deduction (lib_pln.metta:86-101,235-242)",
+      "record": [
+        "Sentence",
+        [
+          [
+            "Inheritance",
+            "HighLoad",
+            "Fails"
+          ],
+          [
+            "stv",
+            0.7400000000000001,
+            0.5832
+          ]
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "parents": [
+        "b8363ee7f819470ca19ce792fc99c30e7f0e9299d0d46b6b9666af840baaa046",
+        "717a605aec551041e9c9496602e82e8e90ee67be631e3b5c849d2805f344e7be"
+      ],
+      "trace_line": 1
+    },
+    {
+      "id": "06aa67a5ed1306bc1a3754fb425595eecd0578bbbec954184b5c8e784ff0edd7",
+      "rule": "input",
+      "record": [
+        "Sentence",
+        [
+          [
+            "Inheritance",
+            "HighLoad",
+            "Vibrating"
+          ],
+          [
+            "stv",
+            0.8,
+            0.9
+          ]
+        ],
+        [
+          3
+        ]
+      ],
+      "parents": [],
+      "trace_line": null
+    },
+    {
+      "id": "e2590a982e13615dc86565a8098586d85f4edd7599f0696980ff3f35b1e282d2",
+      "rule": "input",
+      "record": [
+        "Sentence",
+        [
+          [
+            "Inheritance",
+            "Vibrating",
+            "Fails"
+          ],
+          [
+            "stv",
+            0.644,
+            0.9
+          ]
+        ],
+        [
+          4
+        ]
+      ],
+      "parents": [],
+      "trace_line": null
+    },
+    {
+      "id": "cda2ebaf71513bf0fd79166ab49974ecff48306b13638205740e06bb216fa180",
+      "rule": "Deduction (lib_pln.metta:86-101,235-242)",
+      "record": [
+        "Sentence",
+        [
+          [
+            "Inheritance",
+            "HighLoad",
+            "Fails"
+          ],
+          [
+            "stv",
+            0.5864,
+            0.417312
+          ]
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "parents": [
+        "06aa67a5ed1306bc1a3754fb425595eecd0578bbbec954184b5c8e784ff0edd7",
+        "e2590a982e13615dc86565a8098586d85f4edd7599f0696980ff3f35b1e282d2"
+      ],
+      "trace_line": 18
+    },
+    {
+      "id": "f20e0f348702f744761df272d7e44c62f8d3ecfcc3c894a890a1fe070fcd7f18",
+      "rule": "Revision (lib_pln.metta:136-143,211-213)",
+      "record": [
+        "Sentence",
+        [
+          [
+            "Inheritance",
+            "HighLoad",
+            "Fails"
+          ],
+          [
+            "stv",
+            0.6879979916209911,
+            0.679015635981946
+          ]
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "parents": [
+        "b36fcec2e1649a79e51b9c006a0c67e4f446adfb783ebeee59023affaa53a274",
+        "cda2ebaf71513bf0fd79166ab49974ecff48306b13638205740e06bb216fa180"
+      ],
+      "trace_line": 91
+    }
+  ],
+  "scope": "returned-answer ancestor proof only; not all search operations"
+}

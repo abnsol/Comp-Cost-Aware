@@ -39,14 +39,22 @@ class Runtime:
         result["swipl"] = version
         return result
 
-    def run(self, fixture, *, preload_pln=False):
+    def run(self, fixture, *, preload_pln=False, library_path=None):
+        """Optionally load a generated instrumented library instead of the original.
+
+        The caller must establish its source provenance and behavioural parity.
+        Merely using library_path does not validate instrumentation.
+        """
+        if library_path is not None and not preload_pln:
+            raise ValueError("library_path requires preload_pln=True")
         env = os.environ.copy()
         site = next((self.context / "runtime/venv/lib").glob("python*/site-packages"))
         env.update(PYTHONDONTWRITEBYTECODE="1", PYTHONPATH=str(site))
         command = [str(self.swipl), "--stack_limit=1g", "-q", "-s",
                    str(self.petta / "src/main.pl")]
         if preload_pln:
-            source = str(self.pln / "lib_pln.metta").replace("\\", "\\\\").replace("'", "\\'")
+            source_file = self.pln / "lib_pln.metta" if library_path is None else Path(library_path).resolve()
+            source = str(source_file).replace("\\", "\\\\").replace("'", "\\'")
             command += ["-g", f"load_metta_file('{source}',_)"]
         command += ["--", str(Path(fixture).resolve()), "--silent"]
         # The native example's git-import finds the already verified repos here;
