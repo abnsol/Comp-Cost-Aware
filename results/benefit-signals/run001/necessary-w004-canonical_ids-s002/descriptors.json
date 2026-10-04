@@ -1,0 +1,886 @@
+{
+  "coverage": "qualified-closed-ground-mp-v1",
+  "interpretation": "structural MP support only; not proof validity or deadline probability",
+  "beliefs": 24,
+  "tasks": 22,
+  "candidates": [
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Certificate",
+              "unit0",
+              "required"
+            ],
+            [
+              "CanOperate",
+              "unit0"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          3
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 1,
+      "outputs": [
+        {
+          "term": [
+            "CanOperate",
+            "unit0"
+          ],
+          "evidence_union": [
+            1,
+            2,
+            3
+          ],
+          "status": "potential_goal",
+          "term_already_present": false,
+          "structural_distance": 0
+        }
+      ],
+      "potential_goal_pairs": 1,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Idle",
+            "unit0",
+            "d0"
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          4
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 0,
+      "outputs": [],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Idle",
+            "unit0",
+            "d1"
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          5
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 0,
+      "outputs": [],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Idle",
+            "unit0",
+            "d2"
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          6
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 0,
+      "outputs": [],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Idle",
+            "unit0",
+            "d3"
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          7
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 0,
+      "outputs": [],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Ready",
+              "unit0",
+              "required"
+            ],
+            [
+              "Side",
+              "fact",
+              "s0"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          8
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 1,
+      "outputs": [
+        {
+          "term": [
+            "Side",
+            "fact",
+            "s0"
+          ],
+          "evidence_union": [
+            1,
+            8
+          ],
+          "status": "no_known_query_connection",
+          "term_already_present": true,
+          "structural_distance": null
+        }
+      ],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 1,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Implication",
+              [
+                "Ready",
+                "unit0",
+                "required"
+              ],
+              [
+                "Certificate",
+                "unit0",
+                "required"
+              ]
+            ],
+            [
+              "Side",
+              "rule",
+              "s0"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          9
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 1,
+      "outputs": [
+        {
+          "term": [
+            "Side",
+            "rule",
+            "s0"
+          ],
+          "evidence_union": [
+            2,
+            9
+          ],
+          "status": "no_known_query_connection",
+          "term_already_present": true,
+          "structural_distance": null
+        }
+      ],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 1,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Ready",
+              "unit0",
+              "required"
+            ],
+            [
+              "Side",
+              "fact",
+              "s1"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          10
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 1,
+      "outputs": [
+        {
+          "term": [
+            "Side",
+            "fact",
+            "s1"
+          ],
+          "evidence_union": [
+            1,
+            10
+          ],
+          "status": "no_known_query_connection",
+          "term_already_present": true,
+          "structural_distance": null
+        }
+      ],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 1,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Implication",
+              [
+                "Ready",
+                "unit0",
+                "required"
+              ],
+              [
+                "Certificate",
+                "unit0",
+                "required"
+              ]
+            ],
+            [
+              "Side",
+              "rule",
+              "s1"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          11
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 1,
+      "outputs": [
+        {
+          "term": [
+            "Side",
+            "rule",
+            "s1"
+          ],
+          "evidence_union": [
+            2,
+            11
+          ],
+          "status": "no_known_query_connection",
+          "term_already_present": true,
+          "structural_distance": null
+        }
+      ],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 1,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Ready",
+              "unit0",
+              "required"
+            ],
+            [
+              "Side",
+              "fact",
+              "s2"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          12
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 1,
+      "outputs": [
+        {
+          "term": [
+            "Side",
+            "fact",
+            "s2"
+          ],
+          "evidence_union": [
+            1,
+            12
+          ],
+          "status": "no_known_query_connection",
+          "term_already_present": true,
+          "structural_distance": null
+        }
+      ],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 1,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Implication",
+              [
+                "Ready",
+                "unit0",
+                "required"
+              ],
+              [
+                "Certificate",
+                "unit0",
+                "required"
+              ]
+            ],
+            [
+              "Side",
+              "rule",
+              "s2"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          13
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 1,
+      "outputs": [
+        {
+          "term": [
+            "Side",
+            "rule",
+            "s2"
+          ],
+          "evidence_union": [
+            2,
+            13
+          ],
+          "status": "no_known_query_connection",
+          "term_already_present": true,
+          "structural_distance": null
+        }
+      ],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 1,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Ready",
+              "unit0",
+              "required"
+            ],
+            [
+              "Side",
+              "fact",
+              "s3"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          14
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 1,
+      "outputs": [
+        {
+          "term": [
+            "Side",
+            "fact",
+            "s3"
+          ],
+          "evidence_union": [
+            1,
+            14
+          ],
+          "status": "no_known_query_connection",
+          "term_already_present": true,
+          "structural_distance": null
+        }
+      ],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 1,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Implication",
+              [
+                "Ready",
+                "unit0",
+                "required"
+              ],
+              [
+                "Certificate",
+                "unit0",
+                "required"
+              ]
+            ],
+            [
+              "Side",
+              "rule",
+              "s3"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          15
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 1,
+      "outputs": [
+        {
+          "term": [
+            "Side",
+            "rule",
+            "s3"
+          ],
+          "evidence_union": [
+            2,
+            15
+          ],
+          "status": "no_known_query_connection",
+          "term_already_present": true,
+          "structural_distance": null
+        }
+      ],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 1,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Certificate",
+            "unit0",
+            "required"
+          ],
+          [
+            "stv",
+            1.0,
+            0.81
+          ]
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "max_confidence_eligible": false,
+      "mp_pairs": 1,
+      "outputs": [
+        {
+          "term": [
+            "CanOperate",
+            "unit0"
+          ],
+          "evidence_union": [
+            1,
+            2,
+            3
+          ],
+          "status": "potential_goal",
+          "term_already_present": false,
+          "structural_distance": 0
+        }
+      ],
+      "potential_goal_pairs": 1,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Side",
+            "fact",
+            "s0"
+          ],
+          [
+            "stv",
+            1.0,
+            0.81
+          ]
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      "max_confidence_eligible": false,
+      "mp_pairs": 0,
+      "outputs": [],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Side",
+            "fact",
+            "s1"
+          ],
+          [
+            "stv",
+            1.0,
+            0.81
+          ]
+        ],
+        [
+          1,
+          10
+        ]
+      ],
+      "max_confidence_eligible": false,
+      "mp_pairs": 0,
+      "outputs": [],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Side",
+            "fact",
+            "s2"
+          ],
+          [
+            "stv",
+            1.0,
+            0.81
+          ]
+        ],
+        [
+          1,
+          12
+        ]
+      ],
+      "max_confidence_eligible": false,
+      "mp_pairs": 0,
+      "outputs": [],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Side",
+            "fact",
+            "s3"
+          ],
+          [
+            "stv",
+            1.0,
+            0.81
+          ]
+        ],
+        [
+          1,
+          14
+        ]
+      ],
+      "max_confidence_eligible": false,
+      "mp_pairs": 0,
+      "outputs": [],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Side",
+            "rule",
+            "s0"
+          ],
+          [
+            "stv",
+            1.0,
+            0.81
+          ]
+        ],
+        [
+          2,
+          9
+        ]
+      ],
+      "max_confidence_eligible": false,
+      "mp_pairs": 0,
+      "outputs": [],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Side",
+            "rule",
+            "s1"
+          ],
+          [
+            "stv",
+            1.0,
+            0.81
+          ]
+        ],
+        [
+          2,
+          11
+        ]
+      ],
+      "max_confidence_eligible": false,
+      "mp_pairs": 0,
+      "outputs": [],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Side",
+            "rule",
+            "s2"
+          ],
+          [
+            "stv",
+            1.0,
+            0.81
+          ]
+        ],
+        [
+          2,
+          13
+        ]
+      ],
+      "max_confidence_eligible": false,
+      "mp_pairs": 0,
+      "outputs": [],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Side",
+            "rule",
+            "s3"
+          ],
+          [
+            "stv",
+            1.0,
+            0.81
+          ]
+        ],
+        [
+          2,
+          15
+        ]
+      ],
+      "max_confidence_eligible": false,
+      "mp_pairs": 0,
+      "outputs": [],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    }
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "coverage": "qualified-closed-ground-mp-v1",
+  "interpretation": "structural MP support only; not proof validity or deadline probability",
+  "beliefs": 7,
+  "tasks": 6,
+  "candidates": [
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Ready",
+            "unit0",
+            "route_a"
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          1
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 1,
+      "outputs": [
+        {
+          "term": [
+            "Certificate",
+            "unit0",
+            "path_a"
+          ],
+          "evidence_union": [
+            1,
+            3
+          ],
+          "status": "missing_intermediate",
+          "term_already_present": false,
+          "structural_distance": 1
+        }
+      ],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 1,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Ready",
+              "unit0",
+              "route_a"
+            ],
+            [
+              "Certificate",
+              "unit0",
+              "path_a"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          3
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 1,
+      "outputs": [
+        {
+          "term": [
+            "Certificate",
+            "unit0",
+            "path_a"
+          ],
+          "evidence_union": [
+            1,
+            3
+          ],
+          "status": "missing_intermediate",
+          "term_already_present": false,
+          "structural_distance": 1
+        }
+      ],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 1,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Certificate",
+              "unit0",
+              "path_a"
+            ],
+            [
+              "CanOperate",
+              "unit0"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          4
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 0,
+      "outputs": [],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": true
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Ready",
+              "unit0",
+              "route_b"
+            ],
+            [
+              "Certificate",
+              "unit0",
+              "path_b_001"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          5
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 1,
+      "outputs": [
+        {
+          "term": [
+            "Certificate",
+            "unit0",
+            "path_b_001"
+          ],
+          "evidence_union": [
+            2,
+            5
+          ],
+          "status": "represented_intermediate_value_unresolved",
+          "term_already_present": true,
+          "structural_distance": 1
+        }
+      ],
+      "potential_goal_pairs": 0,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 1,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Certificate",
+              "unit0",
+              "path_b_001"
+            ],
+            [
+              "CanOperate",
+              "unit0"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          6
+        ]
+      ],
+      "max_confidence_eligible": true,
+      "mp_pairs": 1,
+      "outputs": [
+        {
+          "term": [
+            "CanOperate",
+            "unit0"
+          ],
+          "evidence_union": [
+            2,
+            5,
+            6
+          ],
+          "status": "potential_goal",
+          "term_already_present": false,
+          "structural_distance": 0
+        }
+      ],
+      "potential_goal_pairs": 1,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    },
+    {
+      "candidate": [
+        "Sentence",
+        [
+          [
+            "Certificate",
+            "unit0",
+            "path_b_001"
+          ],
+          [
+            "stv",
+            1.0,
+            0.81
+          ]
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "max_confidence_eligible": false,
+      "mp_pairs": 1,
+      "outputs": [
+        {
+          "term": [
+            "CanOperate",
+            "unit0"
+          ],
+          "evidence_union": [
+            2,
+            5,
+            6
+          ],
+          "status": "potential_goal",
+          "term_already_present": false,
+          "structural_distance": 0
+        }
+      ],
+      "potential_goal_pairs": 1,
+      "missing_intermediate_pairs": 0,
+      "represented_support_pairs": 0,
+      "unconnected_pairs": 0,
+      "dormant_query_rule": false
+    }
+  ]
+}

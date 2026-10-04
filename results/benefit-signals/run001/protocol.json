@@ -1,0 +1,14 @@
+{
+  "data_batch": "results/selection/step-03/run002",
+  "selection_batch": "results/selection/step-05/run001",
+  "scope": "qualified-closed-ground-mp-v1",
+  "blocks": 5,
+  "repetitions_per_block": 30,
+  "warmup_calls_per_state": 3,
+  "empty_repetitions": 100,
+  "maximum_empty_p95_fraction": 0.1,
+  "seed": 2171,
+  "timing": "Python process CPU; full all-pending-candidate descriptor batch including record validation, index rebuild, dependency traversal, matching and output construction",
+  "exclusions": "JSON loading, saved-state provenance checks, native-to-Python transfer, printing and offline validation",
+  "comparison": "descriptive acquisition measurement only; no selector, no policy improvement claim, no held-out evaluation"
+}
