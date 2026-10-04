@@ -5,8 +5,13 @@ Research question
 Does adding predicted computational cost to an existing PLN selection method
 improve answer speed and probabilistic accuracy after including its overhead?
 Improvement, no benefit and harm are all legitimate experimental outcomes.
+The current qualification phase addresses time/success to a valid PLN derivation.
+It does not establish improved probability accuracy against external outcomes.
 
-Status: step two implemented and checked on 2026-10-04; stopped for code review.
+Status: qualification step one specified on 2026-10-04; stopped for design review.
+Start at docs/qualification/01-kb-specification.txt. Its design manifest is
+configs/qualification-kb.json; no generator or qualification experiment ran yet.
+The earlier machine-example work is preserved:
 The returned machine-example answer now has a captured seven-node proof replayed
 independently in Python. Instrumented and original runs have identical original
 output, including every selected record. See docs/step-02.txt for scope and limits.
@@ -56,13 +61,12 @@ Working agreement
 - Keep development/tuning separate from held-out evaluation.
 
 Review checkpoint
-Step two's returned-answer deductions and revision are checked; the entire search
-and other rule families are not certified. The machine example is retained as a
-diagnostic. Primary-task selection is now under discussion: see
-docs/workload-candidates-2026-10-04.txt for equal-priority/equal-depth alternative
-proofs and the distinction between rule correctness and probability accuracy.
-Their CPU cost gap has not been measured. Do not implement an estimator or begin
-the main benchmark before validating the new task and reviewing the papers.
+Review docs/qualification/01-kb-specification.txt and configs/qualification-kb.json
+before implementing the generator and ground modus-ponens checks. This new series
+is separate from the completed interface/proof-audit steps1/2. The old machine
+example remains a diagnostic. The new task's CPU cost gap is still unmeasured.
+Do not implement an estimator or begin the main comparison before validating the
+task, reviewing the baseline criteria and studying the papers.
 
 Research context (relative to this project)
 ../hyperon-research-discovery-new-session-prompt.txt
