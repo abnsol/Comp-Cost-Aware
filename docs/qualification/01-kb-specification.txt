@@ -171,6 +171,3 @@ PLN lib_pln.metta:124-126 MP;136-143 revision;334-341 evidence overlap;
 362-363 priority;369-374 queue limits;377-397 expansion;408-421 final query answer.
 Specification consistency was checked against these source definitions.
 No native inference, new tests or CPU measurements ran in qualification step1.
-
-Suggested commit message (user commits)
-  Specify matched-priority PLN qualification workload and success criteria

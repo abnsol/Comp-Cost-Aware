@@ -1,8 +1,9 @@
-"""Offline certificate extraction and independent deduction/revision replay.
+"""Offline certificate extraction and independent deduction/MP/revision replay.
 
 The executed inference remains native MeTTa. This checker implements a declared
 subset of the pinned formulas, rather than calling PLN to validate itself. It
-checks only the returned answer's captured ancestor proof, not all search steps.
+checks only a certificate's ancestor proof, not all search steps. Authored static
+witnesses can also be replayed; their validity does not establish engine execution.
 It verifies rule execution, not statistical soundness or world-truth accuracy.
 """
 from collections import Counter
@@ -32,6 +33,13 @@ def sentence(record):
     if not isinstance(record[1], list) or len(record[1]) != 2:
         raise ValueError("Invalid sentence payload")
     term, tv = record[1]
+    def ground(value):
+        if isinstance(value, list):
+            return all(ground(part) for part in value)
+        return not (isinstance(value, str) and value.startswith("$"))
+
+    if not ground(term):
+        raise ValueError("Variables are outside this ground proof checker")
     evidence = record[2]
     if (not isinstance(evidence, list) or not evidence or
             not all(type(v) is int and v > 0 for v in evidence)
@@ -136,6 +144,10 @@ def replay(certificate, case, source_hash, fixture_hash):
                 expected = [min(1, (w1 * f1 + w2 * f2) / weight),
                             min(1, max(weight / (weight + 1), c1, c2))]
                 rule = "Revision (lib_pln.metta:136-143,211-213)"
+            elif (isinstance(b, list) and len(b) == 3 and b[0] == "Implication"
+                  and a == b[1] and term == b[2]):
+                expected = [f1 * f2 + 0.02 * (1 - f1), (f1 * f2) * (c1 * c2)]
+                rule = "ModusPonens (lib_pln.metta:124-126,216-218)"
             elif (isinstance(a, list) and isinstance(b, list) and len(a) == len(b) == 3
                   and a[0] == b[0] == "Inheritance" and a[2] == b[1]
                   and term == ["Inheritance", a[1], b[2]]):
@@ -165,4 +177,4 @@ def replay(certificate, case, source_hash, fixture_hash):
     if done != set(nodes):
         raise ValueError("Unreachable certificate nodes")
     return {"valid": True, "nodes": len(done), "answer": {"strength": tv[0], "confidence": tv[1], "evidence": evidence},
-            "steps": steps, "scope": "returned-answer ancestor proof only; not all search operations"}
+            "steps": steps, "scope": "certificate ancestor proof only; not all search operations"}

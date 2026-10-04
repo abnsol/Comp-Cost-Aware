@@ -8,9 +8,11 @@ Improvement, no benefit and harm are all legitimate experimental outcomes.
 The current qualification phase addresses time/success to a valid PLN derivation.
 It does not establish improved probability accuracy against external outcomes.
 
-Status: qualification step one specified on 2026-10-04; stopped for design review.
-Start at docs/qualification/01-kb-specification.txt. Its design manifest is
-configs/qualification-kb.json; no generator or qualification experiment ran yet.
+Status: qualification step three completed on 2026-10-04; stopped for review.
+Start at docs/qualification/03-native-feasibility.txt. All nine generated cases
+returned independently verified native PLN answers. Original and traced runs
+have identical original output. CPU differences remain unmeasured.
+The design is docs/qualification/01-kb-specification.txt and configs/qualification-kb.json.
 The earlier machine-example work is preserved:
 The returned machine-example answer now has a captured seven-node proof replayed
 independently in Python. Instrumented and original runs have identical original
@@ -30,16 +32,27 @@ Folder structure and review order
   src/pln_cost/tracing.py Print-only instrumentation of a generated PLN copy
   src/pln_cost/sexpr.py   Restricted ground fixture/trace parser
   src/pln_cost/proof.py   Returned-answer certificate extraction and replay
+  src/pln_cost/qualification.py  KB generator and explicitly authored static proofs
+  src/pln_cost/feasibility.py  Qualification output parsing and observable parity
   scripts/                Human-readable entry points; start at validate_step1.py
   tests/                  Offline input/oracle and false-success checks
   results/step-01/run001/ Original output, parity fixture and result manifest
   results/step-02/        Raw traces, instrumentation diff and replay certificates
+  cases/qualification/   New authorization KBs, separate from the old diagnostic
+  results/qualification/ Static validation and captured native feasibility runs
   docs/                   Step records, limitations and review notes
 
 Run from this project directory (Python standard library only)
   python3 -m unittest discover -s tests -v
+  python3 scripts/generate_qualification.py --run-id review001
+  python3 scripts/validate_qualification.py --run-id review001 --case-batch run001
   python3 scripts/validate_step1.py --run-id review001
   python3 scripts/validate_step2.py --run-id review001
+The qualification generator runs no inference: it checks source revisions and
+runtime version, writes cases, and replays static proofs in Python. Qualification
+validation runs two fresh processes per case (18 total), retaining both native
+and traced logs and replaying captured proofs. validate_step1.py/validate_step2.py
+are the earlier machine-diagnostic native runners.
 Use a fresh run ID: existing results are never overwritten. Runtime paths in
 configs/runtime.json are relative to this project. The external runtime/source
 directories must already exist at the recorded revisions; the runner installs
@@ -61,10 +74,10 @@ Working agreement
 - Keep development/tuning separate from held-out evaluation.
 
 Review checkpoint
-Review docs/qualification/01-kb-specification.txt and configs/qualification-kb.json
-before implementing the generator and ground modus-ponens checks. This new series
-is separate from the completed interface/proof-audit steps1/2. The old machine
-example remains a diagnostic. The new task's CPU cost gap is still unmeasured.
+Review docs/qualification/03-native-feasibility.txt and its saved traces/proofs
+before qualification step four: capture and restore comparable reachable states.
+This new series is separate from the old diagnostic interface/proof-audit steps.
+The new task's CPU cost gap and time to first available answer remain unmeasured.
 Do not implement an estimator or begin the main comparison before validating the
 task, reviewing the baseline criteria and studying the papers.
 

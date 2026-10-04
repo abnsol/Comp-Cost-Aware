@@ -1,0 +1,79 @@
+QUALIFICATION STEP 2: GENERATED KBs AND STATIC PROOF CHECKS
+2026-10-04. Completed; stop for user code review before native feasibility runs.
+
+Outcome
+Generated nine cases: widths N=1,4,16 crossed with canonical, Ready-fact-swap,
+and full seeded-shuffle orderings. They contain 6,12,36 records respectively.
+All axioms have strength 1/confidence 0.9 and unique singleton evidence IDs.
+The query is (CanOperate unit0); its truth value is not supplied as an input.
+No costs, route priorities, precomputed answers or artificial delays are supplied
+to the engine. Query arguments are 100 steps and 4097 for each queue cap.
+
+Each A or B_i two-step path has an authored static witness. All 72 witnesses
+passed independent replay using the pinned ground modus-ponens formula. Every
+minimal witness concludes strength 1/confidence 0.729, within the specified
+numeric tolerance. A uses evidence [1,3,4]; B_i uses [2,2i+3,2i+4].
+The generator computes the unit-strength family's expected confidence using
+exact rational powers of 9/10; the separate checker evaluates the general PLN
+formula, including its non-unit-strength fallback and evidence guards.
+
+These are checked candidate derivations, NOT captured engine executions.
+No native inference ran on these cases. No committed belief-state availability,
+search success, first-answer time, cost gap or CPU-budget effect is established.
+This is rule-conformance validation, not empirical probability calibration.
+The nine cases share one structural family; they are not nine independent domains.
+
+Code review order
+1. src/pln_cost/qualification.py
+   kb_records: stable input/evidence construction and deterministic orderings.
+   render_case: inputs, query and native caps only.
+   static_witness: clearly labelled authored two-MP proofs, outside engine input.
+   qualifies: numerical acceptance after proof replay, not runtime availability.
+2. src/pln_cost/proof.py
+   Added ground MP with exact antecedent/consequent matching. Formula is from
+   lib_pln.metta:124-126,216-218 at the pinned commit. Variable-containing records
+   fail closed, including JSON inputs that bypass the text parser.
+   Existing deduction/revision and provenance checks remain active.
+3. src/pln_cost/sexpr.py
+   Accepts the new QUALIFICATION_RESULT marker and fixtures without marginal
+   definitions. Deduction still requires its marginals during proof checking.
+4. scripts/generate_qualification.py
+   Writes a fresh batch and static proof report. Refuses existing run IDs.
+   Runtime.verify only reads repository status/revisions and SWI --version;
+   it does not call Runtime.run, load PLN or perform inference.
+5. tests/test_qualification.py
+   Structural counts, fixed query/caps, order invariance, 72 valid proofs,
+   truth/parent/conclusion/evidence tampering, non-unit MP arithmetic, variable
+   rejection, confidence threshold, and shared-B-evidence revision rejection.
+   Also checks that disjoint A/B evidence permits a valid revision.
+
+Saved artifacts
+cases/qualification/run001/*.metta
+  Nine generated native input files. Start with n001-canonical_ids.metta.
+results/qualification/step-02/run001/config.json
+  Configuration snapshot; CPU budget is null (unmeasured).
+results/qualification/step-02/run001/report.json
+  Passed static checks, per-case input hashes, each witness's answer/evidence,
+  source revisions/hash and hashes of code/config/test files used.
+results/qualification/step-02/run001/static-witnesses.json
+  All authored certificates with origin labels; no invented trace-line numbers.
+
+Validation performed
+  python3 -m unittest discover -s tests -v
+  Result: 30 tests passed, including the original 20 diagnostic tests.
+  python3 scripts/generate_qualification.py --run-id run001
+  Result: 9 cases, 72 checked static proofs; native_inference_executed=false.
+No dependencies were installed and no external PLN/PeTTa files were modified.
+Earlier diagnostic cases/results are preserved. Changes are not staged or committed.
+
+Next review-gated step
+Run the actual pinned PLN on these fixtures with the specified feasibility caps,
+capture/replay the returned proofs, and establish instrumentation parity. The
+old parse_answer helper is specific to the machine example's IDs 1..4; the new
+runner must add appropriate parsing instead of reusing that restriction blindly.
+Native returned-answer success is distinct from first-available answer timing;
+the latter requires the later state-observation and CPU-instrumentation steps.
+No estimator or cost-aware selection belongs to this completed step.
+
+Suggested commit message
+Add qualification KB generator and ground modus-ponens validation

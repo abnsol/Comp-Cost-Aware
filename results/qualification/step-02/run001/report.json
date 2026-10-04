@@ -1,0 +1,1059 @@
+{
+  "purpose": "static KB and proof validation only",
+  "native_inference_executed": false,
+  "cost_gap_measured": false,
+  "cases": [
+    {
+      "case": "cases/qualification/run001/n001-canonical_ids.metta",
+      "sha256": "3f2fd909ec688e056fcfca590d22162fde7905b6656c9591bb012bc3cca90c1a",
+      "width": 1,
+      "ordering": "canonical_ids",
+      "input_records": 6,
+      "static_proofs": {
+        "a": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              1,
+              3,
+              4
+            ]
+          }
+        },
+        "b_001": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              5,
+              6
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case": "cases/qualification/run001/n001-swap_ready_facts.metta",
+      "sha256": "7e1f1376165c9b85b786174ced3e0e94a3b062686001c4a240846b020529dfcc",
+      "width": 1,
+      "ordering": "swap_ready_facts",
+      "input_records": 6,
+      "static_proofs": {
+        "a": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              1,
+              3,
+              4
+            ]
+          }
+        },
+        "b_001": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              5,
+              6
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case": "cases/qualification/run001/n001-seeded_shuffle.metta",
+      "sha256": "2ff515ae43e5e4901f1515abf49d76c3b39b9bcbd8a924a4a0b182b6f38c5869",
+      "width": 1,
+      "ordering": "seeded_shuffle",
+      "input_records": 6,
+      "static_proofs": {
+        "a": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              1,
+              3,
+              4
+            ]
+          }
+        },
+        "b_001": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              5,
+              6
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case": "cases/qualification/run001/n004-canonical_ids.metta",
+      "sha256": "9f84d7c8bc46ca25afa61689bb0685b420a91e10ef9ada5f89f3fd0cfea72754",
+      "width": 4,
+      "ordering": "canonical_ids",
+      "input_records": 12,
+      "static_proofs": {
+        "a": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              1,
+              3,
+              4
+            ]
+          }
+        },
+        "b_001": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              5,
+              6
+            ]
+          }
+        },
+        "b_002": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              7,
+              8
+            ]
+          }
+        },
+        "b_003": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              9,
+              10
+            ]
+          }
+        },
+        "b_004": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              11,
+              12
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case": "cases/qualification/run001/n004-swap_ready_facts.metta",
+      "sha256": "cc307509c820b96f278fb668e15c1921841ac8855f849c674e8c9f1164110895",
+      "width": 4,
+      "ordering": "swap_ready_facts",
+      "input_records": 12,
+      "static_proofs": {
+        "a": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              1,
+              3,
+              4
+            ]
+          }
+        },
+        "b_001": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              5,
+              6
+            ]
+          }
+        },
+        "b_002": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              7,
+              8
+            ]
+          }
+        },
+        "b_003": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              9,
+              10
+            ]
+          }
+        },
+        "b_004": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              11,
+              12
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case": "cases/qualification/run001/n004-seeded_shuffle.metta",
+      "sha256": "8d68340be3969819fe081862ad4aa8fc774e2bc60000701dae654e99b79209fa",
+      "width": 4,
+      "ordering": "seeded_shuffle",
+      "input_records": 12,
+      "static_proofs": {
+        "a": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              1,
+              3,
+              4
+            ]
+          }
+        },
+        "b_001": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              5,
+              6
+            ]
+          }
+        },
+        "b_002": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              7,
+              8
+            ]
+          }
+        },
+        "b_003": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              9,
+              10
+            ]
+          }
+        },
+        "b_004": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              11,
+              12
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case": "cases/qualification/run001/n016-canonical_ids.metta",
+      "sha256": "0d9eeb414b357c7825df9b794002d832bb3874087f39eaabb9270968ea082216",
+      "width": 16,
+      "ordering": "canonical_ids",
+      "input_records": 36,
+      "static_proofs": {
+        "a": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              1,
+              3,
+              4
+            ]
+          }
+        },
+        "b_001": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              5,
+              6
+            ]
+          }
+        },
+        "b_002": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              7,
+              8
+            ]
+          }
+        },
+        "b_003": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              9,
+              10
+            ]
+          }
+        },
+        "b_004": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              11,
+              12
+            ]
+          }
+        },
+        "b_005": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              13,
+              14
+            ]
+          }
+        },
+        "b_006": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              15,
+              16
+            ]
+          }
+        },
+        "b_007": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              17,
+              18
+            ]
+          }
+        },
+        "b_008": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              19,
+              20
+            ]
+          }
+        },
+        "b_009": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              21,
+              22
+            ]
+          }
+        },
+        "b_010": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              23,
+              24
+            ]
+          }
+        },
+        "b_011": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              25,
+              26
+            ]
+          }
+        },
+        "b_012": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              27,
+              28
+            ]
+          }
+        },
+        "b_013": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              29,
+              30
+            ]
+          }
+        },
+        "b_014": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              31,
+              32
+            ]
+          }
+        },
+        "b_015": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              33,
+              34
+            ]
+          }
+        },
+        "b_016": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              35,
+              36
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case": "cases/qualification/run001/n016-swap_ready_facts.metta",
+      "sha256": "0cf0c8a8d02ed7ad0bc86e36f25b05d2e1c0067f72cd54e54a28f0af1aa2b54f",
+      "width": 16,
+      "ordering": "swap_ready_facts",
+      "input_records": 36,
+      "static_proofs": {
+        "a": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              1,
+              3,
+              4
+            ]
+          }
+        },
+        "b_001": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              5,
+              6
+            ]
+          }
+        },
+        "b_002": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              7,
+              8
+            ]
+          }
+        },
+        "b_003": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              9,
+              10
+            ]
+          }
+        },
+        "b_004": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              11,
+              12
+            ]
+          }
+        },
+        "b_005": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              13,
+              14
+            ]
+          }
+        },
+        "b_006": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              15,
+              16
+            ]
+          }
+        },
+        "b_007": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              17,
+              18
+            ]
+          }
+        },
+        "b_008": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              19,
+              20
+            ]
+          }
+        },
+        "b_009": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              21,
+              22
+            ]
+          }
+        },
+        "b_010": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              23,
+              24
+            ]
+          }
+        },
+        "b_011": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              25,
+              26
+            ]
+          }
+        },
+        "b_012": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              27,
+              28
+            ]
+          }
+        },
+        "b_013": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              29,
+              30
+            ]
+          }
+        },
+        "b_014": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              31,
+              32
+            ]
+          }
+        },
+        "b_015": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              33,
+              34
+            ]
+          }
+        },
+        "b_016": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              35,
+              36
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case": "cases/qualification/run001/n016-seeded_shuffle.metta",
+      "sha256": "cdc2938cc3793d38847dea420b1f588f0a417e434f5d2999b17e533ae170acbe",
+      "width": 16,
+      "ordering": "seeded_shuffle",
+      "input_records": 36,
+      "static_proofs": {
+        "a": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              1,
+              3,
+              4
+            ]
+          }
+        },
+        "b_001": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              5,
+              6
+            ]
+          }
+        },
+        "b_002": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              7,
+              8
+            ]
+          }
+        },
+        "b_003": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              9,
+              10
+            ]
+          }
+        },
+        "b_004": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              11,
+              12
+            ]
+          }
+        },
+        "b_005": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              13,
+              14
+            ]
+          }
+        },
+        "b_006": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              15,
+              16
+            ]
+          }
+        },
+        "b_007": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              17,
+              18
+            ]
+          }
+        },
+        "b_008": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              19,
+              20
+            ]
+          }
+        },
+        "b_009": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              21,
+              22
+            ]
+          }
+        },
+        "b_010": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              23,
+              24
+            ]
+          }
+        },
+        "b_011": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              25,
+              26
+            ]
+          }
+        },
+        "b_012": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              27,
+              28
+            ]
+          }
+        },
+        "b_013": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              29,
+              30
+            ]
+          }
+        },
+        "b_014": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              31,
+              32
+            ]
+          }
+        },
+        "b_015": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              33,
+              34
+            ]
+          }
+        },
+        "b_016": {
+          "valid": true,
+          "nodes": 5,
+          "answer": {
+            "strength": 1.0,
+            "confidence": 0.729,
+            "evidence": [
+              2,
+              35,
+              36
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "passed": true,
+  "source_provenance": {
+    "pln": {
+      "path": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PLN",
+      "commit": "4405956947c4b53c7ff01bd565aa3b114bc970a1",
+      "clean": true
+    },
+    "petta": {
+      "path": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa",
+      "commit": "ae66fa8e41dcd5539d614706bd4e5cfb34f9608d",
+      "clean": true
+    },
+    "swipl": "SWI-Prolog version 9.3.25 for x86_64-linux"
+  },
+  "native_library_sha256": "cdfb3f18bd7b336440fc7b4409209afddf0e64c41f17dee7eefc8f02718de433",
+  "project_source_sha256": {
+    "src/pln_cost/__init__.py": "d3e8c8d1203a850c3cdfd40b8acc83d537ef51742da7cc602e2c0aa1587d8347",
+    "src/pln_cost/proof.py": "2d9949de62accb3611230255368cfe1c63118a152143e5a6efc93f68debfb285",
+    "src/pln_cost/qualification.py": "e269344b160ff0d1d456520ba653d741c4648a91d70dd720822fec0b82c82180",
+    "src/pln_cost/runtime.py": "afd4ee618af741f1cba7f51f733a5c434b7677f52e76bcd97f304be52fd73cdf",
+    "src/pln_cost/sexpr.py": "ca2b35ce3eaba3ef585dcc5a1b95116f64988e56bd564d5a05bb9c200d634a38",
+    "src/pln_cost/tracing.py": "ac339c9bceec4a95a6cbd3966967b0608598d6b36643ff24eddd8b55bd4e48d9",
+    "src/pln_cost/validation.py": "861c9503a9b6425a347db558571b5fbd2624f39701d1319884add2fb7bdd3477",
+    "src/pln_cost/world.py": "9577869660c97408a503e38c330ab5e5e0534b3042c20942590e6ae14233cbd9",
+    "scripts/generate_qualification.py": "d88ac611a189c7a7d98d9cab6555084333137c7b4479937ab463ee9a4924801b",
+    "scripts/validate_step1.py": "77a338cff4c5599131087ff017c2f56ae5c35f153d5feea7067e848bdb0e5638",
+    "scripts/validate_step2.py": "e8532cb1e2327132c5569dfff9980c0ac15777b9823d8e1257fcc093445af2a6",
+    "configs/qualification-kb.json": "949c68828e2cb938ec49526f7fd104406a27f795d226b66ebd68ac343029b14b",
+    "configs/runtime.json": "28c798fbc440a60ab4b58c6e2a60857d1bfeab06e28759ee267c9ba80f63e8f6",
+    "tests/test_qualification.py": "da61171ba0158e9c1119993d5c44b3eac2a2fbbf4404c16b27d78089512bdc63",
+    "tests/test_step1.py": "b9ce3366f36540e9ce907cb11b6bfa3e1a3162036b7ea9517b0470852236f6be",
+    "tests/test_step2.py": "e1bbe7c6e063ba13a3c8bc0d2ccce05253c894b1f2c85d2452e079f3f249e3aa"
+  },
+  "static_witnesses_sha256": "d662176734c9618d5ef9c5481d332cb24a8c22ff192793387b95994598f34c4c",
+  "static_proofs_checked": 72
+}

@@ -1,0 +1,75 @@
+{
+  "case": "cases/qualification/run001/n001-canonical_ids.metta",
+  "fixture_sha256": "3f2fd909ec688e056fcfca590d22162fde7905b6656c9591bb012bc3cca90c1a",
+  "width": 1,
+  "ordering": "canonical_ids",
+  "runs": {
+    "native": {
+      "command": [
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+        "--stack_limit=1g",
+        "-q",
+        "-s",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+        "-g",
+        "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PLN/lib_pln.metta',_)",
+        "--",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/cases/qualification/run001/n001-canonical_ids.metta",
+        "--silent"
+      ],
+      "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+      "returncode": 0,
+      "timed_out": false,
+      "clean_completion": true,
+      "stdout_sha256": "2b3cc0b08e9322f414c2e4bfd3b4de2c8d3b5c596a0f150770276f287f25013a"
+    },
+    "traced": {
+      "command": [
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+        "--stack_limit=1g",
+        "-q",
+        "-s",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+        "-g",
+        "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-03/run001/lib_pln.traced.metta',_)",
+        "--",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/cases/qualification/run001/n001-canonical_ids.metta",
+        "--silent"
+      ],
+      "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+      "returncode": 0,
+      "timed_out": false,
+      "clean_completion": true,
+      "stdout_sha256": "a94f8ef487f5a66ad7327e23d3c4fbd040bafe8a4c098fb7a2adbe7fa8750c06"
+    }
+  },
+  "passed": true,
+  "answer": {
+    "strength": 1.0,
+    "confidence": 0.8432620011567381,
+    "evidence": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "parity": {
+    "all_original_output_unchanged": true,
+    "native_selected_records": 12,
+    "traced_selected_records": 12,
+    "answer_unchanged": true
+  },
+  "trace_events": {
+    "STEP2_BINARY": 12
+  },
+  "proof_nodes": 11,
+  "proof_rules": {
+    "input": 6,
+    "ModusPonens (lib_pln.metta:124-126,216-218)": 4,
+    "Revision (lib_pln.metta:136-143,211-213)": 1
+  },
+  "status": "verified_returned_answer"
+}

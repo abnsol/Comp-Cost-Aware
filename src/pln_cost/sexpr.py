@@ -60,13 +60,15 @@ def read_case(text):
                 inputs = rhs
                 continue
         if (len(form) == 2 and form[0] == "println!" and isinstance(form[1], list)
-                and len(form[1]) == 2 and form[1][0] == "STEP1_RESULT"):
+                and len(form[1]) == 2 and form[1][0] in ("STEP1_RESULT", "QUALIFICATION_RESULT")):
             call = form[1][1]
             if (isinstance(call, list) and len(call) == 6 and call[:2] == ["PLN.Query", ["kb"]]
                     and query is None):
                 query = call[2]
                 continue
         raise ValueError(f"Unsupported fixture form: {form}")
-    if not marginals or not inputs or query is None:
+    # Ground modus ponens requires no STV marginal definitions. Deduction's
+    # required marginals are still checked by the independent proof replay.
+    if not inputs or query is None:
         raise ValueError("Incomplete fixture contract")
     return {"inputs": inputs, "marginals": marginals, "query": query}
