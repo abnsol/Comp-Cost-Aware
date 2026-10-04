@@ -1,14 +1,25 @@
 {
   "schema_version": 1,
-  "status": "native_feasibility_and_logical_state_restoration_validated_costs_unmeasured",
+  "status": "generator_and_static_proof_checks_implemented_native_feasibility_pending",
   "specification": "docs/qualification/01-kb-specification.txt",
   "family": "equal_depth_alternative_authorization_proofs",
-  "development_widths": [1, 4, 16],
-  "query": ["CanOperate", "unit0"],
+  "development_widths": [
+    1,
+    4,
+    16
+  ],
+  "query": [
+    "CanOperate",
+    "unit0"
+  ],
   "initial_strength": 1.0,
   "initial_confidence": 0.9,
   "initial_records_formula": "2*N+4",
-  "input_orderings": ["canonical_ids", "swap_ready_facts", "seeded_shuffle"],
+  "input_orderings": [
+    "canonical_ids",
+    "swap_ready_facts",
+    "seeded_shuffle"
+  ],
   "shuffle_seed": 17,
   "selector": "native_confidence",
   "rule_profile": "full_pinned_library_loaded",

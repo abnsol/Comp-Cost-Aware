@@ -1,0 +1,178 @@
+{
+  "case": "cases/qualification/run001/n001-seeded_shuffle.metta",
+  "fixture_sha256": "2ff515ae43e5e4901f1515abf49d76c3b39b9bcbd8a924a4a0b182b6f38c5869",
+  "width": 1,
+  "ordering": "seeded_shuffle",
+  "runs": {
+    "capture": {
+      "command": [
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+        "--stack_limit=1g",
+        "-q",
+        "-s",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+        "-g",
+        "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-04/run001/lib_pln.states.metta',_)",
+        "--",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/cases/qualification/run001/n001-seeded_shuffle.metta",
+        "--silent"
+      ],
+      "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout_sha256": "d0544dae04e5f247422b7de07accfec314734390b23d31ed33e85fa77478851a"
+    },
+    "restore-000": {
+      "command": [
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+        "--stack_limit=1g",
+        "-q",
+        "-s",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+        "-g",
+        "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-04/run001/lib_pln.states.metta',_)",
+        "--",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-04/run001/n001-seeded_shuffle/restore-000.metta",
+        "--silent"
+      ],
+      "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout_sha256": "b4af063548360945cb2bee87422674f18d15211821cb5edd435219557d7afa9f"
+    },
+    "restore-001": {
+      "command": [
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+        "--stack_limit=1g",
+        "-q",
+        "-s",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+        "-g",
+        "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-04/run001/lib_pln.states.metta',_)",
+        "--",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-04/run001/n001-seeded_shuffle/restore-001.metta",
+        "--silent"
+      ],
+      "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout_sha256": "a63a5985cd6e513ef9087c768b34e72eddc6277aadf6bd8952c9c21b7d206155"
+    },
+    "restore-006": {
+      "command": [
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+        "--stack_limit=1g",
+        "-q",
+        "-s",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+        "-g",
+        "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-04/run001/lib_pln.states.metta',_)",
+        "--",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-04/run001/n001-seeded_shuffle/restore-006.metta",
+        "--silent"
+      ],
+      "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout_sha256": "4f23e3fa02bd738396c4bb28619173ed9c14ee79823b2e5384f55c572670cf3a"
+    },
+    "restore-011": {
+      "command": [
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+        "--stack_limit=1g",
+        "-q",
+        "-s",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+        "-g",
+        "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-04/run001/lib_pln.states.metta',_)",
+        "--",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-04/run001/n001-seeded_shuffle/restore-011.metta",
+        "--silent"
+      ],
+      "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout_sha256": "d5962ab86ea302091f33c0850bfb96e998e29ec8d94af0c9c2a3bf497ee1db52"
+    },
+    "restore-012": {
+      "command": [
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+        "--stack_limit=1g",
+        "-q",
+        "-s",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+        "-g",
+        "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-04/run001/lib_pln.states.metta',_)",
+        "--",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-04/run001/n001-seeded_shuffle/restore-012.metta",
+        "--silent"
+      ],
+      "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout_sha256": "5f38d02dec7c41003174f71d8a0b15077fc28100d7f6d301f43a6c23fef2503a"
+    }
+  },
+  "restorations": [
+    {
+      "completed_expansions": 0,
+      "state_sha256": "6fe9acdaf9b1f8d70d1972e83b37f27117e8cd24c41439be7dc9e39a80f20b97",
+      "fixture_sha256": "ef91342d43a37251f2cf9dc4d90e025abf472dcf76b706d9871848f6d9e0d115",
+      "continuation_events_identical": true,
+      "final_ordered_queues_identical": true,
+      "state_checkpoints_compared": 13,
+      "selected_records_compared": 12
+    },
+    {
+      "completed_expansions": 1,
+      "state_sha256": "dd510c464ad195bbacb0437e5a8f816539ea529a3aaaa349200194ba6a51deee",
+      "fixture_sha256": "56bd4648882d778e9eefb357add91b133b76f334f2507f48bace0fba481b5a98",
+      "continuation_events_identical": true,
+      "final_ordered_queues_identical": true,
+      "state_checkpoints_compared": 12,
+      "selected_records_compared": 11
+    },
+    {
+      "completed_expansions": 6,
+      "state_sha256": "ded91fd3fc4e67d890942778b36e59789ff4d76cf7dabc4074673b43402ec176",
+      "fixture_sha256": "7a3cae20390fe304f97c38812167917846a64fe3d9d8a2e5f1ce46d9e39b1e01",
+      "continuation_events_identical": true,
+      "final_ordered_queues_identical": true,
+      "state_checkpoints_compared": 7,
+      "selected_records_compared": 6
+    },
+    {
+      "completed_expansions": 11,
+      "state_sha256": "8e64e5e34755ea26d108f5e6452be7fde64d78b280ffd1d26f4449ac556ad9f6",
+      "fixture_sha256": "d0e1dc78ab23231b901083fbeb474104e8f6c7d4f784f3df38aba75993bead3a",
+      "continuation_events_identical": true,
+      "final_ordered_queues_identical": true,
+      "state_checkpoints_compared": 2,
+      "selected_records_compared": 1
+    },
+    {
+      "completed_expansions": 12,
+      "state_sha256": "598b6c570d1ac6fa69469f679e494aba41cb8615b6cf8613ac6acea89aff9efa",
+      "fixture_sha256": "0e3b2075c83902d4f912fe1c5085d96eb66e2f6786607917de348ddd4581b463",
+      "continuation_events_identical": true,
+      "final_ordered_queues_identical": true,
+      "state_checkpoints_compared": 1,
+      "selected_records_compared": 0
+    }
+  ],
+  "passed": true,
+  "prior_feasibility_trace_unchanged": true,
+  "checkpoint_count": 13,
+  "maximum_task_queue": 6,
+  "maximum_belief_queue": 11,
+  "trim_events": [],
+  "ready_pair_checkpoints": [
+    0
+  ],
+  "final_task_queue_size": 0,
+  "termination": {
+    "step_cap_reached": false,
+    "task_queue_empty": true
+  },
+  "snapshots_sha256": "49dd346069cccc8552c05ab433f852f3c73973a8eae72e8bb3acbc07df5fb4f6"
+}
