@@ -1,0 +1,146 @@
+[
+  {
+    "alpha": 0.001,
+    "folds": [
+      {
+        "group": "n001",
+        "rows": 24,
+        "mean_absolute_log_error": 0.5640962349979078,
+        "median_absolute_percentage_error": 86.35200514413576
+      },
+      {
+        "group": "n004",
+        "rows": 83,
+        "mean_absolute_log_error": 0.2589129219798705,
+        "median_absolute_percentage_error": 18.57720259098581
+      },
+      {
+        "group": "n016",
+        "rows": 413,
+        "mean_absolute_log_error": 0.15008657551108934,
+        "median_absolute_percentage_error": 14.073441559777834
+      },
+      {
+        "group": "necessary-w004",
+        "rows": 107,
+        "mean_absolute_log_error": 0.22303524534457764,
+        "median_absolute_percentage_error": 19.295033310837763
+      },
+      {
+        "group": "necessary-w016",
+        "rows": 314,
+        "mean_absolute_log_error": 0.3644482831891651,
+        "median_absolute_percentage_error": 28.56501525220422
+      }
+    ],
+    "score": 0.3121158522045221
+  },
+  {
+    "alpha": 0.01,
+    "folds": [
+      {
+        "group": "n001",
+        "rows": 24,
+        "mean_absolute_log_error": 0.57067242953263,
+        "median_absolute_percentage_error": 87.55024046980782
+      },
+      {
+        "group": "n004",
+        "rows": 83,
+        "mean_absolute_log_error": 0.25833401705966397,
+        "median_absolute_percentage_error": 15.926565446911178
+      },
+      {
+        "group": "n016",
+        "rows": 413,
+        "mean_absolute_log_error": 0.1502096626944361,
+        "median_absolute_percentage_error": 14.12420143043185
+      },
+      {
+        "group": "necessary-w004",
+        "rows": 107,
+        "mean_absolute_log_error": 0.21989526691414185,
+        "median_absolute_percentage_error": 19.200846810986416
+      },
+      {
+        "group": "necessary-w016",
+        "rows": 314,
+        "mean_absolute_log_error": 0.333312171372431,
+        "median_absolute_percentage_error": 26.412488381588574
+      }
+    ],
+    "score": 0.30648470951466056
+  },
+  {
+    "alpha": 0.1,
+    "folds": [
+      {
+        "group": "n001",
+        "rows": 24,
+        "mean_absolute_log_error": 0.6043064777672226,
+        "median_absolute_percentage_error": 95.59759293715868
+      },
+      {
+        "group": "n004",
+        "rows": 83,
+        "mean_absolute_log_error": 0.2690014992668799,
+        "median_absolute_percentage_error": 23.799958315129643
+      },
+      {
+        "group": "n016",
+        "rows": 413,
+        "mean_absolute_log_error": 0.14640084662054928,
+        "median_absolute_percentage_error": 13.721002211964418
+      },
+      {
+        "group": "necessary-w004",
+        "rows": 107,
+        "mean_absolute_log_error": 0.21853836025333445,
+        "median_absolute_percentage_error": 16.85084205151435
+      },
+      {
+        "group": "necessary-w016",
+        "rows": 314,
+        "mean_absolute_log_error": 0.2943805957656298,
+        "median_absolute_percentage_error": 21.31473298697696
+      }
+    ],
+    "score": 0.3065255559347232
+  },
+  {
+    "alpha": 1.0,
+    "folds": [
+      {
+        "group": "n001",
+        "rows": 24,
+        "mean_absolute_log_error": 0.7398814915639028,
+        "median_absolute_percentage_error": 129.4562869173292
+      },
+      {
+        "group": "n004",
+        "rows": 83,
+        "mean_absolute_log_error": 0.31402511595868904,
+        "median_absolute_percentage_error": 34.3167260100283
+      },
+      {
+        "group": "n016",
+        "rows": 413,
+        "mean_absolute_log_error": 0.18746918058177142,
+        "median_absolute_percentage_error": 17.10115157023637
+      },
+      {
+        "group": "necessary-w004",
+        "rows": 107,
+        "mean_absolute_log_error": 0.18081400324852465,
+        "median_absolute_percentage_error": 12.072921624007593
+      },
+      {
+        "group": "necessary-w016",
+        "rows": 314,
+        "mean_absolute_log_error": 0.2922733477798622,
+        "median_absolute_percentage_error": 22.206730201778058
+      }
+    ],
+    "score": 0.34289262782655
+  }
+]

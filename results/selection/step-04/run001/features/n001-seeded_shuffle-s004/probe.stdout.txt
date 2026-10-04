@@ -1,0 +1,41 @@
+(FEATURE_PROBE 0 (104171 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 1 (78051 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 2 (175707 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 3 (179426 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 4 (101036 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 5 (92486 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 6 (78836 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 7 (78296 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 8 (78233 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 9 (75116 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 10 (87766 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 11 (75287 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 12 (70517 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 13 (70548 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 14 (123145 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 15 (154650 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 16 (90999 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 17 (86384 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 18 (105626 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+(FEATURE_PROBE 19 (95877 (((Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (8 4 9 1 1 7 0 1 8 4)) ((Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (8 4 10 1 1 6 0 1 8 4)))))
+616682007
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true

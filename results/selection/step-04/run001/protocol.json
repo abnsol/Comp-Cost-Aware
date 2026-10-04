@@ -1,0 +1,18 @@
+{
+  "scope": "development fitting and adapter validation only; no held-out performance comparison",
+  "data_batch": "results/selection/step-03/run002",
+  "model": "weighted standardized ridge regression on log expansion CPU",
+  "ridge_alphas": [
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "validation_groups": "family plus width; all orderings/checkpoints of a structure remain together",
+  "selection_metric": "mean across groups of mean absolute log prediction error",
+  "training_weights": "equal structure weights, then equal states, then equal qualified candidates",
+  "feature_timing_repetitions": 20,
+  "validation_budget_ns": 1000000000,
+  "evaluation_performance_allowed": false,
+  "freeze": "choose alpha using development group validation; fit once on all qualified development rows; no tuning from policy validation timings"
+}

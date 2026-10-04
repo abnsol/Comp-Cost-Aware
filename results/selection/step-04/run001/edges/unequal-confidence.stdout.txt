@@ -1,0 +1,7 @@
+(EDGE (Sentence ((Implication (Certificate unit0 path_b_001) (CanOperate unit0)) (stv 1.0 0.91)) (6)))
+(COST_STATS (1 0 0 63386 0 1))
+true
+622366691
+true
+true
+true
