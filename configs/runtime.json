@@ -1,0 +1,7 @@
+{
+  "context_root": "../research-discovery/step-03",
+  "pln_commit": "4405956947c4b53c7ff01bd565aa3b114bc970a1",
+  "petta_commit": "ae66fa8e41dcd5539d614706bd4e5cfb34f9608d",
+  "swipl_version": "SWI-Prolog version 9.3.25 for x86_64-linux",
+  "timeout_seconds": 60
+}

@@ -35,9 +35,12 @@ evidence and scope. Design agreement alone does not establish empirical validity
 18. Solo-researcher feasibility, bounded claims and stepwise review/commits.
 
 Known open items from prior source inspection
-- The proposed small inheritance example has only had arithmetic checks, not a
-  PLN run. Its four properties alone are not a validated performance workload.
+- Step one ran the proposed small inheritance example in native PLN. The observed
+  answer strength was 0.6879979916209911 against world probability 0.74. Its four
+  properties alone are not a validated performance workload, and the new run has
+  not undergone independent deduction-proof replay.
 - The existing relevance adapter handles implication chains, not general
   inheritance deduction; any extension must be shared by both comparison arms.
 - The existing independent verifier covers MP/revision, not all native PLN rules.
-- Embedded Python-PeTTa compatibility and useful CPU cost variation are untested.
+- Python subprocess-to-PeTTa execution passed the step-one checks. Embedded
+  Python-PeTTa compatibility and useful CPU cost variation remain untested.
