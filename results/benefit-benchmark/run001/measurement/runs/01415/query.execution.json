@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+    "--stack_limit=1g",
+    "-q",
+    "-s",
+    "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+    "-g",
+    "consult('/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/benefit-benchmark/run001/bootstrap.pl')",
+    "-g",
+    "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/benefit-benchmark/run001/lib_pln.quiet.metta',_)",
+    "--",
+    "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/benefit-benchmark/run001/measurement/runs/01415/query.metta",
+    "--silent"
+  ],
+  "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+  "returncode": 0,
+  "timed_out": false,
+  "fixture_sha256": "59472d7066f2cf1de910ef9a3f1f55dc65176139f70963f90c718fdfe5659ae7",
+  "stdout_sha256": "490eb8ea4bb380cc5614bc4bbb4d0cc805960ffbb106c77fece7b05ab9bc8892",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

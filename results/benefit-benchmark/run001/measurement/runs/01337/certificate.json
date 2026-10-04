@@ -1,0 +1,145 @@
+{
+  "source_commit": "4405956947c4b53c7ff01bd565aa3b114bc970a1",
+  "source_sha256": "cdfb3f18bd7b336440fc7b4409209afddf0e64c41f17dee7eefc8f02718de433",
+  "fixture_sha256": "35b5a1e8ecd52ffc157a028508f6e124741ddf173f4274b7f5a685822b743076",
+  "query": [
+    "CanOperate",
+    "unit0"
+  ],
+  "marginals": {},
+  "root": "69cb619dce3b2b7983a45a48382636062d09facbc4547a67fcf54971528d5cd0",
+  "nodes": {
+    "69cb619dce3b2b7983a45a48382636062d09facbc4547a67fcf54971528d5cd0": {
+      "kind": "binary",
+      "record": [
+        "Sentence",
+        [
+          [
+            "CanOperate",
+            "unit0"
+          ],
+          [
+            "stv",
+            1.0,
+            0.7290000000000001
+          ]
+        ],
+        [
+          2,
+          13,
+          14
+        ]
+      ],
+      "parents": [
+        "5859b159f93c0107729a4295c3ba00a3b79a60a6c9de1a70f37f071ebb5de2d7",
+        "feacce36b8d5940518b8352aab697779d04f4079bb8b785ecdfa6e62f9aa1349"
+      ],
+      "trace_line": 23
+    },
+    "5859b159f93c0107729a4295c3ba00a3b79a60a6c9de1a70f37f071ebb5de2d7": {
+      "kind": "binary",
+      "record": [
+        "Sentence",
+        [
+          [
+            "Certificate",
+            "unit0",
+            "path_b_005"
+          ],
+          [
+            "stv",
+            1.0,
+            0.81
+          ]
+        ],
+        [
+          2,
+          13
+        ]
+      ],
+      "parents": [
+        "321bbf49ed3f1ba0839a897ae447dc92bd43ee8000b5069458f681e02a0f4d76",
+        "780bdd438683dfdbc80fb82b63fa60d8c1628d419820ee22464d109a8855f674"
+      ],
+      "trace_line": 5
+    },
+    "321bbf49ed3f1ba0839a897ae447dc92bd43ee8000b5069458f681e02a0f4d76": {
+      "kind": "input",
+      "record": [
+        "Sentence",
+        [
+          [
+            "Ready",
+            "unit0",
+            "route_b"
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          2
+        ]
+      ]
+    },
+    "780bdd438683dfdbc80fb82b63fa60d8c1628d419820ee22464d109a8855f674": {
+      "kind": "input",
+      "record": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Ready",
+              "unit0",
+              "route_b"
+            ],
+            [
+              "Certificate",
+              "unit0",
+              "path_b_005"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          13
+        ]
+      ]
+    },
+    "feacce36b8d5940518b8352aab697779d04f4079bb8b785ecdfa6e62f9aa1349": {
+      "kind": "input",
+      "record": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Certificate",
+              "unit0",
+              "path_b_005"
+            ],
+            [
+              "CanOperate",
+              "unit0"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          14
+        ]
+      ]
+    }
+  }
+}

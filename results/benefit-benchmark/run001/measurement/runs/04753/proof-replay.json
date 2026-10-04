@@ -1,0 +1,159 @@
+{
+  "valid": true,
+  "nodes": 5,
+  "answer": {
+    "strength": 1.0,
+    "confidence": 0.7290000000000001,
+    "evidence": [
+      2,
+      13,
+      14
+    ]
+  },
+  "steps": [
+    {
+      "id": "321bbf49ed3f1ba0839a897ae447dc92bd43ee8000b5069458f681e02a0f4d76",
+      "rule": "input",
+      "record": [
+        "Sentence",
+        [
+          [
+            "Ready",
+            "unit0",
+            "route_b"
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          2
+        ]
+      ],
+      "parents": [],
+      "trace_line": null
+    },
+    {
+      "id": "780bdd438683dfdbc80fb82b63fa60d8c1628d419820ee22464d109a8855f674",
+      "rule": "input",
+      "record": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Ready",
+              "unit0",
+              "route_b"
+            ],
+            [
+              "Certificate",
+              "unit0",
+              "path_b_005"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          13
+        ]
+      ],
+      "parents": [],
+      "trace_line": null
+    },
+    {
+      "id": "5859b159f93c0107729a4295c3ba00a3b79a60a6c9de1a70f37f071ebb5de2d7",
+      "rule": "ModusPonens (lib_pln.metta:124-126,216-218)",
+      "record": [
+        "Sentence",
+        [
+          [
+            "Certificate",
+            "unit0",
+            "path_b_005"
+          ],
+          [
+            "stv",
+            1.0,
+            0.81
+          ]
+        ],
+        [
+          2,
+          13
+        ]
+      ],
+      "parents": [
+        "321bbf49ed3f1ba0839a897ae447dc92bd43ee8000b5069458f681e02a0f4d76",
+        "780bdd438683dfdbc80fb82b63fa60d8c1628d419820ee22464d109a8855f674"
+      ],
+      "trace_line": 5
+    },
+    {
+      "id": "feacce36b8d5940518b8352aab697779d04f4079bb8b785ecdfa6e62f9aa1349",
+      "rule": "input",
+      "record": [
+        "Sentence",
+        [
+          [
+            "Implication",
+            [
+              "Certificate",
+              "unit0",
+              "path_b_005"
+            ],
+            [
+              "CanOperate",
+              "unit0"
+            ]
+          ],
+          [
+            "stv",
+            1.0,
+            0.9
+          ]
+        ],
+        [
+          14
+        ]
+      ],
+      "parents": [],
+      "trace_line": null
+    },
+    {
+      "id": "69cb619dce3b2b7983a45a48382636062d09facbc4547a67fcf54971528d5cd0",
+      "rule": "ModusPonens (lib_pln.metta:124-126,216-218)",
+      "record": [
+        "Sentence",
+        [
+          [
+            "CanOperate",
+            "unit0"
+          ],
+          [
+            "stv",
+            1.0,
+            0.7290000000000001
+          ]
+        ],
+        [
+          2,
+          13,
+          14
+        ]
+      ],
+      "parents": [
+        "5859b159f93c0107729a4295c3ba00a3b79a60a6c9de1a70f37f071ebb5de2d7",
+        "feacce36b8d5940518b8352aab697779d04f4079bb8b785ecdfa6e62f9aa1349"
+      ],
+      "trace_line": 23
+    }
+  ],
+  "scope": "certificate ancestor proof only; not all search operations"
+}

@@ -1,0 +1,33 @@
+{
+  "id": 5945,
+  "case": "reserved-necessary-w032-swap_required_pair",
+  "split": "reserved",
+  "mode": "BO",
+  "budget_ns": 2000000,
+  "repetition": 6,
+  "endpoint": "budget",
+  "result": {
+    "status": "deadline",
+    "completed_expansions": 1,
+    "engine_cpu_ns": 6532988,
+    "observer_window_cpu_ns": 23699,
+    "observer_window_fraction": 0.0036275897032108434,
+    "last_detection_cpu_ns": 6495806,
+    "overshoot_ns": 4532988,
+    "verified_success": false,
+    "detected_proof_verified": false,
+    "goal_in_final_state": false,
+    "audit_prefix_identical": false
+  },
+  "selector_stats": [
+    1,
+    71,
+    3706407,
+    2,
+    144084,
+    4368776,
+    0,
+    0,
+    0
+  ]
+}

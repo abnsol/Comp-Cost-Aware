@@ -1,0 +1,33 @@
+{
+  "id": 6138,
+  "case": "reserved-necessary-w008-canonical_ids",
+  "split": "reserved",
+  "mode": "B",
+  "budget_ns": 32000000,
+  "repetition": 7,
+  "endpoint": "budget",
+  "result": {
+    "status": "success",
+    "completed_expansions": 2,
+    "engine_cpu_ns": 3223089,
+    "observer_window_cpu_ns": 29395,
+    "observer_window_fraction": 0.009120132891148833,
+    "last_detection_cpu_ns": 3206759,
+    "overshoot_ns": 0,
+    "verified_success": true,
+    "detected_proof_verified": true,
+    "goal_in_final_state": true,
+    "audit_prefix_identical": false
+  },
+  "selector_stats": [
+    2,
+    54,
+    2351970,
+    0,
+    0,
+    2714853,
+    0,
+    0,
+    1
+  ]
+}

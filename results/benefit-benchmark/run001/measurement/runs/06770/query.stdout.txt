@@ -1,0 +1,6 @@
+(BUDGET_RESULT (success 2 926438 17402 918174 (Sentence ((CanOperate unit0) (stv 1.0 0.7290000000000001)) (2 5 6)) (((Sentence ((Ready unit0 route_a) (stv 1.0 0.9)) (1)) (Sentence ((Implication (Ready unit0 route_a) (Certificate unit0 path_a)) (stv 1.0 0.9)) (3)) (Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (Sentence ((Certificate unit0 path_b_001) (stv 1.0 0.81)) (2 5)) (Sentence ((CanOperate unit0) (stv 1.0 0.7290000000000001)) (2 5 6))) ((Sentence ((Ready unit0 route_b) (stv 1.0 0.9)) (2)) (Sentence ((Ready unit0 route_a) (stv 1.0 0.9)) (1)) (Sentence ((Implication (Ready unit0 route_a) (Certificate unit0 path_a)) (stv 1.0 0.9)) (3)) (Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (Sentence ((Implication (Certificate unit0 path_b_001) (CanOperate unit0)) (stv 1.0 0.9)) (6)) (Sentence ((Certificate unit0 path_b_001) (stv 1.0 0.81)) (2 5)) (Sentence ((CanOperate unit0) (stv 1.0 0.7290000000000001)) (2 5 6))))))
+(BENEFIT_STATS (2 12 605726 0 0 750975 0 0 1))
+true
+true
+true
+true

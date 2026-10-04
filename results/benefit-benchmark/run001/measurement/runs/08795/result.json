@@ -1,0 +1,33 @@
+{
+  "id": 8795,
+  "case": "necessary-w016-seeded_shuffle",
+  "split": "development",
+  "mode": "BC",
+  "budget_ns": 4000000,
+  "repetition": 10,
+  "endpoint": "budget",
+  "result": {
+    "status": "deadline",
+    "completed_expansions": 2,
+    "engine_cpu_ns": 5782402,
+    "observer_window_cpu_ns": 27936,
+    "observer_window_fraction": 0.0048312102825088955,
+    "last_detection_cpu_ns": 5759571,
+    "overshoot_ns": 1782402,
+    "verified_success": false,
+    "detected_proof_verified": false,
+    "goal_in_final_state": true,
+    "audit_prefix_identical": false
+  },
+  "selector_stats": [
+    2,
+    94,
+    4131909,
+    2,
+    89128,
+    4787659,
+    0,
+    0,
+    1
+  ]
+}
