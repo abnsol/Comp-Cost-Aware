@@ -1,0 +1,27 @@
+# Local Python environments and generated caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# Local configuration and temporary files
+.env
+.env.*
+!.env.example
+.DS_Store
+*.swp
+*.swo
+
+# Downloaded runtime/dependency trees (record revisions in tracked manifests)
+runtime/
+.cache/
+
+# Do not blanket-ignore results, traces, CSV/JSON or experiment logs.
