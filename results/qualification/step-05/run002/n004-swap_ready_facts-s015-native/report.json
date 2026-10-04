@@ -1,0 +1,169 @@
+{
+  "name": "n004-swap_ready_facts-s015-native",
+  "kind": "native_selection",
+  "state_sha256": "ce923caa7e5011f97762c1b94ab48c51ca40c6855ebafc75647b070f48d14faa",
+  "runs": {
+    "reference": {
+      "command": [
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+        "--stack_limit=1g",
+        "-q",
+        "-s",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+        "-g",
+        "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PLN/lib_pln.metta',_)",
+        "--",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-05/run002/n004-swap_ready_facts-s015-native/reference.metta",
+        "--silent"
+      ],
+      "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout_sha256": "2f8282010b99ad6bb170da9627260cb8c0712ae41c1e7bb66779ce262ebc32db",
+      "fixture_sha256": "74a13475e264305d8615e37f312cf01f82f3985ca91063f71d20eb52ed419786"
+    },
+    "timed": {
+      "command": [
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+        "--stack_limit=1g",
+        "-q",
+        "-s",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+        "-g",
+        "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PLN/lib_pln.metta',_)",
+        "--",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-05/run002/n004-swap_ready_facts-s015-native/timed.metta",
+        "--silent"
+      ],
+      "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout_sha256": "51e0c40e664e779bd45fec31feb6240ddee45f25d54a3b4e7fb801756d2eecc0",
+      "fixture_sha256": "f1b113b39c5fe45e3c0b2dbda251bf126efa58e18d0638351ed357b7de7458e0"
+    },
+    "audit": {
+      "command": [
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+        "--stack_limit=1g",
+        "-q",
+        "-s",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+        "-g",
+        "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PLN/lib_pln.metta',_)",
+        "--",
+        "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-05/run002/n004-swap_ready_facts-s015-native/audit.metta",
+        "--silent"
+      ],
+      "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout_sha256": "63312f0b1afe52ea15eb590d40baf33609f6486ac9e5ed4c5048400e4d549a8b",
+      "fixture_sha256": "068997d89c4066043429403fdf888a2ae2d1c58b9ab1acee57b8d97ed57ff618"
+    }
+  },
+  "passed": true,
+  "counters": {
+    "belief_buffer_size": 22,
+    "visited_premise_pairs": 22,
+    "stamp_disjoint_pairs": 12,
+    "binary_rule_dispatches": 24,
+    "unary_rule_dispatches": 1,
+    "generated_binary_results": 1,
+    "generated_unary_results": 0,
+    "unique_generated_records": 1,
+    "unique_new_beliefs": 0,
+    "retained_task_additions": 0,
+    "retained_belief_additions": 0,
+    "tasks_removed_by_cap": 0,
+    "beliefs_removed_by_cap": 0
+  },
+  "timed": {
+    "selected": [
+      "Sentence",
+      [
+        [
+          "Certificate",
+          "unit0",
+          "path_b_004"
+        ],
+        [
+          "stv",
+          1.0,
+          0.81
+        ]
+      ],
+      [
+        2,
+        11
+      ]
+    ],
+    "selection_or_dispatch_cpu_ns": 56256,
+    "expansion_cpu_ns": 162109,
+    "local_total_cpu_ns": 218365,
+    "clock_probes_ns": [
+      [
+        6706,
+        3202,
+        9908
+      ],
+      [
+        4721,
+        3085,
+        7806
+      ],
+      [
+        4343,
+        3041,
+        7384
+      ],
+      [
+        4286,
+        3019,
+        7305
+      ],
+      [
+        4365,
+        3104,
+        7469
+      ],
+      [
+        4279,
+        3024,
+        7303
+      ],
+      [
+        4379,
+        3118,
+        7497
+      ],
+      [
+        4354,
+        3056,
+        7410
+      ],
+      [
+        4237,
+        3157,
+        7394
+      ],
+      [
+        4048,
+        2997,
+        7045
+      ]
+    ],
+    "embedded_clock_info": [
+      "3.12.3",
+      1e-09,
+      "true"
+    ]
+  },
+  "audit_expansion_cpu_ns_including_logging": 1075617,
+  "checks": {
+    "native_ordered_post_queues_identical": true,
+    "audit_generated_results_identical": true,
+    "audit_selected_and_queues_identical": true,
+    "counters_reconciled": true,
+    "saved_natural_next_state_identical": true
+  }
+}

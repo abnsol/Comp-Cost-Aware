@@ -1,0 +1,145 @@
+QUALIFICATION STEP 5: SINGLE-EXPANSION CPU AND WORK INSTRUMENTATION
+Completed; stop for code/results review before repeated cost profiling.
+
+Outcome
+36/36 validation trials passed in run002, with three executions each (108 total):
+26 forced Ready alternatives from the 13 previously identified eligible states;
+9 native selections at the midpoint of each case; and 1 separate trimming test.
+For each trial, the unmodified native one-step loop, timing-only extracted
+expansion and detailed audit agree on the selected record and ordered post-queues.
+Timing-only and audit variants also agree on the full raw derivation list.
+The nine natural midpoint transitions equal the next saved step-four state.
+All counter records reconcile with saved inputs, raw results and final queues.
+
+This validates the measurement implementation on this workload. It does not
+establish a reproducible A/B cost gap, total-query benefit or estimator performance.
+There is one timed expansion per condition, fixed run order and no controlled
+inference warm-up. These are instrumentation checks, not an inferential benchmark.
+
+How actual PLN computation is preserved
+src/pln_cost/expansion.py extracts three expressions from the pinned native
+PLN.Derive: the collapse of binary/unary rule results and the two LimitSize queue
+updates. They remain verbatim in the timing-only helper. The full native library
+supplies rules, truth formulas, evidence guards, deduplication and trimming.
+No Python implementation substitutes for these inference operations.
+Cost.Expand accepts a selected pending Sentence, performs exactly one expansion,
+and returns updated Tasks, Beliefs and raw derivations. It does not recurse.
+It omits the native SELECTED console print; selected-record reporting occurs
+after timing. Consequently this is isolated reasoning-operation timing, not a
+claim to have timed the unmodified native query with all its diagnostic output.
+
+For native selection, the helper uses native BestCandidate and confidence ranking.
+For a forced alternative, the timed/audit queues remain exactly the saved queues.
+The separate unmodified reference moves only that equal-maximum-priority candidate
+to the front of a task COPY so native tie-breaking chooses it, then stops after
+one expansion. Beliefs are unchanged. Native queue updating removes the selected
+record, preserving other task order; full resulting queues must agree exactly.
+This reference trick is not an implemented selection policy, a change to the
+freely running baseline, or an added online scheduling cost model.
+
+Clock and boundaries
+The existing PeTTa py-call/Janus bridge executes Python time.process_time_ns()
+inside the SWI process. This process-wide clock includes user and system CPU,
+excludes sleep time, and returns integer nanoseconds. Nanosecond representation
+and nominal clock resolution do not imply nanosecond measurement accuracy.
+Official semantics: https://docs.python.org/3/library/time.html#time.process_time
+Pinned bridge: PeTTa src/metta.pl:236-261; use_module(library(janus)) at line10.
+SWI statistics(process_cputime) is documented as user CPU only, so it was not used
+as a substitute for user+system CPU:
+https://www.swi-prolog.org/pldoc/man?section=builtin-statistics
+
+Boundary 1: clock before selection/forced-candidate dispatch.
+Boundary 2: clock immediately after selection/dispatch, before Cost.Expand.
+Boundary 3: clock after raw-result collection AND both queue updates complete.
+Report fields:
+- selection_or_dispatch_cpu_ns: boundary2 - boundary1. In forced trials this is
+  candidate dispatch, NOT measured native selector cost. Native trials time the
+  actual confidence selector plus wrapper/clock boundary overhead.
+- expansion_cpu_ns: boundary3 - boundary2, including wrapper/clock overhead.
+- local_total_cpu_ns: boundary3 - boundary1; must equal the sum of those intervals.
+No overhead is automatically subtracted. Detailed printing/counters happen in a
+separate fresh audit process whose results must match the timing-only process.
+Audit CPU includes logging and is labelled accordingly; a difference between two
+single runs is not a reliable estimate of counter overhead.
+
+Ten consecutive three-clock probes per process record clock/bridge/binding costs.
+They are local diagnostics, not a complete measurement-overhead calibration.
+Embedded Python reported 3.12.3, monotonic process clock and nominal resolution
+1e-9 seconds. In the 36 timing-only processes, individual probe intervals ranged
+from 2751 to 34779 ns (median 4603 ns). These are observed probe samples only.
+Startup, module loading, snapshot preparation, parent-Python CPU, offline checks
+and final output printing are excluded from these local intervals. They must be
+accounted for as appropriate in the later total-query benchmark. This harness
+does NOT yet measure total-query CPU, impose CPU deadlines, or estimate route cost.
+
+Work counters and observed mechanism
+The audit logs each visited belief's stamp-disjoint result, forward/backward
+binary rule dispatch, unary dispatch and each generated result. A dispatch means
+one call to native |-, not the number of individual rule clauses tested inside it.
+Stamp-disjoint means evidence-eligible; it does not imply successful rule matching.
+Offline accounting records unique generated records, new beliefs before caps,
+retained task/belief additions, and task/belief removals due to caps. Native queue
+results are also checked against independently reconstructed dedup/removal order.
+
+Canonical initial states:
+Width   Beliefs scanned by EACH candidate   A results   B results
+1       6                                  1           1
+4       12                                 1           4
+16      36                                 1           16
+The extra result-generation mechanism is therefore observed, not merely drawn in
+a diagram. Eleven validation trials generated at least one record already in the
+belief queue; deduplication matters too. These counts are not CPU cost estimates.
+
+Timing limitations demonstrated by the control
+Single expansion measurements across the batch range from about 0.113 to 1.632 ms.
+In canonical N1, A measured 0.130 ms and B 0.210 ms despite the same reported work
+counts. This is a warning against using isolated timings to assign cheap/expensive
+labels: cold-runtime effects and measurement/run variability are uncontrolled.
+No timing ratio, statistical significance, generalization or route-speed claim is
+accepted from this batch. Step six must calibrate clocks/warm-up/overhead, randomize
+paired order, restore before EACH measured alternative, and repeat across states.
+
+Trimming diagnostic
+The extra diagnostic-trim-cap2 trial copies the smallest initial state and sets
+both queue-limit arguments to 2 (native keeps length strictly below 2). This
+instrumentation-only test removed 5 task records and 6 belief records; the newly
+generated certificate was not retained. Reference/timed/audit queues all agree.
+The actual qualification cases retain their original 4097 arguments. This
+diagnostic does not belong to the A/B cost comparison or redefine task success.
+
+Failure retained and fixed
+run001 stopped after its first trial because the counter parser expected capital
+True/False while PeTTa prints lowercase true/false. Its native/timed outputs were
+retained. The parser was fixed and a regression test now reads that exact audit
+log. No inference, task, rule, cap or success threshold changed for the rerun.
+run002 is the successful complete validation batch.
+
+Review files
+src/pln_cost/expansion.py: extraction, clock wrapper, counter parsing/accounting.
+scripts/validate_expansion.py: provenance, trial construction and native parity.
+tests/test_expansion.py: invalid clocks/candidates, counter regression, saved runs.
+results/qualification/step-05/run002/expand.metta: small native-operation helper.
+results/qualification/step-05/run002/expand-audit.metta: diagnostic counterpart.
+results/qualification/step-05/run002/report.json: all inputs, samples and checks.
+Each named trial directory retains input.json, all three MeTTa fixtures, stdout,
+stderr and report.json. Source hashes describe files at execution time; the
+saved-run regression test and status/docs updates were added afterwards.
+Native PLN and PeTTa source repositories remain unchanged. Copies include MIT
+license attribution. The successful batch occupies approximately 2.1 MB.
+
+Validation performed
+  python3 -m unittest discover -s tests -q
+  49 tests passed before run002; 50 passed after adding saved-run regression.
+  python3 scripts/validate_expansion.py --run-id run002
+  36 passed instrumentation validations / 108 clean engine executions.
+No repeated cost-gap experiment, cost estimator or main benchmark was implemented.
+
+Next review-gated step
+Design and calibrate paired repeated CPU measurements before interpreting a cost
+gap. Predeclare repetition counts, practical effect/noise criteria, warm-up,
+randomization, and batching rules. Preserve the N1 control and all measured
+negative/equal outcomes. Compare candidates from identical restored states and
+keep restoration/measurement overhead visible. Do not choose an estimator yet.
+
+Suggested commit message
+Validate native PLN expansion CPU timing and work counters

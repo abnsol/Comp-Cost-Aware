@@ -8,11 +8,11 @@ Improvement, no benefit and harm are all legitimate experimental outcomes.
 The current qualification phase addresses time/success to a valid PLN derivation.
 It does not establish improved probability accuracy against external outcomes.
 
-Status: qualification step four completed; stopped for review.
-Start at docs/qualification/04-state-capture-and-restoration.txt. Captured 435
-logical checkpoints and verified 47 fresh-process continuations across nine KBs.
-All nine cases previously returned independently verified native PLN answers.
-State/proof logging preserves original output. CPU differences remain unmeasured.
+Status: qualification step five completed; stopped for review.
+Start at docs/qualification/05-expansion-instrumentation.txt. Thirty-six native
+validation trials passed: isolated expansion timing, separate work counters and
+ordered-queue parity. Single CPU samples are recorded; a reproducible cost gap
+has NOT been established. Earlier native answers and state restoration remain valid.
 The design is docs/qualification/01-kb-specification.txt and configs/qualification-kb.json.
 The earlier machine-example work is preserved:
 The returned machine-example answer now has a captured seven-node proof replayed
@@ -36,6 +36,7 @@ Folder structure and review order
   src/pln_cost/qualification.py  KB generator and explicitly authored static proofs
   src/pln_cost/feasibility.py  Qualification output parsing and observable parity
   src/pln_cost/states.py  Native state capture, provenance and exact continuation checks
+  src/pln_cost/expansion.py  Native expansion extraction, CPU clocks and separate counters
   scripts/                Human-readable entry points; start at validate_step1.py
   tests/                  Offline input/oracle and false-success checks
   results/step-01/run001/ Original output, parity fixture and result manifest
@@ -49,6 +50,7 @@ Run from this project directory (Python standard library only)
   python3 scripts/generate_qualification.py --run-id review001
   python3 scripts/validate_qualification.py --run-id review001 --case-batch run001
   python3 scripts/validate_states.py --run-id review001 --feasibility-batch run001
+  python3 scripts/validate_expansion.py --run-id review001 --state-batch run001
   python3 scripts/validate_step1.py --run-id review001
   python3 scripts/validate_step2.py --run-id review001
 The qualification generator runs no inference: it checks source revisions and
@@ -60,6 +62,11 @@ State validation records the native queues at every loop entry, then restores
 selected checkpoints in fresh processes. The current batch uses 56 processes
 (9 captures and 47 restorations), each with the existing wall safety limit.
 It does not measure CPU or restore hardware caches/allocator history.
+Expansion validation uses 108 processes (36 trials, each with an unmodified
+native reference, timing-only helper and diagnostic helper). The clock is inside
+the engine process. These are local operation CPU samples, not total query costs.
+Detailed counter logging is excluded from timing-only runs; boundary-clock costs
+remain included, and probes are saved without automatically subtracting them.
 Use a fresh run ID: existing results are never overwritten. Runtime paths in
 configs/runtime.json are relative to this project. The external runtime/source
 directories must already exist at the recorded revisions; the runner installs
@@ -81,10 +88,11 @@ Working agreement
 - Keep development/tuning separate from held-out evaluation.
 
 Review checkpoint
-Review docs/qualification/04-state-capture-and-restoration.txt and its saved
-snapshots before qualification step five: expansion instrumentation and validation.
+Review docs/qualification/05-expansion-instrumentation.txt and the code before
+qualification step six: calibrate and repeatedly compare same-state expansions.
 This new series is separate from the old diagnostic interface/proof-audit steps.
-The new task's CPU cost gap and time to first available answer remain unmeasured.
+The new task's reproducible CPU cost gap and time to first available answer remain
+unestablished. Single validation timings must not be presented as benchmark results.
 Do not implement an estimator or begin the main comparison before validating the
 task, reviewing the baseline criteria and studying the papers.
 

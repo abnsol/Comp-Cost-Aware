@@ -1,0 +1,134 @@
+{
+  "purpose": "instrumentation validation, not a cost-gap estimate",
+  "passed": false,
+  "trials": [
+    {
+      "name": "n001-canonical_ids-s000-route_a",
+      "kind": "forced_ready_candidate",
+      "state_sha256": "daafb61710cc1e2683640e06bcf3825ef54e55021435fa223dd6be58c1d7f0ae",
+      "runs": {
+        "reference": {
+          "command": [
+            "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+            "--stack_limit=1g",
+            "-q",
+            "-s",
+            "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+            "-g",
+            "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PLN/lib_pln.metta',_)",
+            "--",
+            "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-05/run001/n001-canonical_ids-s000-route_a/reference.metta",
+            "--silent"
+          ],
+          "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+          "returncode": 0,
+          "timed_out": false,
+          "stdout_sha256": "38436921bab707da8ab4ffb2b5f4302e3064a1c00749aaacb0fb1c34aa863907",
+          "fixture_sha256": "09dba3bac19c3a2fd0e08901251afd2164b92de37ed0494b0dbea37f615edd18"
+        },
+        "timed": {
+          "command": [
+            "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+            "--stack_limit=1g",
+            "-q",
+            "-s",
+            "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+            "-g",
+            "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PLN/lib_pln.metta',_)",
+            "--",
+            "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-05/run001/n001-canonical_ids-s000-route_a/timed.metta",
+            "--silent"
+          ],
+          "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+          "returncode": 0,
+          "timed_out": false,
+          "stdout_sha256": "13c7a9945b931528bd9328974457f650004b02faadb2241b31103b0c23a8cab9",
+          "fixture_sha256": "c15322f7c18c2242668e97e636b77138eddd52eece8e3e6fef8f98336b77d865"
+        },
+        "audit": {
+          "command": [
+            "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+            "--stack_limit=1g",
+            "-q",
+            "-s",
+            "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+            "-g",
+            "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PLN/lib_pln.metta',_)",
+            "--",
+            "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-05/run001/n001-canonical_ids-s000-route_a/audit.metta",
+            "--silent"
+          ],
+          "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+          "returncode": 0,
+          "timed_out": false,
+          "stdout_sha256": "bdb4b283ab9645afbcb79f580006b52eff12809b960a1db50140e62e0498f44a",
+          "fixture_sha256": "f9c8b984e3a2c5ca4544b6ea235cbe1ba6004dc8ad4fc6708289a688fca925a7"
+        }
+      },
+      "passed": false
+    }
+  ],
+  "repeated_paired_comparison_performed": false,
+  "clock": "embedded Python time.process_time_ns: SWI process user+system CPU",
+  "timing_excludes": [
+    "startup/loading",
+    "snapshot restore",
+    "result printing",
+    "offline counters/checks",
+    "parent Python"
+  ],
+  "timing_includes": [
+    "boundary clock/bridge overhead",
+    "native rules",
+    "result collection",
+    "queue deduplication and trimming"
+  ],
+  "provenance_before": {
+    "pln": {
+      "path": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PLN",
+      "commit": "4405956947c4b53c7ff01bd565aa3b114bc970a1",
+      "clean": true
+    },
+    "petta": {
+      "path": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa",
+      "commit": "ae66fa8e41dcd5539d614706bd4e5cfb34f9608d",
+      "clean": true
+    },
+    "swipl": "SWI-Prolog version 9.3.25 for x86_64-linux"
+  },
+  "hashes": {
+    "native_library": "cdfb3f18bd7b336440fc7b4409209afddf0e64c41f17dee7eefc8f02718de433",
+    "plain_helper": "19dfda76757767ddb3b1215c7bb10e17330c8e4de050a1ea7af9044c26f74581",
+    "audit_helper": "c28dbcacedf079df7b79831d10b9f816673a02619845b99b8bddadeaa6e7c68e",
+    "state_report": "600975b352f06dffe0495eab5cabb36442c4a032c815f0fedfcb57d04469bf9a"
+  },
+  "project_source_sha256": {
+    "src/pln_cost/__init__.py": "d3e8c8d1203a850c3cdfd40b8acc83d537ef51742da7cc602e2c0aa1587d8347",
+    "src/pln_cost/expansion.py": "8ac44e03996894036cd554ebbc5b44c278a992d909adc8ee8e23c487ae24e76c",
+    "src/pln_cost/feasibility.py": "0f1dd3d3ef01cad4f78cc4e1e19966a467027471dae4b9506e35958116426a92",
+    "src/pln_cost/proof.py": "2d9949de62accb3611230255368cfe1c63118a152143e5a6efc93f68debfb285",
+    "src/pln_cost/qualification.py": "e269344b160ff0d1d456520ba653d741c4648a91d70dd720822fec0b82c82180",
+    "src/pln_cost/runtime.py": "afd4ee618af741f1cba7f51f733a5c434b7677f52e76bcd97f304be52fd73cdf",
+    "src/pln_cost/sexpr.py": "ca2b35ce3eaba3ef585dcc5a1b95116f64988e56bd564d5a05bb9c200d634a38",
+    "src/pln_cost/states.py": "3ef97be3ca3c7b5f6035b372c775d7747e28d5f493d90f57257e086788412d00",
+    "src/pln_cost/tracing.py": "ac339c9bceec4a95a6cbd3966967b0608598d6b36643ff24eddd8b55bd4e48d9",
+    "src/pln_cost/validation.py": "861c9503a9b6425a347db558571b5fbd2624f39701d1319884add2fb7bdd3477",
+    "src/pln_cost/world.py": "9577869660c97408a503e38c330ab5e5e0534b3042c20942590e6ae14233cbd9",
+    "scripts/generate_qualification.py": "d88ac611a189c7a7d98d9cab6555084333137c7b4479937ab463ee9a4924801b",
+    "scripts/validate_expansion.py": "8ae40bed3374fc74499133a49b2dff99607fc40f5a5a2aac064261b8c45ada0e",
+    "scripts/validate_qualification.py": "2227fdcbf00cc459b2a1f193eaa0fc564d85c6c15c38639c279b457916397332",
+    "scripts/validate_states.py": "c5b0c2272a6c2c696d2fd8c698ee0cda1f6309cb282f14f263a969595a2793ba",
+    "scripts/validate_step1.py": "77a338cff4c5599131087ff017c2f56ae5c35f153d5feea7067e848bdb0e5638",
+    "scripts/validate_step2.py": "e8532cb1e2327132c5569dfff9980c0ac15777b9823d8e1257fcc093445af2a6",
+    "configs/qualification-kb.json": "9377dc9fae1e6d61330b548c98b3efb3704861ac8e16032f06f81ae8e5903109",
+    "configs/runtime.json": "28c798fbc440a60ab4b58c6e2a60857d1bfeab06e28759ee267c9ba80f63e8f6",
+    "tests/test_expansion.py": "45ace9b2c757c8ad8376154f89439d502e0f0290e29eadb0a05337e5d03f2183",
+    "tests/test_feasibility.py": "342586903e8839e524c1cbe1be5eb36fc1e724206ae5e8e23e413816d4d225d2",
+    "tests/test_qualification.py": "da61171ba0158e9c1119993d5c44b3eac2a2fbbf4404c16b27d78089512bdc63",
+    "tests/test_states.py": "3263176ed5ae4e31b4a15d98f139bfa5f5556cebed722a1b9e9fbfaf31111257",
+    "tests/test_step1.py": "b9ce3366f36540e9ce907cb11b6bfa3e1a3162036b7ea9517b0470852236f6be",
+    "tests/test_step2.py": "e1bbe7c6e063ba13a3c8bc0d2ccce05253c894b1f2c85d2452e079f3f249e3aa"
+  },
+  "planned_trials": 36,
+  "error": "ValueError: Premise traversal/guard counters disagree with the saved state"
+}
