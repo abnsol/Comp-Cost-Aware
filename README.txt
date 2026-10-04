@@ -56,10 +56,13 @@ Working agreement
 - Keep development/tuning separate from held-out evaluation.
 
 Review checkpoint
-Review step-two code and results before proceeding. The returned answer's two
-deductions and revision are checked; the entire search and other rule families
-are not certified. Remaining work includes fair relevance support and CPU
-instrumentation. Do not begin the cost estimator, training or a benchmark yet.
+Step two's returned-answer deductions and revision are checked; the entire search
+and other rule families are not certified. The machine example is retained as a
+diagnostic. Primary-task selection is now under discussion: see
+docs/workload-candidates-2026-10-04.txt for equal-priority/equal-depth alternative
+proofs and the distinction between rule correctness and probability accuracy.
+Their CPU cost gap has not been measured. Do not implement an estimator or begin
+the main benchmark before validating the new task and reviewing the papers.
 
 Research context (relative to this project)
 ../hyperon-research-discovery-new-session-prompt.txt

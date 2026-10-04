@@ -1,0 +1,111 @@
+MATCHED-PRIORITY WORKLOAD CANDIDATES AND VERIFICATION SCOPE
+2026-10-04. Source/design investigation only; no new code, task execution,
+CPU profiling or estimator. Stop for discussion before implementation.
+
+Latest agreed direction
+Retain machine_failure as a diagnostic, not the primary resource-allocation test.
+The new primary endpoint is time/success to a valid derivation under declared PLN
+rules. Probability accuracy against a data-generating world is a separate later
+question. The user proposes using pinned PLN formulas as the verification standard.
+That is appropriate for derivational correctness; it cannot alone establish
+empirical probability accuracy. Avoid using the same engine call as its own oracle.
+
+Source findings
+Pinned PLN 4405956947c4b53c7ff01bd565aa3b114bc970a1:
+- lib_pln.metta:362-363 PriorityRank selects sentence confidence.
+- lib_pln.metta:377-397 expands the selected sentence against the current belief
+  buffer, attempting binary rules in both orders and unary rules. It then
+  deduplicates and limits queues. A selection does not commit to a complete route.
+- lib_pln.metta:124-126 Truth_ModusPonens gives f_out=f_p*f_rule+0.02*(1-f_p),
+  c_out=f_p*f_rule*c_p*c_rule. With both strengths1, output strength remains1
+  and confidence is the product of the two premise confidences.
+- examples/Toothbrush.metta demonstrates chained, curried implication rules and
+  operations represented as supplied facts. It is a native representation example,
+  not evidence that our proposed route costs differ.
+- examples/Direct.metta compiles clauses via another execution interface; do not
+  silently substitute it for the pending-work selector in PLN.Derive.
+
+Candidate A: equal-depth authorization proofs with different expansion width
+Query: CanOperate(machine).
+Proposed implication structure (schematic, not implemented):
+  ReadyA(machine) -> CertificateA(machine) -> CanOperate(machine)
+  ReadyB(machine) -> CertificateB_i(machine) -> CanOperate(machine), i=1..N
+Both Ready facts and all implication records have strength1 and confidence0.9.
+Each two-step modus-ponens proof therefore reaches strength1/confidence0.729,
+before any revision. All initial priorities are0.9 under native PriorityRank;
+the intermediate certificate priorities are0.81. Assign unique evidence stamps
+to distinct assertions and use the normal disjoint-evidence guard.
+
+At a shared state, expanding ReadyA can produce one certificate, while expanding
+ReadyB can produce N certificates. Each certificate provides a valid alternative
+route to the goal. The additional work is potentially useful reasoning, not an
+injected delay or a set of deliberately irrelevant distractors. Both routes have
+the same logical depth, so simple shortest-chain preference alone cannot explain
+an expansion-cost difference. All branches should also count as query-relevant.
+
+The benchmark objective must be explicit: one valid supported proof is sufficient.
+Higher confidence from subsequently combining several proofs is not necessary
+for that endpoint. This is an operational authorization/proof example, not a
+statistical claim that a real machine is safe or calibrated with probability1.
+Strength/confidence values are controlled logical inputs, not empirical safety data.
+
+No measurable gap has been established yet. Both expansions scan the SAME full
+belief buffer; B's additional emitted results and deduplication may dominate, or
+the shared scan may dominate. We must measure and may have to reject the candidate.
+Also verify that actual generated traces use the intended supported rules, that
+queue limits do not manufacture the effect and that the proposed decision state
+really occurs under the common baseline. Other initial rules can themselves
+derive a certificate when selected; the analysis cannot ignore those choices.
+
+Qualification measurements to discuss before implementation
+1. Validate each route's proof and expected TV via an independent checker of the
+   pinned formulas, grounded rule bindings and evidence stamps.
+2. At the same captured reachable state, probe alternative next expansions in
+   fresh/restored states. Keep the KB, queues and existing priorities identical.
+   Such forced-choice probes are diagnostics, not the final free-selection policy.
+3. Repeat in randomized order and record real CPU for the complete work unit,
+   including matching and result/queue management. Do not count unrelated startup
+   as a route cost or charge one version for more instrumentation than the other.
+4. Separately measure CPU until a valid answer under declared continuation rules.
+   Single-expansion cost and total remaining route cost are different quantities.
+5. Require a reproducible gap large enough to exceed noise and plausible estimator
+   overhead. Choose the acceptance margin on development data before held-out tests.
+   No finite measurement licenses 'definitely slower in every execution'.
+6. Counterbalance input order/ties, preserve the same available information and
+   include an equal-width control. Charge relevance preprocessing in later trials.
+
+Candidate B: delayed useful work versus cheap unproductive work
+Some inexpensive expansions can fail to complete a proof, while a more expensive
+expansion unlocks one. Define usefulness by eventual verified goal success, not
+an invented correspondence between truth and expense. Cost itself does not supply
+a benefit estimate. Hold this harder case until Candidate A is validated and the
+paper review informs the treatment of delayed benefit.
+Do not conceal an obvious missing premise from a strong relevance baseline or
+credit cost selection for a gap closed by cheap filtering. If relevance discovers
+the proof structure in advance, include its full work and assess remaining headroom.
+
+Why more CPU does not prove the 'only cost differs' claim
+The current implementation has confidence-based answer selection and bounded
+queues; neither implies that output probability monotonically approaches world
+truth or that every available proof is eventually found. Step-two evidence shows
+0.74 was derived before the higher-confidence revised0.688 in the diagnostic.
+That is evidence against assuming monotone accuracy, not a controlled budget study.
+A high-budget successful run demonstrates feasibility for that task/configuration,
+not an inevitable result or an isolation of all causal differences.
+
+Verification contract
+Independent means separate proof-checking code and externally supplied premises,
+query and pinned rule semantics. It does NOT require a different probability theory.
+Use PLN's formulas to verify that a result follows those rules correctly. For a
+general proof query, accept any supported valid proof rather than equating correctness
+with one long-run program output. If the claim is improved probability accuracy,
+we still need an independent outcome/distribution reference for that different claim.
+
+Status and next decision
+Candidate A is recommended for a bounded correctness-and-cost qualification probe,
+not yet accepted as the main benchmark. There are currently NO measured CPU values
+for the proposed routes. Discuss this exact task and measurement boundary first.
+No cost estimator or new priority policy has been chosen or implemented.
+
+Suggested commit message (user commits)
+  Document matched-priority PLN workload candidates and verification scope
