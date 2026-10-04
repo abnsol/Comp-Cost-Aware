@@ -1,0 +1,1049 @@
+{
+  "clock": [
+    "3.12.3",
+    1e-09,
+    "true"
+  ],
+  "samples": [
+    {
+      "phase": "Warmup",
+      "pair": 0,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 34601,
+      "batch_cpu_ns": 219288
+    },
+    {
+      "phase": "Warmup",
+      "pair": 0,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 68577,
+      "batch_cpu_ns": 847144
+    },
+    {
+      "phase": "Warmup",
+      "pair": 1,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 38609,
+      "batch_cpu_ns": 773588
+    },
+    {
+      "phase": "Warmup",
+      "pair": 1,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 32900,
+      "batch_cpu_ns": 206157
+    },
+    {
+      "phase": "Warmup",
+      "pair": 2,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 32739,
+      "batch_cpu_ns": 205702
+    },
+    {
+      "phase": "Warmup",
+      "pair": 2,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 38055,
+      "batch_cpu_ns": 775102
+    },
+    {
+      "phase": "Warmup",
+      "pair": 3,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 37894,
+      "batch_cpu_ns": 764364
+    },
+    {
+      "phase": "Warmup",
+      "pair": 3,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 31298,
+      "batch_cpu_ns": 197437
+    },
+    {
+      "phase": "Warmup",
+      "pair": 4,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 30521,
+      "batch_cpu_ns": 203383
+    },
+    {
+      "phase": "Warmup",
+      "pair": 4,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 37128,
+      "batch_cpu_ns": 1063844
+    },
+    {
+      "phase": "Warmup",
+      "pair": 5,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 157869,
+      "batch_cpu_ns": 1411410
+    },
+    {
+      "phase": "Warmup",
+      "pair": 5,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 42492,
+      "batch_cpu_ns": 247602
+    },
+    {
+      "phase": "Warmup",
+      "pair": 6,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 57403,
+      "batch_cpu_ns": 926643
+    },
+    {
+      "phase": "Warmup",
+      "pair": 6,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 36011,
+      "batch_cpu_ns": 246433
+    },
+    {
+      "phase": "Warmup",
+      "pair": 7,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 36762,
+      "batch_cpu_ns": 275427
+    },
+    {
+      "phase": "Warmup",
+      "pair": 7,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 95097,
+      "batch_cpu_ns": 963185
+    },
+    {
+      "phase": "Warmup",
+      "pair": 8,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 34749,
+      "batch_cpu_ns": 217737
+    },
+    {
+      "phase": "Warmup",
+      "pair": 8,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 43344,
+      "batch_cpu_ns": 852042
+    },
+    {
+      "phase": "Warmup",
+      "pair": 9,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 35375,
+      "batch_cpu_ns": 235562
+    },
+    {
+      "phase": "Warmup",
+      "pair": 9,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 39814,
+      "batch_cpu_ns": 799220
+    },
+    {
+      "phase": "Warmup",
+      "pair": 10,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 31757,
+      "batch_cpu_ns": 204990
+    },
+    {
+      "phase": "Warmup",
+      "pair": 10,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 50325,
+      "batch_cpu_ns": 745335
+    },
+    {
+      "phase": "Warmup",
+      "pair": 11,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 35676,
+      "batch_cpu_ns": 746498
+    },
+    {
+      "phase": "Warmup",
+      "pair": 11,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 30217,
+      "batch_cpu_ns": 199719
+    },
+    {
+      "phase": "Warmup",
+      "pair": 12,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 35755,
+      "batch_cpu_ns": 762051
+    },
+    {
+      "phase": "Warmup",
+      "pair": 12,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 30085,
+      "batch_cpu_ns": 196178
+    },
+    {
+      "phase": "Warmup",
+      "pair": 13,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 29545,
+      "batch_cpu_ns": 191670
+    },
+    {
+      "phase": "Warmup",
+      "pair": 13,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 35758,
+      "batch_cpu_ns": 853083
+    },
+    {
+      "phase": "Warmup",
+      "pair": 14,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 31740,
+      "batch_cpu_ns": 198921
+    },
+    {
+      "phase": "Warmup",
+      "pair": 14,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 64899,
+      "batch_cpu_ns": 956989
+    },
+    {
+      "phase": "Warmup",
+      "pair": 15,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 72808,
+      "batch_cpu_ns": 337335
+    },
+    {
+      "phase": "Warmup",
+      "pair": 15,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 67176,
+      "batch_cpu_ns": 940073
+    },
+    {
+      "phase": "Warmup",
+      "pair": 16,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 44418,
+      "batch_cpu_ns": 860047
+    },
+    {
+      "phase": "Warmup",
+      "pair": 16,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 35886,
+      "batch_cpu_ns": 238719
+    },
+    {
+      "phase": "Warmup",
+      "pair": 17,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 40367,
+      "batch_cpu_ns": 803746
+    },
+    {
+      "phase": "Warmup",
+      "pair": 17,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 34049,
+      "batch_cpu_ns": 224861
+    },
+    {
+      "phase": "Warmup",
+      "pair": 18,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 37488,
+      "batch_cpu_ns": 752149
+    },
+    {
+      "phase": "Warmup",
+      "pair": 18,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 31564,
+      "batch_cpu_ns": 212377
+    },
+    {
+      "phase": "Warmup",
+      "pair": 19,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 36596,
+      "batch_cpu_ns": 740221
+    },
+    {
+      "phase": "Warmup",
+      "pair": 19,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 31029,
+      "batch_cpu_ns": 198024
+    },
+    {
+      "phase": "Measured",
+      "pair": 0,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 36219,
+      "batch_cpu_ns": 836270
+    },
+    {
+      "phase": "Measured",
+      "pair": 0,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 31681,
+      "batch_cpu_ns": 213136
+    },
+    {
+      "phase": "Measured",
+      "pair": 1,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 46020,
+      "batch_cpu_ns": 728393
+    },
+    {
+      "phase": "Measured",
+      "pair": 1,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 30154,
+      "batch_cpu_ns": 199995
+    },
+    {
+      "phase": "Measured",
+      "pair": 2,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 29873,
+      "batch_cpu_ns": 190767
+    },
+    {
+      "phase": "Measured",
+      "pair": 2,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 34010,
+      "batch_cpu_ns": 700430
+    },
+    {
+      "phase": "Measured",
+      "pair": 3,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 28437,
+      "batch_cpu_ns": 185315
+    },
+    {
+      "phase": "Measured",
+      "pair": 3,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 34149,
+      "batch_cpu_ns": 704319
+    },
+    {
+      "phase": "Measured",
+      "pair": 4,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 28716,
+      "batch_cpu_ns": 190909
+    },
+    {
+      "phase": "Measured",
+      "pair": 4,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 34213,
+      "batch_cpu_ns": 697892
+    },
+    {
+      "phase": "Measured",
+      "pair": 5,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 50169,
+      "batch_cpu_ns": 1045949
+    },
+    {
+      "phase": "Measured",
+      "pair": 5,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 70028,
+      "batch_cpu_ns": 353832
+    },
+    {
+      "phase": "Measured",
+      "pair": 6,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 87163,
+      "batch_cpu_ns": 353219
+    },
+    {
+      "phase": "Measured",
+      "pair": 6,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 56940,
+      "batch_cpu_ns": 1037147
+    },
+    {
+      "phase": "Measured",
+      "pair": 7,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 47758,
+      "batch_cpu_ns": 873758
+    },
+    {
+      "phase": "Measured",
+      "pair": 7,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 34728,
+      "batch_cpu_ns": 220590
+    },
+    {
+      "phase": "Measured",
+      "pair": 8,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 33111,
+      "batch_cpu_ns": 205861
+    },
+    {
+      "phase": "Measured",
+      "pair": 8,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 39343,
+      "batch_cpu_ns": 755506
+    },
+    {
+      "phase": "Measured",
+      "pair": 9,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 38591,
+      "batch_cpu_ns": 954366
+    },
+    {
+      "phase": "Measured",
+      "pair": 9,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 37825,
+      "batch_cpu_ns": 226911
+    },
+    {
+      "phase": "Measured",
+      "pair": 10,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 39794,
+      "batch_cpu_ns": 744354
+    },
+    {
+      "phase": "Measured",
+      "pair": 10,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 35575,
+      "batch_cpu_ns": 211718
+    },
+    {
+      "phase": "Measured",
+      "pair": 11,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 39087,
+      "batch_cpu_ns": 746513
+    },
+    {
+      "phase": "Measured",
+      "pair": 11,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 31265,
+      "batch_cpu_ns": 190303
+    },
+    {
+      "phase": "Measured",
+      "pair": 12,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 29314,
+      "batch_cpu_ns": 188947
+    },
+    {
+      "phase": "Measured",
+      "pair": 12,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 35258,
+      "batch_cpu_ns": 703515
+    },
+    {
+      "phase": "Measured",
+      "pair": 13,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 34180,
+      "batch_cpu_ns": 714772
+    },
+    {
+      "phase": "Measured",
+      "pair": 13,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 29033,
+      "batch_cpu_ns": 187850
+    },
+    {
+      "phase": "Measured",
+      "pair": 14,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 30356,
+      "batch_cpu_ns": 186740
+    },
+    {
+      "phase": "Measured",
+      "pair": 14,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 69619,
+      "batch_cpu_ns": 718085
+    },
+    {
+      "phase": "Measured",
+      "pair": 15,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 29572,
+      "batch_cpu_ns": 187337
+    },
+    {
+      "phase": "Measured",
+      "pair": 15,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 33902,
+      "batch_cpu_ns": 1122239
+    },
+    {
+      "phase": "Measured",
+      "pair": 16,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 73154,
+      "batch_cpu_ns": 325471
+    },
+    {
+      "phase": "Measured",
+      "pair": 16,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 72396,
+      "batch_cpu_ns": 1547819
+    },
+    {
+      "phase": "Measured",
+      "pair": 17,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 78111,
+      "batch_cpu_ns": 859381
+    },
+    {
+      "phase": "Measured",
+      "pair": 17,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 39364,
+      "batch_cpu_ns": 214362
+    },
+    {
+      "phase": "Measured",
+      "pair": 18,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 41169,
+      "batch_cpu_ns": 820120
+    },
+    {
+      "phase": "Measured",
+      "pair": 18,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 32047,
+      "batch_cpu_ns": 207760
+    },
+    {
+      "phase": "Measured",
+      "pair": 19,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 30587,
+      "batch_cpu_ns": 191924
+    },
+    {
+      "phase": "Measured",
+      "pair": 19,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 36410,
+      "batch_cpu_ns": 726656
+    },
+    {
+      "phase": "Measured",
+      "pair": 20,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 29449,
+      "batch_cpu_ns": 210741
+    },
+    {
+      "phase": "Measured",
+      "pair": 20,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 55770,
+      "batch_cpu_ns": 776911
+    },
+    {
+      "phase": "Measured",
+      "pair": 21,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 30677,
+      "batch_cpu_ns": 250026
+    },
+    {
+      "phase": "Measured",
+      "pair": 21,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 34088,
+      "batch_cpu_ns": 702818
+    },
+    {
+      "phase": "Measured",
+      "pair": 22,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 34010,
+      "batch_cpu_ns": 690859
+    },
+    {
+      "phase": "Measured",
+      "pair": 22,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 29163,
+      "batch_cpu_ns": 186469
+    },
+    {
+      "phase": "Measured",
+      "pair": 23,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 29202,
+      "batch_cpu_ns": 183773
+    },
+    {
+      "phase": "Measured",
+      "pair": 23,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 32802,
+      "batch_cpu_ns": 720050
+    },
+    {
+      "phase": "Measured",
+      "pair": 24,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 26900,
+      "batch_cpu_ns": 174409
+    },
+    {
+      "phase": "Measured",
+      "pair": 24,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 31969,
+      "batch_cpu_ns": 651827
+    },
+    {
+      "phase": "Measured",
+      "pair": 25,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 32600,
+      "batch_cpu_ns": 695831
+    },
+    {
+      "phase": "Measured",
+      "pair": 25,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 26287,
+      "batch_cpu_ns": 199519
+    },
+    {
+      "phase": "Measured",
+      "pair": 26,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 30939,
+      "batch_cpu_ns": 632224
+    },
+    {
+      "phase": "Measured",
+      "pair": 26,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 54535,
+      "batch_cpu_ns": 249810
+    },
+    {
+      "phase": "Measured",
+      "pair": 27,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 94675,
+      "batch_cpu_ns": 1083612
+    },
+    {
+      "phase": "Measured",
+      "pair": 27,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 69635,
+      "batch_cpu_ns": 382964
+    },
+    {
+      "phase": "Measured",
+      "pair": 28,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 66255,
+      "batch_cpu_ns": 1510545
+    },
+    {
+      "phase": "Measured",
+      "pair": 28,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 34257,
+      "batch_cpu_ns": 212886
+    },
+    {
+      "phase": "Measured",
+      "pair": 29,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 31840,
+      "batch_cpu_ns": 215087
+    },
+    {
+      "phase": "Measured",
+      "pair": 29,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 39155,
+      "batch_cpu_ns": 738611
+    },
+    {
+      "phase": "Empty",
+      "pair": 0,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 31638,
+      "batch_cpu_ns": 5350
+    },
+    {
+      "phase": "Empty",
+      "pair": 1,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 47756,
+      "batch_cpu_ns": 2471
+    },
+    {
+      "phase": "Empty",
+      "pair": 2,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 29173,
+      "batch_cpu_ns": 2224
+    },
+    {
+      "phase": "Empty",
+      "pair": 3,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 36842,
+      "batch_cpu_ns": 2037
+    },
+    {
+      "phase": "Empty",
+      "pair": 4,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 29088,
+      "batch_cpu_ns": 2109
+    },
+    {
+      "phase": "Empty",
+      "pair": 5,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 35175,
+      "batch_cpu_ns": 2112
+    },
+    {
+      "phase": "Empty",
+      "pair": 6,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 31091,
+      "batch_cpu_ns": 2338
+    },
+    {
+      "phase": "Empty",
+      "pair": 7,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 40931,
+      "batch_cpu_ns": 2470
+    },
+    {
+      "phase": "Empty",
+      "pair": 8,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 86169,
+      "batch_cpu_ns": 6644
+    },
+    {
+      "phase": "Empty",
+      "pair": 9,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 44832,
+      "batch_cpu_ns": 2995
+    },
+    {
+      "phase": "Empty",
+      "pair": 10,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 37742,
+      "batch_cpu_ns": 2696
+    },
+    {
+      "phase": "Empty",
+      "pair": 11,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 42512,
+      "batch_cpu_ns": 2569
+    },
+    {
+      "phase": "Empty",
+      "pair": 12,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 33112,
+      "batch_cpu_ns": 2161
+    },
+    {
+      "phase": "Empty",
+      "pair": 13,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 40767,
+      "batch_cpu_ns": 2481
+    },
+    {
+      "phase": "Empty",
+      "pair": 14,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 30388,
+      "batch_cpu_ns": 2310
+    },
+    {
+      "phase": "Empty",
+      "pair": 15,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 35486,
+      "batch_cpu_ns": 2205
+    },
+    {
+      "phase": "Empty",
+      "pair": 16,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 29515,
+      "batch_cpu_ns": 2163
+    },
+    {
+      "phase": "Empty",
+      "pair": 17,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 33885,
+      "batch_cpu_ns": 2014
+    },
+    {
+      "phase": "Empty",
+      "pair": 18,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 29547,
+      "batch_cpu_ns": 2170
+    },
+    {
+      "phase": "Empty",
+      "pair": 19,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 33998,
+      "batch_cpu_ns": 2166
+    },
+    {
+      "phase": "Empty",
+      "pair": 20,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 28455,
+      "batch_cpu_ns": 2138
+    },
+    {
+      "phase": "Empty",
+      "pair": 21,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 35174,
+      "batch_cpu_ns": 2047
+    },
+    {
+      "phase": "Empty",
+      "pair": 22,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 31288,
+      "batch_cpu_ns": 2111
+    },
+    {
+      "phase": "Empty",
+      "pair": 23,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 46203,
+      "batch_cpu_ns": 2772
+    },
+    {
+      "phase": "Empty",
+      "pair": 24,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 31673,
+      "batch_cpu_ns": 2164
+    },
+    {
+      "phase": "Empty",
+      "pair": 25,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 35882,
+      "batch_cpu_ns": 2096
+    },
+    {
+      "phase": "Empty",
+      "pair": 26,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 28715,
+      "batch_cpu_ns": 1941
+    },
+    {
+      "phase": "Empty",
+      "pair": 27,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 33095,
+      "batch_cpu_ns": 1991
+    },
+    {
+      "phase": "Empty",
+      "pair": 28,
+      "route": "A",
+      "k": 1,
+      "prepare_cpu_ns": 27782,
+      "batch_cpu_ns": 1929
+    },
+    {
+      "phase": "Empty",
+      "pair": 29,
+      "route": "B",
+      "k": 1,
+      "prepare_cpu_ns": 33081,
+      "batch_cpu_ns": 2043
+    }
+  ]
+}

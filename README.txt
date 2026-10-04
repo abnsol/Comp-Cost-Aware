@@ -8,17 +8,17 @@ Improvement, no benefit and harm are all legitimate experimental outcomes.
 The current qualification phase addresses time/success to a valid PLN derivation.
 It does not establish improved probability accuracy against external outcomes.
 
-Status: step six stopped at its predeclared calibration gate; review required.
-Start at docs/qualification/06-calibration-results.txt. All three attempted batch
-sizes exceeded the 10% empty-harness overhead criterion. The main paired cost
-comparison was NOT run. Earlier native correctness/state/instrumentation checks
-remain valid; a reproducible cost gap has not been established.
+Status: step-six harness repaired and recalibrated; stopped for review.
+Start at docs/qualification/06-thin-repair-results.txt. A thinner adapter calls
+the same compiled PLN expansion without accumulating output lists. Validation
+passed on all 13 states; recalibration passed the unchanged 10% overhead gate.
+The main paired comparison has NOT run; a reproducible cost gap is not established.
 The design is docs/qualification/01-kb-specification.txt and configs/qualification-kb.json.
 The earlier machine-example work is preserved:
 The returned machine-example answer now has a captured seven-node proof replayed
 independently in Python. Instrumented and original runs have identical original
 output, including every selected record. See docs/step-02.txt for scope and limits.
-No cost estimator, relevance extension or CPU benchmark has been implemented.
+No cost estimator, relevance extension or end-to-end CPU benchmark is implemented.
 
 The experiment is Python-led, using the actual pinned PLN MeTTa rules. Step one
 uses a subprocess interface; embedded PeTTa()/hyperon.MeTTa() compatibility is
@@ -38,6 +38,7 @@ Folder structure and review order
   src/pln_cost/states.py  Native state capture, provenance and exact continuation checks
   src/pln_cost/expansion.py  Native expansion extraction, CPU clocks and separate counters
   src/pln_cost/paired.py  Repeated-state harness, calibration summaries and block analysis
+  src/pln_cost/thin.py / thin_clock.pl  Thin compiled-call measurement adapter
   scripts/                Human-readable entry points; start at validate_step1.py
   tests/                  Offline input/oracle and false-success checks
   results/step-01/run001/ Original output, parity fixture and result manifest
@@ -53,6 +54,9 @@ Run from this project directory (Python standard library only)
   python3 scripts/validate_states.py --run-id review001 --feasibility-batch run001
   python3 scripts/validate_expansion.py --run-id review001 --state-batch run001
   python3 scripts/run_paired.py calibrate --run-id review001
+  python3 scripts/repair_calibration.py diagnose --run-id review001
+  python3 scripts/repair_calibration.py validate --run-id review001
+  python3 scripts/repair_calibration.py calibrate --run-id review001 --validation val001
   python3 scripts/validate_step1.py --run-id review001
   python3 scripts/validate_step2.py --run-id review001
 The qualification generator runs no inference: it checks source revisions and
@@ -69,9 +73,12 @@ native reference, timing-only helper and diagnostic helper). The clock is inside
 the engine process. These are local operation CPU samples, not total query costs.
 Detailed counter logging is excluded from timing-only runs; boundary-clock costs
 remain included, and probes are saved without automatically subtracting them.
-The paired harness has separate calibrate/measure stages. A failed calibration
-cannot authorize measurement. The saved cal001 calibration failed at K=1,8,32;
-do not run the main comparison using it or quietly relax the overhead limit.
+The legacy paired harness has separate calibrate/measure stages. Its saved cal001
+failed and remains preserved. repair_calibration.py records the thin-adapter
+revision: val001 passed and repair/calibrate/cal002 passed with singleton timing.
+The legacy run_paired.py measure command still uses the old wrapper; it must not
+be used with the thin calibration. Main-run integration of the validated thin
+adapter is the next reviewed work, preserving the paired protocol's criteria.
 Use a fresh run ID: existing results are never overwritten. Runtime paths in
 configs/runtime.json are relative to this project. The external runtime/source
 directories must already exist at the recorded revisions; the runner installs
@@ -93,9 +100,9 @@ Working agreement
 - Keep development/tuning separate from held-out evaluation.
 
 Review checkpoint
-Review docs/qualification/06-calibration-results.txt and the saved failed
-calibration before revising the measurement harness. Step six's main comparison
-remains pending; do not advance to the budgeted query benchmark.
+Review docs/qualification/06-thin-repair-results.txt and the adapter code before
+the main paired comparison. Keep cal001's failure and the protocol revision as
+evidence. Do not advance to the budgeted query benchmark yet.
 This new series is separate from the old diagnostic interface/proof-audit steps.
 The new task's reproducible CPU cost gap and time to first available answer remain
 unestablished. Single validation timings must not be presented as benchmark results.

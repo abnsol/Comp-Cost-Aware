@@ -39,7 +39,7 @@ class Runtime:
         result["swipl"] = version
         return result
 
-    def run(self, fixture, *, preload_pln=False, library_path=None):
+    def run(self, fixture, *, preload_pln=False, library_path=None, bootstrap_path=None):
         """Optionally load a generated instrumented library instead of the original.
 
         The caller must establish its source provenance and behavioural parity.
@@ -52,6 +52,9 @@ class Runtime:
         env.update(PYTHONDONTWRITEBYTECODE="1", PYTHONPATH=str(site))
         command = [str(self.swipl), "--stack_limit=1g", "-q", "-s",
                    str(self.petta / "src/main.pl")]
+        if bootstrap_path is not None:
+            bootstrap = str(Path(bootstrap_path).resolve()).replace("\\", "\\\\").replace("'", "\\'")
+            command += ["-g", f"consult('{bootstrap}')"]
         if preload_pln:
             source_file = self.pln / "lib_pln.metta" if library_path is None else Path(library_path).resolve()
             source = str(source_file).replace("\\", "\\\\").replace("'", "\\'")

@@ -1,0 +1,1 @@
+ERROR: /home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl:36: user:main Unknown error term: thin_native_output_mismatch

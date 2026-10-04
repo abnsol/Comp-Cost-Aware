@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "paired_calibration_failed_overhead_gate_main_cost_comparison_not_run",
+  "status": "thin_adapter_recalibration_passed_main_cost_comparison_pending",
   "specification": "docs/qualification/01-kb-specification.txt",
   "family": "equal_depth_alternative_authorization_proofs",
   "development_widths": [1, 4, 16],
