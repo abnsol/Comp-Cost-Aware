@@ -1,5 +1,12 @@
 EXPERIMENT ACCEPTANCE CHECKLIST
-Agreed criteria recorded 2026-10-04; not yet validated.
+Agreed research-wide criteria recorded 2026-10-04; reviewed after qualification
+in docs/qualification/09-criteria-review.txt. That review marks all18 criteria
+with evidence and scope. Preliminary measurement qualification is complete;
+the full cost-factor/accuracy research benchmark is not yet ready.
+
+The later approved first-valid-proof task contract narrows this preliminary
+phase. Probability-accuracy and learned-method requirements below remain open;
+they are not silently dropped or retroactively imposed on the proof-speed test.
 
 For the baseline review, mark each criterion MET, UNMET or UNRESOLVED, with
 evidence and scope. Design agreement alone does not establish empirical validity.
@@ -34,7 +41,7 @@ evidence and scope. Design agreement alone does not establish empirical validity
     avoid transferring guarantees whose assumptions do not hold.
 18. Solo-researcher feasibility, bounded claims and stepwise review/commits.
 
-Known open items from prior source inspection
+Historical open items at checklist creation (superseded where noted below)
 - Step one ran the proposed small inheritance example in native PLN. The observed
   answer strength was 0.6879979916209911 against world probability 0.74. Its four
   properties alone are not a validated performance workload. Step two independently
@@ -47,3 +54,16 @@ Known open items from prior source inspection
   MP/revision checker remains separate.
 - Python subprocess-to-PeTTa execution passed the step-one checks. Embedded
   Python-PeTTa compatibility and useful CPU cost variation remain untested.
+
+Current corrections from the qualification audit
+- The new authorization family has native first-answer certificates checked by
+  ground modus-ponens replay. The checker also supports the declared deduction
+  and revision cases; it still does not validate all possible PLN rule families.
+- Useful local expansion CPU variation has now been measured in8/13 saved states;
+  four states remain instrumentation-unresolved and one passed the relative band.
+- First-answer CPU and budget-sensitive completion have been measured. No matched
+  cost-aware arm, external probability-accuracy evaluation, structural held-out
+  evaluation or cost estimator has run. Embedded-runtime compatibility remains
+  untested; the actual Python-led subprocess path works.
+- The old0.74/0.688 machine example remains a separate diagnostic, not the target
+  or probabilistic oracle of the new formal authorization task.

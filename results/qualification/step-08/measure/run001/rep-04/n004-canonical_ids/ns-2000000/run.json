@@ -1,0 +1,41 @@
+{
+  "command": [
+    "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+    "--stack_limit=1g",
+    "-q",
+    "-s",
+    "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+    "-g",
+    "consult('/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-08/measure/run001/budget_clock.pl')",
+    "-g",
+    "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-08/measure/run001/lib_pln.budget-quiet.metta',_)",
+    "--",
+    "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-08/measure/run001/rep-04/n004-canonical_ids/ns-2000000/trial.metta",
+    "--silent"
+  ],
+  "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+  "returncode": 0,
+  "timed_out": false,
+  "label": "rep-04/n004-canonical_ids/ns-2000000",
+  "name": "n004-canonical_ids",
+  "budget_ns": 2000000,
+  "audit": false,
+  "absent_query": false,
+  "parent_invocation_cpu_ns": 1265953,
+  "invocation_wall_ns": 602835193,
+  "stdout_sha256": "32296d388fe869254b41ab408a170fa88589ce312b32700b35c15023b3693f43",
+  "fixture_sha256": "224afa5468919f5c1e1c4f74318cf59dcb3262d2f12142226ae7179a12ecdf86",
+  "result": {
+    "status": "success",
+    "completed_expansions": 4,
+    "engine_cpu_ns": 907601,
+    "observer_window_cpu_ns": 53085,
+    "observer_window_fraction": 0.05848935820916901,
+    "last_detection_cpu_ns": 892769,
+    "overshoot_ns": 0,
+    "verified_success": true,
+    "detected_proof_verified": true,
+    "goal_in_final_state": true,
+    "audit_prefix_identical": false
+  }
+}

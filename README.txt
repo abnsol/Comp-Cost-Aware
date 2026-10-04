@@ -8,12 +8,24 @@ Improvement, no benefit and harm are all legitimate experimental outcomes.
 The current qualification phase addresses time/success to a valid PLN derivation.
 It does not establish improved probability accuracy against external outcomes.
 
-Status: step-seven first-answer CPU pilot completed; stopped for review.
-Start at docs/qualification/07-first-answer-results.txt. All nine KBs reached a
+Status: preliminary phase complete; criteria audit recorded; stopped for review.
+Start at docs/qualification/09-criteria-review.txt. Retain this as a controlled
+development baseline for first-valid-proof completion. It is not yet a full
+research benchmark or evidence of cost-factor benefit. The next reviewed step
+is primary-paper/method review before choosing or implementing a cost estimator.
+Probability accuracy, expensive-but-useful cases, matched policy comparisons
+and structural held-out evaluation remain open; the18 criteria are not all met.
+Budget results: docs/qualification/08-budget-results.txt. All20 online-adapter validation
+processes and630 scheduled timing processes passed execution/proof/state checks.
+There were370 on-time verified successes and260 deadline misses. No run succeeded
+at0.25 ms; all90 runs per budget succeeded at8 ms and16 ms. Actual CPU includes
+online stopping/goal detection. Cooperative stopping can overshoot; late answers
+are not successes. A cost-aware policy or estimator has not been implemented.
+Previous step: docs/qualification/07-first-answer-results.txt. All nine KBs reached a
 verified goal after 4-6 expansions, with pilot median reasoning CPU about0.38-3.02
-milliseconds. Nine prefix audits and 54 fresh-process timings passed. Timing uses
-an offline-known stopping checkpoint; an online answer detector and CPU-budget
-policy are not implemented. The native selector/rules/queues remain unchanged.
+milliseconds. Nine prefix audits and54 fresh-process timings passed. That pilot
+used an offline-known stopping checkpoint; step8 now observes goals online and
+charges its work. The native selector/rules/queues remain unchanged.
 Previous step: docs/qualification/06-paired-results.txt. Across 156 fresh processes and
 1560 measured pairs, B was reproducibly costlier in 8/13 saved states. One control
 fell within the relative equivalence band; four states remain unresolved because
@@ -24,7 +36,8 @@ The earlier machine-example work is preserved:
 The returned machine-example answer now has a captured seven-node proof replayed
 independently in Python. Instrumented and original runs have identical original
 output, including every selected record. See docs/step-02.txt for scope and limits.
-No cost estimator, relevance extension or end-to-end CPU benchmark is implemented.
+No cost estimator or relevance extension is implemented. Whole-application latency
+and online proof-verification cost are not benchmarked.
 
 The experiment is Python-led, using the actual pinned PLN MeTTa rules. Step one
 uses a subprocess interface; embedded PeTTa()/hyperon.MeTTa() compatibility is
@@ -46,6 +59,7 @@ Folder structure and review order
   src/pln_cost/paired.py  Repeated-state harness, calibration summaries and block analysis
   src/pln_cost/thin.py / thin_clock.pl  Thin compiled-call measurement adapter
   src/pln_cost/first_answer.py / first_clock.pl  First-goal proofs and native-loop CPU
+  src/pln_cost/budget.py / budget_clock.pl  Online goal detection and CPU-boundary stopping
   scripts/                Human-readable entry points; start at validate_step1.py
   tests/                  Offline input/oracle and false-success checks
   results/step-01/run001/ Original output, parity fixture and result manifest
@@ -66,6 +80,8 @@ Run from this project directory (Python standard library only)
   python3 scripts/repair_calibration.py calibrate --run-id review001 --validation val001
   python3 scripts/run_paired.py measure --harness thin --run-id review001 --calibration cal002
   python3 scripts/measure_first_answer.py --run-id review001
+  python3 scripts/run_budgets.py validate --run-id review001
+  python3 scripts/run_budgets.py measure --run-id review001 --validation val001
   python3 scripts/validate_step1.py --run-id review001
   python3 scripts/validate_step2.py --run-id review001
 The qualification generator runs no inference: it checks source revisions and
@@ -98,7 +114,14 @@ Only SELECTED console printing is silenced in the timing copy; inference and
 selection remain native. Startup/input preparation, parent orchestration and
 offline verification are excluded. This is reasoning CPU to answer availability,
 not online answer-return latency. Full-derivation timing excludes final Query
-answer ranking. Future online observation and budget-check overhead must count.
+answer ranking. Step8 charges the online observation and budget-check overhead.
+The budget adapter adds online exact-query/numeric-threshold detection and
+cooperative stopping at native expansion boundaries. It receives no expected
+proof or checkpoint index. Detection, checks, bookkeeping and native recursion
+unwind are charged to loaded-engine CPU. Answers returned past the CPU deadline
+count as misses, and actual CPU overshoot is recorded. This is not hard preemption
+or whole-application latency; setup/serialization and offline proof verification
+remain outside the budget. The native selector/rules/queue updates stay intact.
 Use a fresh run ID: existing results are never overwritten. Runtime paths in
 configs/runtime.json are relative to this project. The external runtime/source
 directories must already exist at the recorded revisions; the runner installs
@@ -120,15 +143,18 @@ Working agreement
 - Keep development/tuning separate from held-out evaluation.
 
 Review checkpoint
-Review docs/qualification/07-first-answer-results.txt and the native-loop timer.
+Review docs/qualification/09-criteria-review.txt and its evidence index.
 Keep cal001's failure, the repair and all main-run unresolved outcomes as evidence.
-The proposed next step is CPU-budget observation design and repeated budget tests,
-after discussion. Do not silently grant the online policy an offline-known stop.
+The agreed preliminary steps are complete. Next: review the primary papers'
+problems, computation units, cost/benefit assumptions, data needs, methods,
+experiments and limitations against this actual PLN interface before adaptation.
+Do not silently grant an online policy an offline-known stop or claim a hard CPU
+cap from these cooperative checks; retain measured overshoot and late-answer misses.
 This new series is separate from the old diagnostic interface/proof-audit steps.
 Local expansion cost gaps are established for eight fixed development states;
-first-answer availability CPU now has a three-repetition pilot. Do not implement an estimator
-or begin a cost-aware policy comparison before reviewing the baseline criteria
-and studying the papers. Local expansion costs do not establish full proof costs.
+first-answer CPU has a pilot and deadline success now has ten runs per case/budget.
+Do not implement an estimator or begin a cost-aware policy comparison before the
+paper/design review. Local expansion costs do not establish full proof costs.
 
 Research context (relative to this project)
 ../hyperon-research-discovery-new-session-prompt.txt
