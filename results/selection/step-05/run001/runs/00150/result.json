@@ -1,0 +1,30 @@
+{
+  "id": 150,
+  "case": "necessary-w004-swap_required_pair",
+  "split": "development",
+  "mode": "O",
+  "budget_ns": 4000000,
+  "repetition": 0,
+  "endpoint": "budget",
+  "result": {
+    "status": "success",
+    "completed_expansions": 3,
+    "engine_cpu_ns": 2736871,
+    "observer_window_cpu_ns": 49307,
+    "observer_window_fraction": 0.018015829025189715,
+    "last_detection_cpu_ns": 2720054,
+    "overshoot_ns": 0,
+    "verified_success": true,
+    "detected_proof_verified": true,
+    "goal_in_final_state": true,
+    "audit_prefix_identical": false
+  },
+  "selector_stats": [
+    3,
+    42,
+    1248661,
+    2014238,
+    0,
+    0
+  ]
+}

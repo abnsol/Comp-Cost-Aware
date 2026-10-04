@@ -1,0 +1,30 @@
+{
+  "id": 2049,
+  "case": "modules-w004-canonical_ids",
+  "split": "evaluation",
+  "mode": "N",
+  "budget_ns": 1000000,
+  "repetition": 4,
+  "endpoint": "budget",
+  "result": {
+    "status": "deadline",
+    "completed_expansions": 3,
+    "engine_cpu_ns": 1153440,
+    "observer_window_cpu_ns": 43927,
+    "observer_window_fraction": 0.03808347204882785,
+    "last_detection_cpu_ns": 1137387,
+    "overshoot_ns": 153440,
+    "verified_success": false,
+    "detected_proof_verified": false,
+    "goal_in_final_state": true,
+    "audit_prefix_identical": false
+  },
+  "selector_stats": [
+    3,
+    0,
+    0,
+    382056,
+    0,
+    0
+  ]
+}

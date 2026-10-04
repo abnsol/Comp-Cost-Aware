@@ -1,0 +1,243 @@
+{
+  "development": [
+    {
+      "name": "n001-canonical_ids",
+      "family": "alternative",
+      "split": "development",
+      "fixture": "cases/qualification/run001/n001-canonical_ids.metta",
+      "fixture_sha256": "3f2fd909ec688e056fcfca590d22162fde7905b6656c9591bb012bc3cca90c1a",
+      "states_path": "results/qualification/step-04/run001/n001-canonical_ids/snapshots.jsonl",
+      "states_format": "jsonl",
+      "states_sha256": "5e03e8605f6e99ffd288fadd13d38f0ca71ae197e4404467b733aff6d7be8f2f",
+      "first_step": 4
+    },
+    {
+      "name": "n001-swap_ready_facts",
+      "family": "alternative",
+      "split": "development",
+      "fixture": "cases/qualification/run001/n001-swap_ready_facts.metta",
+      "fixture_sha256": "7e1f1376165c9b85b786174ced3e0e94a3b062686001c4a240846b020529dfcc",
+      "states_path": "results/qualification/step-04/run001/n001-swap_ready_facts/snapshots.jsonl",
+      "states_format": "jsonl",
+      "states_sha256": "b6bee1eda0eb45aa4f97fa48644c67f0babd1b16360969964f41b5134a3078d3",
+      "first_step": 4
+    },
+    {
+      "name": "n001-seeded_shuffle",
+      "family": "alternative",
+      "split": "development",
+      "fixture": "cases/qualification/run001/n001-seeded_shuffle.metta",
+      "fixture_sha256": "2ff515ae43e5e4901f1515abf49d76c3b39b9bcbd8a924a4a0b182b6f38c5869",
+      "states_path": "results/qualification/step-04/run001/n001-seeded_shuffle/snapshots.jsonl",
+      "states_format": "jsonl",
+      "states_sha256": "49dd346069cccc8552c05ab433f852f3c73973a8eae72e8bb3acbc07df5fb4f6",
+      "first_step": 5
+    },
+    {
+      "name": "n004-canonical_ids",
+      "family": "alternative",
+      "split": "development",
+      "fixture": "cases/qualification/run001/n004-canonical_ids.metta",
+      "fixture_sha256": "9f84d7c8bc46ca25afa61689bb0685b420a91e10ef9ada5f89f3fd0cfea72754",
+      "states_path": "results/qualification/step-04/run001/n004-canonical_ids/snapshots.jsonl",
+      "states_format": "jsonl",
+      "states_sha256": "4654ef6ec3e7e56faa05bf06fe4d6c64ed0262ae3d8c409ffaea0e046af89330",
+      "first_step": 4
+    },
+    {
+      "name": "n004-swap_ready_facts",
+      "family": "alternative",
+      "split": "development",
+      "fixture": "cases/qualification/run001/n004-swap_ready_facts.metta",
+      "fixture_sha256": "cc307509c820b96f278fb668e15c1921841ac8855f849c674e8c9f1164110895",
+      "states_path": "results/qualification/step-04/run001/n004-swap_ready_facts/snapshots.jsonl",
+      "states_format": "jsonl",
+      "states_sha256": "282f4665b18dda49e4cb184e3bfef4235734ca282e4b637c3c0ec0ddb7e8ab60",
+      "first_step": 4
+    },
+    {
+      "name": "n004-seeded_shuffle",
+      "family": "alternative",
+      "split": "development",
+      "fixture": "cases/qualification/run001/n004-seeded_shuffle.metta",
+      "fixture_sha256": "8d68340be3969819fe081862ad4aa8fc774e2bc60000701dae654e99b79209fa",
+      "states_path": "results/qualification/step-04/run001/n004-seeded_shuffle/snapshots.jsonl",
+      "states_format": "jsonl",
+      "states_sha256": "071f2a8a43460d09a5af8376e25cda2622198cc17775472182adb42ce7305579",
+      "first_step": 6
+    },
+    {
+      "name": "n016-canonical_ids",
+      "family": "alternative",
+      "split": "development",
+      "fixture": "cases/qualification/run001/n016-canonical_ids.metta",
+      "fixture_sha256": "0d9eeb414b357c7825df9b794002d832bb3874087f39eaabb9270968ea082216",
+      "states_path": "results/qualification/step-04/run001/n016-canonical_ids/snapshots.jsonl",
+      "states_format": "jsonl",
+      "states_sha256": "b73fd3d46c367db79f9e69debbf48f72558524f91044d39c72455e76fd0274b2",
+      "first_step": 4
+    },
+    {
+      "name": "n016-swap_ready_facts",
+      "family": "alternative",
+      "split": "development",
+      "fixture": "cases/qualification/run001/n016-swap_ready_facts.metta",
+      "fixture_sha256": "0cf0c8a8d02ed7ad0bc86e36f25b05d2e1c0067f72cd54e54a28f0af1aa2b54f",
+      "states_path": "results/qualification/step-04/run001/n016-swap_ready_facts/snapshots.jsonl",
+      "states_format": "jsonl",
+      "states_sha256": "704b886d4ffda1f94c8ccbcef2bd49ea25c99c40dfed57c457a535b27873fe66",
+      "first_step": 4
+    },
+    {
+      "name": "n016-seeded_shuffle",
+      "family": "alternative",
+      "split": "development",
+      "fixture": "cases/qualification/run001/n016-seeded_shuffle.metta",
+      "fixture_sha256": "cdc2938cc3793d38847dea420b1f588f0a417e434f5d2999b17e533ae170acbe",
+      "states_path": "results/qualification/step-04/run001/n016-seeded_shuffle/snapshots.jsonl",
+      "states_format": "jsonl",
+      "states_sha256": "021661b3db3b16e49980fae3f52b8da53c4bb7299f1946ccc5b74fdebd19524f",
+      "first_step": 5
+    },
+    {
+      "name": "necessary-w004-canonical_ids",
+      "family": "necessary",
+      "split": "development",
+      "fixture": "results/selection/step-02/run001/necessary-w004-canonical_ids/native.metta",
+      "fixture_sha256": "3cd7d5ddb159853372287375d7c41cb76013216053e6b3f5314c9e31f218960a",
+      "states_path": "results/selection/step-02/run001/necessary-w004-canonical_ids/states.json",
+      "states_format": "json",
+      "states_sha256": "3b883c741b4dd2df72c89ee4018ce813fdd394595d25829a504608bd0c07ce7f",
+      "first_step": 3
+    },
+    {
+      "name": "necessary-w004-swap_required_pair",
+      "family": "necessary",
+      "split": "development",
+      "fixture": "results/selection/step-02/run001/necessary-w004-swap_required_pair/native.metta",
+      "fixture_sha256": "0b2e8cf717dd41e560d262120cdaef5ae97f3969ed663f86c83c3366f120fd2e",
+      "states_path": "results/selection/step-02/run001/necessary-w004-swap_required_pair/states.json",
+      "states_format": "json",
+      "states_sha256": "357cd1f2d19c96230ecc5a68b115b87d1d9e5c27c38549476e8d0c866d3f69e2",
+      "first_step": 3
+    },
+    {
+      "name": "necessary-w004-seeded_shuffle",
+      "family": "necessary",
+      "split": "development",
+      "fixture": "results/selection/step-02/run001/necessary-w004-seeded_shuffle/native.metta",
+      "fixture_sha256": "1fdddd2b9d8bc2a6c36f26ce32129cce60cd8f79959ae74b31b2d0718c62d5ae",
+      "states_path": "results/selection/step-02/run001/necessary-w004-seeded_shuffle/states.json",
+      "states_format": "json",
+      "states_sha256": "6280dd6b6bed8c75f9cf480e0a3b1af4e5e2568acb7609a10e7119ef4e8c2f92",
+      "first_step": 9
+    },
+    {
+      "name": "necessary-w016-canonical_ids",
+      "family": "necessary",
+      "split": "development",
+      "fixture": "results/selection/step-02/run001/necessary-w016-canonical_ids/native.metta",
+      "fixture_sha256": "d13f2c30b1d2aefdc7c13a5285808d9fea2821bba2f83bb15f15ed691f5056f6",
+      "states_path": "results/selection/step-02/run001/necessary-w016-canonical_ids/states.json",
+      "states_format": "json",
+      "states_sha256": "68d60bcadf10d71cda8ee0751b447ba621d19d849a66852070e0247cb87de769",
+      "first_step": 3
+    },
+    {
+      "name": "necessary-w016-swap_required_pair",
+      "family": "necessary",
+      "split": "development",
+      "fixture": "results/selection/step-02/run001/necessary-w016-swap_required_pair/native.metta",
+      "fixture_sha256": "46a4949754916e57d42d1892464a9d445ff5a2702e003ea52cd504f0b3500296",
+      "states_path": "results/selection/step-02/run001/necessary-w016-swap_required_pair/states.json",
+      "states_format": "json",
+      "states_sha256": "51401f66a5f5340eedc2a734a97c567cfc3c9ff3e3f0977bab932e6a8ff4f191",
+      "first_step": 3
+    },
+    {
+      "name": "necessary-w016-seeded_shuffle",
+      "family": "necessary",
+      "split": "development",
+      "fixture": "results/selection/step-02/run001/necessary-w016-seeded_shuffle/native.metta",
+      "fixture_sha256": "a2dd6540dbe1881259ca653781cfa5cd1bdc6a0094614b204a15f26423602498",
+      "states_path": "results/selection/step-02/run001/necessary-w016-seeded_shuffle/states.json",
+      "states_format": "json",
+      "states_sha256": "84bc4ef1519d86ff1a028eb7a19081e03d62d6556504d3bf94be5eac4ecb91d7",
+      "first_step": 58
+    }
+  ],
+  "evaluation": [
+    {
+      "name": "shared-w008-canonical_ids",
+      "split": "evaluation",
+      "variant": {
+        "name": "shared-w008",
+        "width": 8,
+        "modules": 1,
+        "shared_sinks": true
+      },
+      "fixture": "results/selection/step-03/run002/evaluation/shared-w008-canonical_ids/native.metta",
+      "fixture_sha256": "428e7e3383ce2002561fd743ba45c8edace35dc55cea74f043d422df250a0659"
+    },
+    {
+      "name": "shared-w008-swap_required_pair",
+      "split": "evaluation",
+      "variant": {
+        "name": "shared-w008",
+        "width": 8,
+        "modules": 1,
+        "shared_sinks": true
+      },
+      "fixture": "results/selection/step-03/run002/evaluation/shared-w008-swap_required_pair/native.metta",
+      "fixture_sha256": "2e205a1924c27078f85e8858fcee12137aad6c314d08789a4efaf309f217ba76"
+    },
+    {
+      "name": "shared-w008-seeded_shuffle",
+      "split": "evaluation",
+      "variant": {
+        "name": "shared-w008",
+        "width": 8,
+        "modules": 1,
+        "shared_sinks": true
+      },
+      "fixture": "results/selection/step-03/run002/evaluation/shared-w008-seeded_shuffle/native.metta",
+      "fixture_sha256": "60ed3c6bd43de89e24f367fab1d2687bb66150c266e079f20b6daa7dda8c8aac"
+    },
+    {
+      "name": "modules-w004-canonical_ids",
+      "split": "evaluation",
+      "variant": {
+        "name": "modules-w004",
+        "width": 4,
+        "modules": 2,
+        "shared_sinks": false
+      },
+      "fixture": "results/selection/step-03/run002/evaluation/modules-w004-canonical_ids/native.metta",
+      "fixture_sha256": "b1f0643ea19b70ad70373fad1b69c66c11ceeb4eea962f691e7c634bb7eff9ba"
+    },
+    {
+      "name": "modules-w004-swap_required_pair",
+      "split": "evaluation",
+      "variant": {
+        "name": "modules-w004",
+        "width": 4,
+        "modules": 2,
+        "shared_sinks": false
+      },
+      "fixture": "results/selection/step-03/run002/evaluation/modules-w004-swap_required_pair/native.metta",
+      "fixture_sha256": "a2d3fdd04c9506a0c69744725835c885241832599aa1d01850be9517fa494b63"
+    },
+    {
+      "name": "modules-w004-seeded_shuffle",
+      "split": "evaluation",
+      "variant": {
+        "name": "modules-w004",
+        "width": 4,
+        "modules": 2,
+        "shared_sinks": false
+      },
+      "fixture": "results/selection/step-03/run002/evaluation/modules-w004-seeded_shuffle/native.metta",
+      "fixture_sha256": "0930b971eb3414ee2e5189c154c2d1417f8d0762eff6b5d88a83a0b8f4bf681d"
+    }
+  ]
+}

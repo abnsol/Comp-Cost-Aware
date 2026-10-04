@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "run_results_matching_jsonl": 6048,
+  "execution_files_hash_checked": 18144,
+  "document_links_checked": 17,
+  "latency_table_rows_verified": 21,
+  "budget_table_rows_verified": 8,
+  "audited_trajectories_hash_checked": 63
+}

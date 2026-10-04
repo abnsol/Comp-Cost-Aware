@@ -1,0 +1,30 @@
+{
+  "id": 2033,
+  "case": "n004-seeded_shuffle",
+  "split": "development",
+  "mode": "O",
+  "budget_ns": 2000000,
+  "repetition": 4,
+  "endpoint": "budget",
+  "result": {
+    "status": "deadline",
+    "completed_expansions": 5,
+    "engine_cpu_ns": 2012972,
+    "observer_window_cpu_ns": 41003,
+    "observer_window_fraction": 0.02036938417424584,
+    "last_detection_cpu_ns": 2004427,
+    "overshoot_ns": 12972,
+    "verified_success": false,
+    "detected_proof_verified": false,
+    "goal_in_final_state": false,
+    "audit_prefix_identical": false
+  },
+  "selector_stats": [
+    5,
+    50,
+    797241,
+    1510222,
+    0,
+    0
+  ]
+}

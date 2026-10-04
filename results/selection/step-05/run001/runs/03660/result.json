@@ -1,0 +1,30 @@
+{
+  "id": 3660,
+  "case": "n004-canonical_ids",
+  "split": "development",
+  "mode": "C",
+  "budget_ns": 250000,
+  "repetition": 7,
+  "endpoint": "budget",
+  "result": {
+    "status": "deadline",
+    "completed_expansions": 1,
+    "engine_cpu_ns": 670370,
+    "observer_window_cpu_ns": 20915,
+    "observer_window_fraction": 0.031199188507838954,
+    "last_detection_cpu_ns": 658821,
+    "overshoot_ns": 420370,
+    "verified_success": false,
+    "detected_proof_verified": false,
+    "goal_in_final_state": false,
+    "audit_prefix_identical": false
+  },
+  "selector_stats": [
+    1,
+    12,
+    261286,
+    496163,
+    0,
+    0
+  ]
+}

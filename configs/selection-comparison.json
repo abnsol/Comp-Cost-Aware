@@ -1,0 +1,16 @@
+{
+  "validation_batch": "results/selection/step-04/run001",
+  "data_batch": "results/selection/step-03/run002",
+  "policies": ["N", "O", "C"],
+  "budgets_ns": [250000, 500000, 1000000, 2000000, 4000000, 8000000, 16000000],
+  "generous_budget_ns": 1000000000,
+  "audit_budget_ns": 10000000000,
+  "repetitions": 12,
+  "seed": 1951,
+  "schedule": "all 21 cases and eight budgets shuffled within each repetition; six arm permutations used twice per case/budget",
+  "execution": "serial fresh processes, one query per process, no inference warmup",
+  "scope": "loaded-query CPU including native hook and telemetry; cooperative deadlines",
+  "held_out_rule": "frozen model; evaluation outcomes cannot alter model, features, policies or budgets",
+  "failures": "retain every run; invalid execution separate from deadline/exhaustion; no replacement measurements",
+  "audit_rule": "audit policy paths on evaluation cases before timing, with native one-step checks; audit timings are not comparison results"
+}

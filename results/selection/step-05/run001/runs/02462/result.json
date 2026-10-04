@@ -1,0 +1,30 @@
+{
+  "id": 2462,
+  "case": "shared-w008-canonical_ids",
+  "split": "evaluation",
+  "mode": "O",
+  "budget_ns": 2000000,
+  "repetition": 4,
+  "endpoint": "budget",
+  "result": {
+    "status": "deadline",
+    "completed_expansions": 2,
+    "engine_cpu_ns": 3149400,
+    "observer_window_cpu_ns": 35838,
+    "observer_window_fraction": 0.011379310344827587,
+    "last_detection_cpu_ns": 3124421,
+    "overshoot_ns": 1149400,
+    "verified_success": false,
+    "detected_proof_verified": false,
+    "goal_in_final_state": false,
+    "audit_prefix_identical": false
+  },
+  "selector_stats": [
+    2,
+    45,
+    1465650,
+    2135908,
+    0,
+    0
+  ]
+}
