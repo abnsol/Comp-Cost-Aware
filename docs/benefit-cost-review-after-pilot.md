@@ -58,4 +58,38 @@ For a later causal comparison, benefit guidance must be shared between the cost-
 
 This review supports a concrete next discussion: **what evidence available before an expansion can indicate that it enables a verified answer soon, at an affordable evaluation cost?** It does not select a neural model, promise an improvement, or draft the final project proposal.
 
-Suggested commit message: `Document benefit-cost requirements after the negative PLN pilot`
+## Follow-up: audit of information available before expansion
+
+This is a read-only source and saved-state audit, not a benchmark or a selected policy. The [current feature code](../src/pln_cost/cost_features.py) and [native adapter](../src/pln_cost/cost_selector.pl) already count evidence-disjoint, ground modus-ponens matches in either premise orientation. The frozen cost model uses these counts to predict expansion duration. It does not assign a benefit to the resulting work.
+
+Recomputing that existing feature from the saved `n004-canonical_ids` states gives:
+
+| Pending candidate | Initial MP matches | After native expansion 1 produces CertA |
+| --- | ---: | ---: |
+| ReadyA | 1 | No longer pending |
+| ReadyB | 4 | 4 |
+| ReadyA -> CertA | 1 | 1 |
+| CertA -> Goal | 0 | 1 |
+
+Evidence: [initial and subsequent native states](../results/selection/step-05/run001/audits/n004-canonical_ids/N/states.json). After C's sixth expansion produces CertA, `CertA -> Goal` is absent from PQT because it was selected earlier, although the rule remains in BB: [C states](../results/selection/step-05/run001/audits/n004-canonical_ids/C/states.json). A signal must describe the current candidate set; it cannot silently reinsert a consumed task.
+
+The existing MP count is **not** a general applicability test for the entire PLN rule library. It counts ground structural matches with disjoint evidence; it does not implement general unification, all rules, validity checks for every possible truth-value calculation, output novelty or future usefulness. Its significance here is supported by the already validated workload and transitions.
+
+| Candidate signal | Present implementation | Additional work / limitation |
+| --- | --- | --- |
+| Current MP premise availability | Already represented by `mp_matches` | Scans BB per eligible candidate. Availability is not usefulness; four matches must not automatically beat one. |
+| Connection of possible consequences to the query | Not a current cost feature | Needs the query and a defined dependency analysis. A syntactic connection need not be a valid proof path. |
+| Whether an applicable consequence supplies a missing prerequisite | Not implemented | Requires a query-dependency representation and current-state checks. This is a structural proxy for delayed usefulness, not a probability of deadline success. |
+| Whether a result would add useful new information | Not implemented | Requires consequence/evidence/truth-value reasoning. Merely finding the same term in BB is insufficient: different evidence or improved truth values can matter. |
+| Remaining CPU budget | Available in the deadline wrapper | The selector currently takes Tasks and Beliefs; it does not read the stored query or remaining budget. Supplying them would be an explicit interface change. |
+| Confidence, evidence, queue position | Already stored | Confidence is not search-success probability; queue position reflects history rather than intrinsic usefulness. |
+
+See the [selection hook](../src/pln_cost/cost_selection.py) and [budget state](../src/pln_cost/budget_clock.pl) for the interface distinction. Static model weights are available to the selector; the query is used by the stopping wrapper rather than by the current cost prediction.
+
+**Recommended review scope:** begin by specifying applicability, query connection and missing-prerequisite support as candidate structural signals. Do not assign ranking weights, call them calibrated benefits, or choose a learner yet. Determine whether they separate the observed cases without executing all candidate expansions. Predicting novelty is a separate complication, not an already available free feature.
+
+Acquisition cannot be assumed cheap. The present implementation traverses beliefs separately for tied candidates; more signals can increase that overhead. An index might reduce repeated search but adds construction and maintenance costs. A later timing test must charge those costs and preserve the short cases where overhead can dominate. No index has been implemented or timed here.
+
+The next design discussion should establish how a signal credits prerequisite work without rewarding irrelevant branching or duplicates. Any resulting guidance must be shared by the cost-disabled and cost-enabled arms, so its contribution is not mistaken for a benefit from CPU information. This audit supplies candidate observations, not evidence that a new selection rule improves performance.
+
+Suggested commit message: `Audit pre-expansion usefulness signals for PLN`
