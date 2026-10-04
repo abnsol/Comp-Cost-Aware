@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "state_batch": "run001",
+  "expansion_validation_batch": "run002",
+  "seed": 1949,
+  "calibration_widths": [1, 4, 16],
+  "batch_sizes_to_try": [1, 8, 32],
+  "warmup_pairs": 20,
+  "calibration_pairs": 30,
+  "calibration_empty_batches": 30,
+  "maximum_empty_p95_fraction": 0.10,
+  "blocks": 12,
+  "pairs_per_block": 10,
+  "empty_batches_per_block": 10,
+  "bootstrap_resamples": 5000,
+  "descriptive_ci_percent": 95,
+  "practical_ratio": 1.10,
+  "absolute_floor_empty_median_multiplier": 5,
+  "family_sign_alpha": 0.05,
+  "number_of_state_comparisons": 13,
+  "maximum_block_empty_p95_fraction": 0.10,
+  "scope": "fixed development states; local expansion CPU only; no query-speed or accuracy claim"
+}

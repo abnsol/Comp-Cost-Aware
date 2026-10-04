@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "expansion_timing_and_counters_validated_repeated_cost_comparison_pending",
+  "status": "paired_calibration_failed_overhead_gate_main_cost_comparison_not_run",
   "specification": "docs/qualification/01-kb-specification.txt",
   "family": "equal_depth_alternative_authorization_proofs",
   "development_widths": [1, 4, 16],

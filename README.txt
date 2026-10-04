@@ -8,11 +8,11 @@ Improvement, no benefit and harm are all legitimate experimental outcomes.
 The current qualification phase addresses time/success to a valid PLN derivation.
 It does not establish improved probability accuracy against external outcomes.
 
-Status: qualification step five completed; stopped for review.
-Start at docs/qualification/05-expansion-instrumentation.txt. Thirty-six native
-validation trials passed: isolated expansion timing, separate work counters and
-ordered-queue parity. Single CPU samples are recorded; a reproducible cost gap
-has NOT been established. Earlier native answers and state restoration remain valid.
+Status: step six stopped at its predeclared calibration gate; review required.
+Start at docs/qualification/06-calibration-results.txt. All three attempted batch
+sizes exceeded the 10% empty-harness overhead criterion. The main paired cost
+comparison was NOT run. Earlier native correctness/state/instrumentation checks
+remain valid; a reproducible cost gap has not been established.
 The design is docs/qualification/01-kb-specification.txt and configs/qualification-kb.json.
 The earlier machine-example work is preserved:
 The returned machine-example answer now has a captured seven-node proof replayed
@@ -37,6 +37,7 @@ Folder structure and review order
   src/pln_cost/feasibility.py  Qualification output parsing and observable parity
   src/pln_cost/states.py  Native state capture, provenance and exact continuation checks
   src/pln_cost/expansion.py  Native expansion extraction, CPU clocks and separate counters
+  src/pln_cost/paired.py  Repeated-state harness, calibration summaries and block analysis
   scripts/                Human-readable entry points; start at validate_step1.py
   tests/                  Offline input/oracle and false-success checks
   results/step-01/run001/ Original output, parity fixture and result manifest
@@ -51,6 +52,7 @@ Run from this project directory (Python standard library only)
   python3 scripts/validate_qualification.py --run-id review001 --case-batch run001
   python3 scripts/validate_states.py --run-id review001 --feasibility-batch run001
   python3 scripts/validate_expansion.py --run-id review001 --state-batch run001
+  python3 scripts/run_paired.py calibrate --run-id review001
   python3 scripts/validate_step1.py --run-id review001
   python3 scripts/validate_step2.py --run-id review001
 The qualification generator runs no inference: it checks source revisions and
@@ -67,6 +69,9 @@ native reference, timing-only helper and diagnostic helper). The clock is inside
 the engine process. These are local operation CPU samples, not total query costs.
 Detailed counter logging is excluded from timing-only runs; boundary-clock costs
 remain included, and probes are saved without automatically subtracting them.
+The paired harness has separate calibrate/measure stages. A failed calibration
+cannot authorize measurement. The saved cal001 calibration failed at K=1,8,32;
+do not run the main comparison using it or quietly relax the overhead limit.
 Use a fresh run ID: existing results are never overwritten. Runtime paths in
 configs/runtime.json are relative to this project. The external runtime/source
 directories must already exist at the recorded revisions; the runner installs
@@ -88,8 +93,9 @@ Working agreement
 - Keep development/tuning separate from held-out evaluation.
 
 Review checkpoint
-Review docs/qualification/05-expansion-instrumentation.txt and the code before
-qualification step six: calibrate and repeatedly compare same-state expansions.
+Review docs/qualification/06-calibration-results.txt and the saved failed
+calibration before revising the measurement harness. Step six's main comparison
+remains pending; do not advance to the budgeted query benchmark.
 This new series is separate from the old diagnostic interface/proof-audit steps.
 The new task's reproducible CPU cost gap and time to first available answer remain
 unestablished. Single validation timings must not be presented as benchmark results.

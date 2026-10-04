@@ -1,0 +1,83 @@
+STEP 6: CALIBRATION FAILED; MAIN PAIRED COMPARISON NOT RUN
+
+Outcome
+The frozen protocol's overhead gate failed at every predeclared batch size.
+Calibration ran nine fresh processes: canonical initial N1/N4/N16 at K=1,8,32.
+Every measured/warm-up expansion's output check passed. No inference correctness
+failure occurred. The problem is measurement-harness adequacy for short operations.
+The main 12-block, 13-state experiment was not started. No cost-gap verdict is
+reported from these calibration samples.
+
+Gate fixed BEFORE calibration
+For each state, 95th-percentile empty-batch CPU must be <=10% of the faster
+candidate's median batch CPU. All three states must pass at the same K. An empty
+batch uses the same framework and returns the expected tuple without inference.
+It is an overhead proxy, not an exact decomposition of all instrumentation costs.
+There is no automatic subtraction of empty time from inference time.
+
+Observed empty-p95 / faster-median ratios
+K       N1       N4       N16
+1       17.1%    22.3%    27.6%
+8       16.7%    17.8%    19.3%
+32      16.6%    15.2%    18.7%
+Every cell exceeds the 10% criterion. The values are calibration diagnostics,
+not evidence of statistically significant differences between task families.
+
+What we learned
+Increasing K amortizes boundary-clock costs but did not adequately reduce the
+measured harness fraction. Repeated recursive calls, argument handling and result
+list construction remain inside every batch. These are plausible sources of the
+remaining overhead; this run does not separately identify their causal shares.
+The harness preserved logical behavior: every native result tuple matched the
+previously validated output. That does not establish timing fidelity. A functional
+parity pass and a measurement-overhead failure are compatible findings.
+
+What was implemented
+configs/paired-protocol.json and docs/qualification/06-paired-protocol.txt freeze
+the calibration options, randomization, warm-up, main repetition counts, overhead
+gate, practical margins, process-block statistics and stop rule before execution.
+src/pln_cost/paired.py generates batches that reuse the ORIGINAL immutable state
+for every expansion. Outputs are never fed into the following iteration. Every
+output is checked outside the timing window, rather than checking only the last.
+Each process has 20 warm-up pairs, then 30 measured calibration pairs (balanced
+A-first/B-first order), then 30 empty batches. The main block-analysis code exists
+and has synthetic unit tests; it has not analyzed a main measurement dataset.
+scripts/run_paired.py separates calibration from measurement, verifies saved
+states/native outputs/helper hashes and refuses a failed calibration for measure.
+
+Timing scope remains narrow
+The clock is embedded Python process_time_ns in the engine process. Batch CPU
+includes native expansion and framework work inside the batch. Input preparation
+has a separate interval. Startup, output printing, correctness comparisons and
+parent-Python CPU are outside this local window. No hardware/cache snapshot is
+restored; only the logical reasoning state is held fixed. No inference warm-up
+or repetition counts were tuned after seeing a desirable cost contrast.
+
+Retained artifacts
+results/qualification/step-06/calibrate/cal001/protocol.json
+results/qualification/step-06/calibrate/cal001/conditions.json
+results/qualification/step-06/calibrate/cal001/report.json
+The report has passed=false and no accepted_batch_size. Its nine run directories
+contain exact MeTTa fixtures, full stdout/stderr, schedules, parsed samples and
+summaries. It records source/code/protocol hashes at execution time. The saved-run
+regression test and status/docs updates were added after calibration.
+
+Validation
+  python3 -m unittest discover -s tests -q
+  55 tests passed before calibration; 56 after adding saved-calibration replay.
+  python3 scripts/run_paired.py calibrate --run-id cal001
+  Nine clean engine executions; output checks passed; overhead gate failed.
+The script returned nonzero as intended. Failed calibration evidence is preserved.
+No main measurement, cost estimator or budgeted-query benchmark was executed.
+No source/runtime repositories were modified and no commit was made.
+
+Next step for review
+Reduce and validate the per-expansion harness overhead, then repeat calibration
+under a documented revision while retaining cal001. A thinner loop that calls
+the already compiled native helper is one candidate; it must still restore the
+same logical inputs and verify every result. Do not simply increase K again,
+relax the threshold, subtract estimated overhead, or interpret calibration A/B
+ratios as the main experiment. Discuss the revised approach before implementation.
+
+Suggested commit message
+Add paired CPU protocol and retain failed overhead calibration

@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/runtime/swipl/bin/swipl",
+    "--stack_limit=1g",
+    "-q",
+    "-s",
+    "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PeTTa/src/main.pl",
+    "-g",
+    "load_metta_file('/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03/repos/PLN/lib_pln.metta',_)",
+    "--",
+    "/home/abnsol/Documents/Icog/Individual Evaluation/pln-computation-cost/results/qualification/step-06/calibrate/cal001/k001/n004-canonical_ids-s000/trial.metta",
+    "--silent"
+  ],
+  "cwd": "/home/abnsol/Documents/Icog/Individual Evaluation/research-discovery/step-03",
+  "returncode": 0,
+  "timed_out": false,
+  "name": "n004-canonical_ids-s000",
+  "label": "k001/n004-canonical_ids-s000",
+  "batch_size": 1,
+  "stdout_sha256": "bc2547304009cbe2e1eb65a8cb501be45f183fdd82d779308a8296d4458be7b6",
+  "fixture_sha256": "1c2719fc81e1b37c3a5446ee6260add8d36af26f1f1c5117e690c960499d45fe"
+}
