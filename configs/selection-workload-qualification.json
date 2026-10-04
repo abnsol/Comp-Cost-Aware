@@ -1,0 +1,23 @@
+{
+  "scope": "development workload qualification; no selection intervention",
+  "widths": [4, 16],
+  "orderings": ["canonical_ids", "swap_required_pair", "seeded_shuffle"],
+  "shuffle_seed": 17,
+  "irrelevant_facts": 4,
+  "timing": {
+    "blocks": 6,
+    "warmup_pairs": 20,
+    "measured_pairs": 10,
+    "empty_samples": 30,
+    "seed": 1951,
+    "maximum_empty_p95_fraction": 0.1,
+    "minimum_ratio": 1.2,
+    "empty_median_gap_multiplier": 5,
+    "scope": "initial canonical state only; descriptive qualification, not policy evaluation"
+  },
+  "held_out": {
+    "status": "reserved, not generated or timed in this step",
+    "structural_changes": ["shared side-consequence sinks across required endpoints", "multiple disconnected required-pair modules with one queried module"],
+    "requirement": "qualify correctness and freeze instances before fitting; never train on evaluation timing labels"
+  }
+}
