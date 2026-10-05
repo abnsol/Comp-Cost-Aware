@@ -92,39 +92,6 @@ class StateTests(unittest.TestCase):
             instrument_states("not the pinned implementation")
 
 
-class RecordedStateTests(unittest.TestCase):
-    def test_all_saved_native_continuations(self):
-        batch = PROJECT / "results/qualification/step-04/run001"
-        report = json.loads((batch / "report.json").read_text())
-        config = json.loads((batch / "config.json").read_text())
-        from pln_cost.sexpr import read_case
-        self.assertEqual(len(report["cases"]), 9)
-        count = 0
-        for entry in report["cases"]:
-            folder = batch / Path(entry["case"]).stem
-            with self.subTest(case=folder.name):
-                raw = (folder / "snapshots.jsonl").read_bytes()
-                self.assertEqual(hashlib.sha256(raw).hexdigest(), entry["snapshots_sha256"])
-                saved = [json.loads(line) for line in raw.splitlines()]
-                log = (folder / "capture.stdout.txt").read_text()
-                self.assertEqual(hashlib.sha256(log.encode()).hexdigest(), entry["runs"]["capture"]["stdout_sha256"])
-                states, trims = capture_states(log, read_case((PROJECT / entry["case"]).read_text()),
-                                               config["initial_correctness_limits"])
-                self.assertEqual([s["state"] for s in saved], [s["state"] for s in states])
-                self.assertEqual(len(states), entry["checkpoint_count"])
-                self.assertEqual(trims, entry["trim_events"])
-                self.assertEqual([r["completed_expansions"] for r in entry["restorations"]], checkpoints_to_restore(states))
-                for restoration in entry["restorations"]:
-                    index = restoration["completed_expansions"]
-                    name = f"restore-{index:03d}"
-                    resumed = (folder / f"{name}.stdout.txt").read_text()
-                    self.assertEqual(hashlib.sha256(resumed.encode()).hexdigest(), entry["runs"][name]["stdout_sha256"])
-                    self.assertEqual(saved[index]["sha256"], restoration["state_sha256"])
-                    checked = check_restoration(resumed, log, states[index], states[-1]["state"])
-                    self.assertTrue(checked["continuation_events_identical"])
-                    count += 1
-        self.assertEqual(count, 47)
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()

@@ -14,6 +14,7 @@ from pln_cost.benefit_benchmark import schedule, summarize, coverage, check_stat
 from pln_cost.budget import check_result
 from pln_cost.expansion import marked
 from pln_cost.sexpr import read_case
+from pln_cost.provenance import verify_project_sources
 
 
 def load(path):
@@ -26,7 +27,8 @@ def sha(path):
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--run-id',required=True)
+    ap.add_argument('--run-id',default='run001')
+    ap.add_argument('--output',type=Path,help='Optional new audit report; existing files are never overwritten')
     args=ap.parse_args()
     if not args.run_id.replace('-','').replace('_','').isalnum():ap.error('Simple run ID required')
     root=PROJECT/'results/benefit-benchmark'/args.run_id
@@ -37,8 +39,9 @@ def main():
     for path,expected in [(root/'freeze.json',report['freeze_sha256']),
                           (root/'qualification-report.json',report['qualification_report_sha256'])]:
         if sha(path)!=expected:raise ValueError(f'Changed metadata: {path}')
-    checks=0
-    for base,hashes in [(PROJECT,freeze['project_sources']),(root,freeze['artifacts']),(root,qualification['audit_sha256'])]:
+    source_mode=verify_project_sources(PROJECT,root,freeze['project_sources'])
+    checks=len(freeze['project_sources'])
+    for base,hashes in [(root,freeze['artifacts']),(root,qualification['audit_sha256'])]:
         for name,expected in hashes.items():
             if sha(base/name)!=expected:raise ValueError(f'Changed frozen file: {name}')
             checks+=1
@@ -139,7 +142,16 @@ def main():
         paired_tight_budget_outcomes=paired,latency=latency,diagnostic=diagnostic,
         input_hashes={n:sha(dest/n) for n in ('runs.jsonl','report.json','summary.json')},
         analysis_script_sha256=sha(Path(__file__)))
-    (dest/'verified-analysis.json').write_text(json.dumps(analysis,indent=2)+'\n')
+    original=dest/'verified-analysis.json'
+    if original.exists():
+        recorded=load(original)
+        expected={k:v for k,v in recorded.items() if k!='analysis_script_sha256'}
+        actual={k:v for k,v in analysis.items() if k!='analysis_script_sha256'}
+        if expected!=actual:raise ValueError('Reanalysis differs from the original verified findings')
+    if args.output:
+        with args.output.open('x') as stream:
+            stream.write(json.dumps(analysis,indent=2)+'\n')
+    print('Historical source verification: '+source_mode,flush=True)
     print(json.dumps({k:analysis[k] for k in ('passed','completed_runs','native_artifact_hash_checks','replayed_detected_proofs','statuses','diagnostic')},indent=2),flush=True)
 
 

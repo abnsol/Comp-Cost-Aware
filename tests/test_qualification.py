@@ -10,7 +10,7 @@ sys.path.insert(0, str(PROJECT / "src"))
 from pln_cost.proof import SOURCE_COMMIT, key, replay
 from pln_cost.qualification import ORDERINGS, kb_records, qualifies, render_case, static_witness, validate_config
 from pln_cost.sexpr import read_case, read_forms
-from test_step2 import rekey
+from test_proof import rekey
 
 
 class QualificationTests(unittest.TestCase):

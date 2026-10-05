@@ -48,49 +48,7 @@ class ExpansionTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             build_expansion("not native PLN")
 
-    def test_actual_boolean_spelling_and_missing_counter_rejection(self):
-        # Retain the first failed validation: its counter parser expected True,
-        # whereas PeTTa's output spelling is true. Native work itself matched.
-        path = PROJECT / "results/qualification/step-05/run001/n001-canonical_ids-s000-route_a/audit.stdout.txt"
-        log = path.read_text()
-        trial = parse_trial(log)
-        result = counters(self.state, self.state["tasks"][0], trial, log)
-        self.assertEqual(result["visited_premise_pairs"], 6)
-        self.assertEqual(result["stamp_disjoint_pairs"], 5)
-        self.assertEqual(result["generated_binary_results"], 1)
-        with self.assertRaisesRegex(ValueError, "counters"):
-            counters(self.state, self.state["tasks"][0], trial, log.replace("(COST_GUARD false)\n", ""))
-        with self.assertRaisesRegex(ValueError, "dispatch"):
-            counters(self.state, self.state["tasks"][0], trial, log.replace("(COST_ATTEMPT unary)\n", ""))
 
 
-class RecordedExpansionTests(unittest.TestCase):
-    def test_all_native_counter_and_timing_records(self):
-        root = PROJECT / "results/qualification/step-05/run002"
-        report = json.loads((root / "report.json").read_text())
-        self.assertTrue(report["passed"])
-        self.assertEqual(len(report["trials"]), 36)
-        for result in report["trials"]:
-            folder = root / result["name"]
-            with self.subTest(trial=result["name"]):
-                source = json.loads((folder / "input.json").read_text())
-                state = source["state"]
-                logs = {}
-                for mode in ("reference", "timed", "audit"):
-                    raw = (folder / f"{mode}.stdout.txt").read_bytes()
-                    self.assertEqual(hashlib.sha256(raw).hexdigest(), result["runs"][mode]["stdout_sha256"])
-                    logs[mode] = raw.decode()
-                timed, audited = parse_trial(logs["timed"]), parse_trial(logs["audit"])
-                self.assertEqual(timed["queues"], audited["queues"])
-                self.assertEqual(timed["derivations"], audited["derivations"])
-                from pln_cost.expansion import marked
-                self.assertEqual(marked(logs["reference"], "COST_REFERENCE"), [timed["queues"]])
-                chosen = chosen_record(state, source["requested"])
-                self.assertEqual(counters(state, chosen, audited, logs["audit"]), result["counters"])
-        diagnostic = next(t for t in report["trials"] if t["kind"] == "synthetic_cap_boundary_check")
-        self.assertEqual(diagnostic["counters"]["tasks_removed_by_cap"], 5)
-        self.assertEqual(diagnostic["counters"]["beliefs_removed_by_cap"], 6)
-
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()

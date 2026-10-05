@@ -1,3 +1,0 @@
-(SELECTED (Sentence ((Ready unit0 route_a) (stv 1.0 0.9)) (1)))
-(COST_REFERENCE (((Sentence ((Implication (Certificate unit0 path_b_001) (CanOperate unit0)) (stv 1.0 0.9)) (6))) ((Sentence ((Implication (Certificate unit0 path_b_001) (CanOperate unit0)) (stv 1.0 0.9)) (6)))))
-true

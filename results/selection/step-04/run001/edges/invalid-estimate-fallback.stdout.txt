@@ -1,7 +1,0 @@
-(EDGE (Sentence ((Ready unit0 route_a) (stv 1.0 0.9)) (1)))
-(COST_STATS (1 6 129379 316342 1 0))
-true
-632435190
-true
-true
-true

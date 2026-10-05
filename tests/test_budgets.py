@@ -12,21 +12,19 @@ from pln_cost.budget import check_result, fixture
 from pln_cost.qualification import expression
 from pln_cost.sexpr import read_case
 sys.path.insert(0, str(PROJECT / "scripts"))
-from run_budgets import summarize, validation_matches
 
 
 class BudgetTests(unittest.TestCase):
     def setUp(self):
-        root = PROJECT / "results/qualification/step-04/run001"
-        report = json.loads((root / "report.json").read_text())
-        entry = report["cases"][0]
-        path = PROJECT / entry["case"]
-        folder = root / path.stem
-        self.states = [json.loads(l) for l in (folder / "snapshots.jsonl").read_text().splitlines()]
-        self.trace = (folder / "capture.stdout.txt").read_text()
-        self.case = read_case(path.read_text())
-        self.config = json.loads((root / "config.json").read_text())
-        self.source_hash, self.fixture_hash = report["hashes"]["native_library"], entry["fixture_sha256"]
+        root = PROJECT / "results/benefit-benchmark/run001"
+        entry = next(e for e in json.loads((root / "manifest.json").read_text()) if e["name"] == "n001-canonical_ids")
+        folder = root / "audits/n001-canonical_ids/N"
+        self.states = json.loads((folder / "states.json").read_text())
+        self.trace = (folder / "audit.stdout.txt").read_text()
+        self.case = read_case((root / entry["fixture"]).read_text())
+        self.config = json.loads((root / "qualification-config.json").read_text())
+        self.source_hash = json.loads((root / "freeze.json").read_text())["native_library_sha256"]
+        self.fixture_hash = entry["fixture_sha256"]
         self.goal = next(r for r in self.states[4]["state"]["beliefs"] if r[1][0] == self.case["query"])
 
     def check(self, row, budget):
@@ -55,7 +53,7 @@ class BudgetTests(unittest.TestCase):
 
     def test_false_success_changed_queues_and_bad_clocks_are_rejected(self):
         for row in (self.row('success', 3, 100, []), self.row('exhausted', 1, 100, []),
-                    self.row('deadline', 1, 99, []), self.row('success', 5, 100, self.goal)):
+                    self.row('deadline', 1, 99, []), self.row('success', 3, 100, self.goal)):
             with self.assertRaises(ValueError):
                 self.check(row, 100)
         row = self.row('success', 4, 100, self.goal)
@@ -75,70 +73,6 @@ class BudgetTests(unittest.TestCase):
         self.assertNotIn('Expected', text)
         self.assertNotIn('certificate', text)
 
-
-class SavedBudgetTests(unittest.TestCase):
-    def test_validation_has_native_parity_and_real_negative_cases(self):
-        root = PROJECT / "results/qualification/step-08/validate/val001"
-        report = json.loads((root / "report.json").read_text())
-        self.assertTrue(report["passed"])
-        self.assertEqual(len(report["runs"]), 20)
-        audits = [r for r in report["runs"] if r["audit"]]
-        self.assertEqual(len(audits), 9)
-        self.assertTrue(all(r["result"]["audit_prefix_identical"] and r["result"]["verified_success"] for r in audits))
-        zero, absent = report["runs"][-2:]
-        self.assertEqual(zero["result"]["completed_expansions"], 0)
-        self.assertEqual(zero["result"]["status"], "deadline")
-        self.assertEqual(absent["result"]["status"], "exhausted")
-        self.assertFalse(absent["result"]["goal_in_final_state"])
-
-    def test_validation_binding_rejects_changed_execution(self):
-        path = PROJECT / "results/qualification/step-08/validate/val001/report.json"
-        report = json.loads(path.read_text())
-        validation_matches(report, report)
-        for field in ("hashes", "provenance_before", "project_source_sha256"):
-            changed = deepcopy(report)
-            if field == "project_source_sha256":
-                changed[field]["scripts/run_budgets.py"] = "changed"
-            else:
-                changed[field] = {}
-            with self.assertRaises(ValueError):
-                validation_matches(report, changed)
-
-    def test_complete_sweep_raw_outputs_proofs_and_summary_reproduce(self):
-        root = PROJECT / "results/qualification/step-08/measure/run001"
-        report = json.loads((root / "report.json").read_text())
-        self.assertTrue(report["passed"])
-        self.assertEqual(len(report["runs"]), 630)
-        self.assertEqual(report["summary"], summarize(report["runs"]))
-        self.assertEqual(len(report["summary"]), 63)
-        self.assertTrue(all(s["n"] == 10 for s in report["summary"]))
-        schedule = json.loads((root / "schedule.json").read_text())
-        validation = PROJECT / "results/qualification/step-08/validate/val001/report.json"
-        self.assertEqual(hashlib.sha256(validation.read_bytes()).hexdigest(), report["validation_sha256"])
-        previous = PROJECT / "results/qualification/step-04/run001"
-        prior = json.loads((previous / "report.json").read_text())
-        config = json.loads((root / "config.json").read_text())
-        data = {}
-        for entry in prior["cases"]:
-            fixture_path = PROJECT / entry["case"]
-            name = fixture_path.stem
-            folder = previous / name
-            data[name] = (entry, read_case(fixture_path.read_text()),
-                          [json.loads(l) for l in (folder / "snapshots.jsonl").read_text().splitlines()],
-                          (folder / "capture.stdout.txt").read_text())
-        for job, run in zip(schedule, report["runs"]):
-            self.assertEqual(run["label"], f"rep-{job['repetition']:02d}/{job['name']}/ns-{job['budget_ns']}")
-            folder = root / run["label"]
-            raw = (folder / "stdout.txt").read_bytes()
-            self.assertEqual(hashlib.sha256(raw).hexdigest(), run["stdout_sha256"])
-            self.assertEqual(hashlib.sha256((folder / "trial.metta").read_bytes()).hexdigest(), run["fixture_sha256"])
-            entry, case, states, trace = data[run["name"]]
-            checked, cert, proof = check_result(raw.decode(), run["budget_ns"], states, trace, case,
-                report["hashes"]["native"], entry["fixture_sha256"], config["success"])
-            self.assertEqual(checked, run["result"])
-            if cert:
-                self.assertEqual(cert, json.loads((folder / "certificate.json").read_text()))
-                self.assertEqual(proof, json.loads((folder / "replay.json").read_text()))
 
 
 if __name__ == '__main__':

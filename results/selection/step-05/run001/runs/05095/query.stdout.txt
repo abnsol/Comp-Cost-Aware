@@ -1,5 +1,0 @@
-(BUDGET_RESULT (deadline 1 379959 17338 371622 () (((Sentence ((Ready unit0 route_b) (stv 1.0 0.9)) (2)) (Sentence ((Ready unit0 route_a) (stv 1.0 0.9)) (1)) (Sentence ((Implication (Ready unit0 route_a) (Certificate unit0 path_a)) (stv 1.0 0.9)) (3)) (Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (Sentence ((Implication (Certificate unit0 path_b_001) (CanOperate unit0)) (stv 1.0 0.9)) (6))) ((Sentence ((Ready unit0 route_b) (stv 1.0 0.9)) (2)) (Sentence ((Ready unit0 route_a) (stv 1.0 0.9)) (1)) (Sentence ((Implication (Ready unit0 route_a) (Certificate unit0 path_a)) (stv 1.0 0.9)) (3)) (Sentence ((Implication (Certificate unit0 path_a) (CanOperate unit0)) (stv 1.0 0.9)) (4)) (Sentence ((Implication (Ready unit0 route_b) (Certificate unit0 path_b_001)) (stv 1.0 0.9)) (5)) (Sentence ((Implication (Certificate unit0 path_b_001) (CanOperate unit0)) (stv 1.0 0.9)) (6))))))
-(COST_STATS (1 6 101477 247220 0 0))
-true
-true
-true

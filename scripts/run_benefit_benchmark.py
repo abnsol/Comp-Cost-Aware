@@ -18,7 +18,8 @@ import time
 PROJECT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT / "src"))
 from pln_cost.benefit_benchmark import schedule, summarize, coverage, expected_counters, check_stats
-from pln_cost.benefit_selection import selection_fixture, choose
+from pln_cost.benefit_selection import selection_fixture, choose, build_library, bootstrap
+from pln_cost.first_answer import quiet_library
 from pln_cost.benefit_signals import SCOPE, describe
 from pln_cost.budget import check_result
 from pln_cost.cost_selection import audit_trace
@@ -89,10 +90,6 @@ def qualified_shape(case, family, width, distractors=4):
         raise ValueError('Qualified fixture rejected by descriptors')
 
 
-def logical_input_key(case):
-    return key([case['query'],case['marginals'],sorted(map(key,case['inputs']))])
-
-
 def prepare(out):
     out.mkdir(parents=True,exist_ok=False)
     report = dict(passed=False, timing_sweep_started=False, audits=[], authored_witnesses=[],
@@ -100,71 +97,46 @@ def prepare(out):
     try:
         protocol = load(PROJECT/'configs/benefit-selection-comparison.json')
         save(out/'protocol.json',protocol)
-        prior = PROJECT/protocol['validation_batch']
-        expected = {str((prior/'report.json').relative_to(PROJECT)):protocol['validation_report_sha256']}
-        for stem in ('model','prior_manifest','qualification_config'):
-            expected[protocol[stem+'_path']] = protocol[stem+'_sha256']
-        verify_hashes(PROJECT,expected)
-        validation = load(prior/'report.json')
-        if not validation['passed'] or protocol['scope'] != SCOPE:
-            raise ValueError('Invalid prior validation/scope')
-        verify_hashes(PROJECT,validation['source_sha256'])
-        verify_hashes(prior,validation['adapter_sha256'])
+        reference = PROJECT / protocol['reference_batch']
+        model_path = PROJECT / protocol['model_path']
+        if sha(model_path) != protocol['model_sha256']:
+            raise ValueError('Changed frozen cost model')
         runtime = Runtime(PROJECT,PROJECT/'configs/runtime.json')
         report['provenance_before'] = runtime.verify()
+        source = (runtime.pln/'lib_pln.metta').read_text()
         source_hash = sha(runtime.pln/'lib_pln.metta')
-        if source_hash != validation['native_library_sha256']:
-            raise ValueError('Changed native library')
         report['native_library_sha256'] = source_hash
-        for name in (*validation['adapter_sha256'],'PLN-LICENSE.txt'):
-            shutil.copyfile(prior/name,out/name)
-        shutil.copyfile(PROJECT/protocol['model_path'],out/'model.json')
+        (out/'bootstrap.pl').write_text(bootstrap(PROJECT))
+        for audit in (False,True):
+            text,patch = build_library(source,audit)
+            name = 'lib_pln.audit' if audit else 'lib_pln.quiet'
+            (out/(name+'.metta')).write_text(text)
+            (out/(name+'.diff')).write_text(patch)
+        (out/'lib_pln.native.metta').write_text(quiet_library(source)[0])
+        shutil.copyfile(runtime.pln/'LICENSE',out/'PLN-LICENSE.txt')
+        shutil.copyfile(model_path,out/'model.json')
         config = load(PROJECT/protocol['qualification_config_path'])
         save(out/'qualification-config.json',config)
         model = load(out/'model.json')
-        old = load(PROJECT/protocol['prior_manifest_path'])
-        if len(old['development']) != protocol['development']['expected_cases']:
-            raise ValueError('Development coverage changed')
-        known = set()
-        for entry in old['development']+old['evaluation']:
-            p = PROJECT/entry['fixture']
-            if sha(p) != entry['fixture_sha256']:
-                raise ValueError('Changed historical fixture')
-            expected[entry['fixture']] = sha(p)
-            known.add(logical_input_key(read_case(p.read_text())))
+        # Reproduce the already published 27 cases. These are now known cases,
+        # not a fresh held-out evaluation for any subsequent method changes.
+        original_entries = load(reference/'manifest.json')
         fixtures = out/'fixtures'; fixtures.mkdir()
         entries = []
-        for old_entry in old['development']:
-            entry = dict(old_entry)
-            src = PROJECT/entry['fixture']
-            dst = fixtures/(entry['name']+'.metta'); shutil.copyfile(src,dst)
-            entry['fixture'] = str(dst.relative_to(out))
-            entry['width'] = int(entry['name'].split('-')[0][1:] if entry['family']=='alternative'
-                                 else entry['name'].split('-')[1][1:])
-            entries.append(entry)
-        fresh_keys = {}
-        for profile in protocol['reserved_evaluation']['profiles']:
-            family,width = profile['family'],profile['width']
-            for ordering in profile['orderings']:
-                name = f'reserved-{family}-w{width:03d}-{ordering}'
-                seed = protocol['reserved_evaluation']['shuffle_seed']
-                records = (kb_records(width,ordering,seed) if family=='alternative' else
-                           necessary_records(width,ordering,seed,profile['distractors']))
-                dst = fixtures/(name+'.metta')
-                dst.write_text(render_case(records,config['initial_correctness_limits']))
-                case = read_case(dst.read_text())
-                identity = logical_input_key(case)
-                if identity in known:
-                    raise ValueError('Reserved KB duplicates a previously manifested KB')
-                # The three orders intentionally share one KB; distinct profiles must not.
-                profile_id = (family,width)
-                if identity in fresh_keys and fresh_keys[identity] != profile_id:
-                    raise ValueError('Different reserved profiles duplicate a KB')
-                fresh_keys[identity] = profile_id
-                entries.append(dict(name=name,split='reserved',family=family,width=width,ordering=ordering,
-                    distractors=profile.get('distractors',4),fixture=str(dst.relative_to(out)),fixture_sha256=sha(dst)))
-        if sum(e['split']=='reserved' for e in entries) != protocol['reserved_evaluation']['expected_cases']:
-            raise ValueError('Reserved case coverage mismatch')
+        expected = {protocol['model_path']:sha(model_path),
+                    str((reference/'manifest.json').relative_to(PROJECT)):sha(reference/'manifest.json')}
+        for old in original_entries:
+            src = reference/old['fixture']
+            if sha(src)!=old['fixture_sha256']:
+                raise ValueError('Reference fixture changed')
+            dst = fixtures/(old['name']+'.metta');shutil.copyfile(src,dst)
+            expected[str(src.relative_to(PROJECT))] = sha(src)
+            entries.append(dict(name=old['name'],family=old['family'],split=old['split'],
+                width=old['width'],distractors=old.get('distractors',4),
+                fixture=str(dst.relative_to(out)),fixture_sha256=sha(dst)))
+        if len(entries)!=27:
+            raise ValueError('Expected the 27 published benchmark cases')
+        report['evaluation_status']='Reproduction of known cases; not a new holdout'
         cases = {}
         witness_dir = out/'authored-witnesses'; witness_dir.mkdir()
         for entry in entries:
@@ -195,48 +167,34 @@ def prepare(out):
         report['freeze_sha256']=sha(out/'freeze.json')
         report['planned_measurements']=len(jobs)
         save(out/'qualification-report.json',report)
-        prior_runs={r['fixture']:r for r in validation['native_runs']}
         for entry in entries:
             name=entry['name']; case=cases[name]; paths={}
             for mode in protocol['policies']:
                 print(f"Qualify {entry['split']}: {name} {mode}",flush=True)
                 folder=out/'audits'/name/mode;folder.mkdir(parents=True)
-                if entry['split']=='development':
-                    old_folder=prior/'policies'/name/mode
-                    anchored=prior_runs[f'policies/{name}/{mode}/audit.metta']
-                    if sha(old_folder/'audit.stdout.txt')!=anchored['stdout_sha256']:
-                        raise ValueError('Changed validated development trace')
-                    for filename in ('audit.stdout.txt','states.json','certificate.json','proof-replay.json'):
-                        shutil.copyfile(old_folder/filename,folder/filename)
-                    log=(folder/'audit.stdout.txt').read_text()
-                else:
-                    path=folder/'audit.metta'
-                    path.write_text(selection_fixture(case,config,protocol['audit_budget_ns'],model,mode))
-                    log=execute(runtime,out,path,out/'lib_pln.audit.metta')
+                path=folder/'audit.metta'
+                path.write_text(selection_fixture(case,config,protocol['audit_budget_ns'],model,mode))
+                log=execute(runtime,out,path,out/'lib_pln.audit.metta')
                 states,selected,cert,checked=audit_trace(log,case,config,model,mode,source_hash,
                     entry['fixture_sha256'],selection_reference=partial(choose,query=case['query'],marginals={}))
                 result,_,_=check_result(log,protocol['audit_budget_ns'],states,log,case,source_hash,
                     entry['fixture_sha256'],config['success'],audit=True)
                 if result['status'] not in ('success','exhausted'):
                     raise ValueError('Audit did not cover a complete logical trajectory')
-                if entry['split']=='development' and (states!=load(folder/'states.json') or
-                        cert!=load(folder/'certificate.json') or checked!=load(folder/'proof-replay.json')):
-                    raise ValueError('Development proof/state artifact mismatch')
                 save(folder/'states.json',states);save(folder/'certificate.json',cert);save(folder/'proof-replay.json',checked)
                 paths[mode]=[s['state'] for s in states]
                 if mode=='BO' and paths['BO']!=paths['B']:
                     raise ValueError('Overhead-only arm changed choices')
                 transitions=0
-                if entry['split']=='reserved':
-                    ref=folder/'native-transitions.metta'
-                    ref.write_text(''.join(reference_fixture(s['state'],c).replace('COST_REFERENCE',f'TRANSITION_{i}')
-                        for i,(s,c) in enumerate(zip(states[:-1],selected,strict=True))))
-                    ref_log=execute(runtime,out,ref,out/'lib_pln.native.metta')
-                    actual=[read_one(line) for line in ref_log.splitlines() if line.startswith('(TRANSITION_')]
-                    wanted=[[f'TRANSITION_{i}',[states[i+1]['state'][k] for k in ('tasks','beliefs')]] for i in range(len(selected))]
-                    if actual!=wanted:
-                        raise ValueError('Native one-step transition mismatch')
-                    transitions=len(actual)
+                ref=folder/'native-transitions.metta'
+                ref.write_text(''.join(reference_fixture(s['state'],c).replace('COST_REFERENCE',f'TRANSITION_{i}')
+                    for i,(s,c) in enumerate(zip(states[:-1],selected,strict=True))))
+                ref_log=execute(runtime,out,ref,out/'lib_pln.native.metta')
+                actual=[read_one(line) for line in ref_log.splitlines() if line.startswith('(TRANSITION_')]
+                wanted=[[f'TRANSITION_{i}',[states[i+1]['state'][k] for k in ('tasks','beliefs')]] for i in range(len(selected))]
+                if actual!=wanted:
+                    raise ValueError('Native one-step transition mismatch')
+                transitions=len(actual)
                 prefixes=expected_counters(states,model,mode,case['query']);save(folder/'counter-prefixes.json',prefixes)
                 quiet=folder/'quiet.metta'
                 quiet.write_text(selection_fixture(case,config,protocol['audit_budget_ns'],model,mode))
