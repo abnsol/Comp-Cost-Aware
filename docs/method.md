@@ -137,10 +137,9 @@ checked before measurement. Hashes bind the source, fixtures and outputs.
 ## What remains and why
 
 The full [results](results.md) retain wins, losses, late answers and inconclusive
-measurements. The earlier cost-only pilot was negative: its median first-answer
-CPU exceeded native selection on all 21 tested cases. Its compact summaries and
-prior expansion/first-answer findings remain under [baselines](../results/baselines/).
-Their complete old runs can be recovered from the pre-cleanup Git commit.
+measurements from the final benchmark. Earlier baseline summaries are outside the
+active experiment and can be recovered from Git commit `c4af6a92b` under
+`results/baselines/`; complete earlier runs remain in the pre-cleanup history.
 
 The frozen final batch retains raw evidence so its reported outcomes can still be
 verified. Its small source archive binds historical code without leaving obsolete

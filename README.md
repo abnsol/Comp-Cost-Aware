@@ -33,15 +33,18 @@ scripts/analyze_benefit_benchmark.py  Verify the completed batch without rerunni
 data/training/           Original development labels, CV and fitting provenance
 docs/method.md           One explanation of the experiment and code
 docs/results.md          One results narrative
-results/baselines/       Main earlier findings, including the negative cost-only pilot
 results/benefit-benchmark/run001/  Frozen final benchmark and its original evidence
 ```
 
 The old machine-failure task, step-by-step journals, interrupted/calibration runs,
 old experiment drivers and redundant result notes have been removed from the
 working tree. They remain in Git history at `95a1125cc8c326ce9af49a3f78e8072ace531ecc`.
-Earlier baseline JSONs retain original metadata and historical path strings;
-they are summaries, not standalone runnable experiments.
+Only the final benchmark and its dependencies remain in the working tree.
+Earlier baseline summaries are available in Git history at
+`c4af6a92b` under `results/baselines/`. The remaining source modules support the
+benchmark, proof verification, predictor fitting or saved-trace walkthrough;
+`tests/` checks those components. Training data and fitting provenance explain
+and reproduce the predictor used in the final comparison.
 
 ## Validate without measuring new performance
 
